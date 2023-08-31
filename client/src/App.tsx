@@ -1,8 +1,18 @@
 import './App.css';
-import { Box } from '@chakra-ui/react';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/login/login.page';
 
 function App() {
-	return <Box color={'secondary'}>Sk. Zaber Ahmed</Box>;
+	return (
+		<Router>
+			<Routes>
+				<Route
+					path="/login"
+					element={<LoginPage />}></Route>
+			</Routes>
+		</Router>
+	);
 }
 
 export default App;
