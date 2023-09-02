@@ -1,12 +1,13 @@
-import { Resolver, useForm } from 'react-hook-form';
-import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center, Icon, InputGroup, InputLeftElement, InputLeftAddon } from '@chakra-ui/react';
-import { isValidEmail } from '../../utils/helperFunctions/emailValidator';
+import { useForm } from 'react-hook-form';
+import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center, Icon, InputGroup, InputLeftElement, Divider, Flex, Text } from '@chakra-ui/react';
 import { MdEmail } from 'react-icons/md';
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { BiSolidUser } from 'react-icons/bi';
 import { FaMobileAlt } from 'react-icons/fa';
+import { BsFacebook, BsGoogle } from 'react-icons/bs';
+import { signUpResolver } from './validator';
 
-type SignupFormData = {
+export type SignupFormData = {
 	name: string;
 	email: string;
 	password: string;
@@ -14,53 +15,12 @@ type SignupFormData = {
 	phone: string;
 };
 
-const resolver: Resolver<SignupFormData> = async (values) => {
-	const errors: Record<string, { type: string; message: string }> = {};
-
-	if (!values.email) {
-		errors.email = {
-			type: 'required',
-			message: 'Email is required.',
-		};
-	} else if (!isValidEmail(values.email)) {
-		errors.email = {
-			type: 'invalidEmail',
-			message: 'Invalid email format.',
-		};
-	}
-
-	if (!values.password) {
-		errors.password = {
-			type: 'required',
-			message: 'Password is required.',
-		};
-	}
-
-	if (!values.confirmPassword) {
-		errors.password = {
-			type: 'required',
-			message: 'Password is required.',
-		};
-	}
-	if (values.password !== values.confirmPassword) {
-		errors.password = {
-			type: 'noMatch',
-			message: 'Password does not match.',
-		};
-	}
-
-	return {
-		values,
-		errors,
-	};
-};
-
 const SignupForm = () => {
 	const {
 		handleSubmit,
 		register,
 		formState: { errors, isSubmitting },
-	} = useForm<SignupFormData>({ resolver });
+	} = useForm<SignupFormData>({ resolver: signUpResolver });
 
 	function onSubmit(values: SignupFormData): Promise<void> {
 		return new Promise((resolve) => {
@@ -178,6 +138,41 @@ const SignupForm = () => {
 					Register
 				</Button>
 			</Center>
+			<Flex
+				alignItems={'center'}
+				gap={'1rem'}
+				mt={'1rem'}>
+				<Divider
+					border={'1px solid gray.300'}
+					my={'1rem'}
+				/>
+				<Text>OR</Text>
+				<Divider
+					border={'1px solid gray.300'}
+					my={'1rem'}
+				/>
+			</Flex>
+			<Flex
+				gap={'1rem'}
+				justifyContent={'center'}
+				alignItems={'center'}>
+				<Button w={'10rem'}>
+					<Icon
+						as={BsFacebook}
+						mr={'.35rem'}
+						mb={'.25rem'}
+					/>
+					<Text>Facebook</Text>
+				</Button>
+				<Button w={'10rem'}>
+					<Icon
+						as={BsGoogle}
+						mr={'.35rem'}
+						mb={'.25rem'}
+					/>
+					<Text> Google</Text>
+				</Button>
+			</Flex>
 		</form>
 	);
 };

@@ -1,40 +1,12 @@
-import { Resolver, useForm } from 'react-hook-form';
-import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center, Icon, Flex, InputLeftElement, InputGroup } from '@chakra-ui/react';
-import { isValidEmail } from '../../utils/helperFunctions/emailValidator';
+import { useForm } from 'react-hook-form';
+import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center, Icon, InputLeftElement, InputGroup } from '@chakra-ui/react';
 import { MdEmail } from 'react-icons/md';
 import { RiLockPasswordFill } from 'react-icons/ri';
+import { loginResolver } from './validator';
 
-type LoginFormData = {
+export type LoginFormData = {
 	email: string;
 	password: string;
-};
-
-const resolver: Resolver<LoginFormData> = async (values) => {
-	const errors: Record<string, { type: string; message: string }> = {};
-
-	if (!values.email) {
-		errors.email = {
-			type: 'required',
-			message: 'Email is required.',
-		};
-	} else if (!isValidEmail(values.email)) {
-		errors.email = {
-			type: 'invalidEmail',
-			message: 'Invalid email format.',
-		};
-	}
-
-	if (!values.password) {
-		errors.password = {
-			type: 'required',
-			message: 'Password is required.',
-		};
-	}
-
-	return {
-		values,
-		errors,
-	};
 };
 
 const LoginForm = () => {
@@ -42,7 +14,7 @@ const LoginForm = () => {
 		handleSubmit,
 		register,
 		formState: { errors, isSubmitting },
-	} = useForm<LoginFormData>({ resolver });
+	} = useForm<LoginFormData>({ resolver: loginResolver });
 
 	function onSubmit(values: LoginFormData): Promise<void> {
 		return new Promise((resolve) => {
@@ -84,7 +56,7 @@ const LoginForm = () => {
 					</InputLeftElement>
 					<Input
 						id="password"
-						placeholder="XXXXXXXX"
+						placeholder="********"
 						{...register('password')}
 					/>
 				</InputGroup>
