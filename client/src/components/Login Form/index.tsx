@@ -1,5 +1,8 @@
 import { Resolver, useForm } from 'react-hook-form';
-import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center } from '@chakra-ui/react';
+import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center, Icon, Flex, InputLeftElement, InputGroup } from '@chakra-ui/react';
+import { isValidEmail } from '../../utils/helperFunctions/emailValidator';
+import { MdEmail } from 'react-icons/md';
+import { RiLockPasswordFill } from 'react-icons/ri';
 
 type LoginFormData = {
 	email: string;
@@ -34,10 +37,6 @@ const resolver: Resolver<LoginFormData> = async (values) => {
 	};
 };
 
-function isValidEmail(email: string): boolean {
-	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
 const LoginForm = () => {
 	const {
 		handleSubmit,
@@ -57,22 +56,38 @@ const LoginForm = () => {
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<FormControl>
-				<FormLabel htmlFor="name">Email</FormLabel>
-				<Input
-					id="email"
-					placeholder="Email"
-					{...register('email')}
-				/>
+				<FormLabel htmlFor="email">Email</FormLabel>
+				<InputGroup>
+					<InputLeftElement pointerEvents="none">
+						<Icon
+							as={MdEmail}
+							color="gray.400"
+						/>
+					</InputLeftElement>
+					<Input
+						id="email"
+						placeholder="example@example.com"
+						{...register('email')}
+					/>
+				</InputGroup>
 				{errors?.email && <FormErrorMessage>errors.email.message </FormErrorMessage>}
 			</FormControl>
 
 			<FormControl mt={'.5rem'}>
 				<FormLabel htmlFor="password">Password</FormLabel>
-				<Input
-					id="password"
-					placeholder="Password"
-					{...register('password')}
-				/>
+				<InputGroup>
+					<InputLeftElement pointerEvents={'none'}>
+						<Icon
+							as={RiLockPasswordFill}
+							color="gray.400"
+						/>
+					</InputLeftElement>
+					<Input
+						id="password"
+						placeholder="XXXXXXXX"
+						{...register('password')}
+					/>
+				</InputGroup>
 				{errors?.password && <FormErrorMessage>{errors.password.message}</FormErrorMessage>}
 			</FormControl>
 			<Center>

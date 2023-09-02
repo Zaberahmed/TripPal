@@ -1,7 +1,7 @@
 import { Box, Center } from '@chakra-ui/react';
-import LoginForm from '../../components/Login Form';
+import SignupForm from '../../components/Signup Form';
 
-const LoginPage = () => {
+const SignUpPage = () => {
 	return (
 		<Center h="100vh">
 			<Box
@@ -9,10 +9,10 @@ const LoginPage = () => {
 				m={'auto'}
 				maxW="sm"
 				w="100%">
-				<LoginForm />
+				<SignupForm />
 			</Box>
 		</Center>
 	);
 };
 
-export default LoginPage;
+export default SignUpPage;
