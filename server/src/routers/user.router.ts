@@ -10,3 +10,4 @@ userRouter.get('/profile', authenticator, userController.profile);
 userRouter.delete('/signout', authenticator, userController.signOut);
 
 userRouter.get('/getall', userController.getAllUsers);
+userRouter.get('/get/:id', userController.getUserById);

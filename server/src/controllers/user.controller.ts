@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
-import { createUser, findAllUsers, findUserByEmail } from '../models/user/user.query';
+import { createUser, findAllUsers, findUserByEmail, findUserById } from '../models/user/user.query';
 import { getSession, createSession, destroySession } from './../middlewares/sessionManagement';
 import { Session } from '../interfaces/session.interface';
+import { Types } from '../database';
 
 export const signUp = async (req: Request, res: Response) => {
 	try {
@@ -58,6 +59,19 @@ export const getAllUsers = async (req: Request, res: Response) => {
 		res.status(500).json({
 			error: true,
 			message: 'Error while getting all users!',
+		});
+	}
+};
+export const getUserById = async (req: Request, res: Response) => {
+	try {
+		const userId = req.params.id;
+		const user = await findUserById(new Types.ObjectId(userId));
+		res.status(200).send(user);
+	} catch (error) {
+		console.error('Error while getting user at controller!');
+		res.status(500).json({
+			error: true,
+			message: 'Error while getting user!',
 		});
 	}
 };
