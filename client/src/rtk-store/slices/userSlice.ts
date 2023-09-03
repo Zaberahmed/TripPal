@@ -20,7 +20,7 @@ const userSlice = createSlice({
 		insertUser: (state, action) => {
 			return { ...state, ...action.payload };
 		},
-		removeUser: (state, action) => {
+		removeUser: () => {
 			return initialUserState;
 		},
 	},

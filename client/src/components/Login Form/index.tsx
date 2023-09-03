@@ -3,6 +3,7 @@ import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center, Icon, 
 import { MdEmail } from 'react-icons/md';
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { loginResolver } from './validator';
+import { useSignInMutation } from '../../rtk-store/api/authApi';
 
 export type LoginFormData = {
 	email: string;
@@ -13,18 +14,17 @@ const LoginForm = () => {
 	const {
 		handleSubmit,
 		register,
-		formState: { errors, isSubmitting },
+		formState: { errors },
 	} = useForm<LoginFormData>({ resolver: loginResolver });
+	const [signIn, { isLoading, isError, error }] = useSignInMutation();
 
-	function onSubmit(values: LoginFormData): Promise<void> {
-		return new Promise((resolve) => {
-			// setTimeout(() => {
-			// 	console.log(values);
-			// 	resolve();
-			// }, 2000);
-			console.log(values);
-			resolve();
-		});
+	async function onSubmit(values: LoginFormData) {
+		try {
+			const result = await signIn(values).unwrap();
+			console.log('result:', result);
+		} catch (error) {
+			console.error('Error:', error);
+		}
 	}
 
 	return (
@@ -71,7 +71,7 @@ const LoginForm = () => {
 					color={'primary'}
 					bg={'action'}
 					borderRadius={'.85rem'}
-					isLoading={isSubmitting}
+					isLoading={isLoading}
 					type="submit">
 					Login
 				</Button>

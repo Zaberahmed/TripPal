@@ -17,7 +17,7 @@ app.use(router);
 try {
 	mongoose.connection.on('open', () => console.log('🍁 Connected to Database'));
 
-	app.listen(process.env.SERVER_PORT, () => console.log(`🚀 Server is listening on ${process.env.SERVER_URL}:${process.env.SERVER_PORT}`));
+	app.listen(process.env.BACKEND_PORT, () => console.log(`🚀 Server is listening on ${process.env.BACKEND_URL}:${process.env.BACKEND_PORT}`));
 } catch (error) {
 	console.error('Could not connect to server!');
 }
