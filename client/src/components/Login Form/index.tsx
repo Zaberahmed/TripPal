@@ -18,10 +18,12 @@ const LoginForm = () => {
 
 	function onSubmit(values: LoginFormData): Promise<void> {
 		return new Promise((resolve) => {
-			setTimeout(() => {
-				console.log(values);
-				resolve();
-			}, 2000);
+			// setTimeout(() => {
+			// 	console.log(values);
+			// 	resolve();
+			// }, 2000);
+			console.log(values);
+			resolve();
 		});
 	}
 
