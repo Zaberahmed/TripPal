@@ -7,13 +7,13 @@ import { Types } from '../database';
 
 export const signUp = async (req: Request, res: Response) => {
 	try {
-		const { name, email, password } = req.body;
+		const { name, email, password, phone } = req.body;
 		if (await findUserByEmail(email)) return res.status(401).send('Email already exists!');
 
 		const saltRounds = 10;
 		const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-		const newUser = await createUser({ name, email, password: hashedPassword });
+		const newUser = await createUser({ name, email, password: hashedPassword, phone });
 		res.status(201).send(newUser);
 	} catch (error) {
 		console.error('Error while signing up an user at controller!');
@@ -40,7 +40,7 @@ export const signIn = async (req: Request, res: Response) => {
 			sameSite: 'strict',
 		});
 
-		res.status(200).send({ accessToken: token });
+		res.status(200).send(user);
 	} catch (error) {
 		console.error('Error while signing in at controller!');
 		res.status(500).json({

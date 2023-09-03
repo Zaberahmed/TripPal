@@ -55,7 +55,7 @@ export const signUpResolver: Resolver<SignupFormData> = async (values) => {
 			type: 'required',
 			message: 'Contact Number is required.',
 		};
-	} else if (!isValidPhoneNumber(values.phone)) {
+	} else if (values.phone && !isValidPhoneNumber(values.phone)) {
 		errors.phone = {
 			type: 'invalidPhone',
 			message: 'Invalid phone number format.',
