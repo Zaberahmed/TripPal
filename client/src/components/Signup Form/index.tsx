@@ -1,11 +1,14 @@
 import { useForm } from 'react-hook-form';
-import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center, Icon, InputGroup, InputLeftElement, Divider, Flex, Text } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 import { MdEmail } from 'react-icons/md';
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { BiSolidUser } from 'react-icons/bi';
 import { FaMobileAlt } from 'react-icons/fa';
-import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import { signUpResolver } from './validator';
+import OauthButtons from '../Oauth Buttons';
+import OrDivider from '../Or Divider';
+import SubmitButton from '../Submit Button';
+import InputField from '../Input field';
 
 export type SignupFormData = {
 	name: string;
@@ -27,152 +30,75 @@ const SignupForm = () => {
 			setTimeout(() => {
 				console.log(values);
 				resolve();
-			}, 2000);
+			}, 1000);
 		});
 	}
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<FormControl>
-				<FormLabel htmlFor="name">Name</FormLabel>
-				<InputGroup>
-					<InputLeftElement pointerEvents="none">
-						<Icon
-							as={BiSolidUser}
-							color="gray.400"
-						/>
-					</InputLeftElement>
-					<Input
-						id="name"
-						placeholder="John Doe"
-						type="text"
-						{...register('name')}
-					/>
-				</InputGroup>
-				{errors?.name && <FormErrorMessage>errors.name.message </FormErrorMessage>}
-			</FormControl>
+			<InputField
+				register={register}
+				errors={errors}
+				id="name"
+				placeholder="John Doe"
+				type="text"
+				icon={BiSolidUser}
+				label="Name"
+			/>
 
-			<FormControl>
-				<FormLabel htmlFor="email">Email</FormLabel>
-				<InputGroup>
-					<InputLeftElement pointerEvents="none">
-						<Icon
-							as={MdEmail}
-							color="gray.400"
-						/>
-					</InputLeftElement>
-					<Input
-						id="email"
-						placeholder="example@example.com"
-						type="email"
-						{...register('email')}
-					/>
-				</InputGroup>
-				{errors?.email && <FormErrorMessage>errors.email.message </FormErrorMessage>}
-			</FormControl>
+			<InputField
+				register={register}
+				errors={errors}
+				id="email"
+				placeholder="example@example.com"
+				type="email"
+				icon={MdEmail}
+				label="Email"
+			/>
 
-			<FormControl mt={'.5rem'}>
-				<FormLabel htmlFor="password">Password</FormLabel>
-				<InputGroup>
-					<InputLeftElement pointerEvents={'none'}>
-						<Icon
-							as={RiLockPasswordFill}
-							color="gray.400"
-						/>
-					</InputLeftElement>
-					<Input
-						id="password"
-						placeholder="*********"
-						type="password"
-						{...register('password')}
-					/>
-				</InputGroup>
-				{errors?.password && <FormErrorMessage>{errors.password.message}</FormErrorMessage>}
-			</FormControl>
-			<FormControl mt={'.5rem'}>
-				<FormLabel htmlFor="confirmPassword">Confirm password</FormLabel>
-				<InputGroup>
-					<InputLeftElement pointerEvents={'none'}>
-						<Icon
-							as={RiLockPasswordFill}
-							color="gray.400"
-						/>
-					</InputLeftElement>
-					<Input
-						id="confirmPassword"
-						placeholder="*********"
-						type="password"
-						{...register('confirmPassword')}
-					/>
-				</InputGroup>
-				{errors?.confirmPassword && <FormErrorMessage>{errors.confirmPassword.message}</FormErrorMessage>}
-			</FormControl>
+			<InputField
+				register={register}
+				errors={errors}
+				id="password"
+				placeholder="* * * * * * * * *"
+				type="password"
+				icon={RiLockPasswordFill}
+				label="Password"
+			/>
 
-			<FormControl mt={'.5rem'}>
-				<FormLabel htmlFor="phone">Contact Number</FormLabel>
-				<InputGroup>
-					<InputLeftElement pointerEvents="none">
-						<Icon
-							as={FaMobileAlt}
-							color="gray.400"
-						/>
-					</InputLeftElement>
-					<Input
-						id="phone"
-						placeholder="01XXX-XXXXXX"
-						type="tel"
-						{...register('phone')}
-					/>
-				</InputGroup>
-				{errors?.phone && <FormErrorMessage>errors.phone.message </FormErrorMessage>}
-			</FormControl>
+			<InputField
+				register={register}
+				errors={errors}
+				id="confirmPassword"
+				placeholder="* * * * * * * * *"
+				type="password"
+				icon={RiLockPasswordFill}
+				label="Confirm Password"
+			/>
+
+			<InputField
+				register={register}
+				errors={errors}
+				id="phone"
+				placeholder="01XXX-XXXXXX"
+				type="tel"
+				icon={FaMobileAlt}
+				label="Contact Number"
+			/>
+
 			<Center>
-				<Button
-					w={'10rem'}
-					mt={'4'}
+				<SubmitButton
+					width={'10rem'}
+					marginTop={'1.25rem'}
+					bgColor={'action'}
 					color={'primary'}
-					bg={'action'}
 					borderRadius={'.85rem'}
 					isLoading={isSubmitting}
-					type="submit">
-					Register
-				</Button>
+					type={'submit'}
+				/>
 			</Center>
-			<Flex
-				alignItems={'center'}
-				gap={'1rem'}
-				mt={'1rem'}>
-				<Divider
-					border={'1px solid gray.300'}
-					my={'1rem'}
-				/>
-				<Text>OR</Text>
-				<Divider
-					border={'1px solid gray.300'}
-					my={'1rem'}
-				/>
-			</Flex>
-			<Flex
-				gap={'1rem'}
-				justifyContent={'center'}
-				alignItems={'center'}>
-				<Button w={'10rem'}>
-					<Icon
-						as={BsFacebook}
-						mr={'.35rem'}
-						mb={'.25rem'}
-					/>
-					<Text>Facebook</Text>
-				</Button>
-				<Button w={'10rem'}>
-					<Icon
-						as={BsGoogle}
-						mr={'.35rem'}
-						mb={'.25rem'}
-					/>
-					<Text> Google</Text>
-				</Button>
-			</Flex>
+			<OrDivider />
+			<OauthButtons />
 		</form>
 	);
 };

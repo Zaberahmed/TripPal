@@ -58,7 +58,7 @@ const LoginForm = () => {
 					</InputLeftElement>
 					<Input
 						id="password"
-						placeholder="********"
+						placeholder="* * * * * * * *"
 						{...register('password')}
 					/>
 				</InputGroup>

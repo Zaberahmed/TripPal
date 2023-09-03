@@ -3,15 +3,11 @@ import axiosInstance from '../axios';
 
 export const signIn = async (signInData: LoginFormData) => {
 	try {
-		const response = await axiosInstance.post('/user/signin', signInData);
-		if (response.status === 200) {
-			return response.data;
-		} else {
-			console.error('Sign-in failed with status code:', response.status);
-			throw new Error('Sign-in failed');
-		}
+		return await axiosInstance
+			.post('/user/signin', signInData)
+			.then((res) => res.data)
+			.catch((error) => console.error('Error:', error));
 	} catch (error) {
-		console.error('Sign-in error:', error);
-		throw new Error('Sign-in failed');
+		console.error('Error:', error);
 	}
 };
