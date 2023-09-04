@@ -1,6 +1,8 @@
-import { Text, Flex, Box, IconButton, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerBody } from '@chakra-ui/react';
+import { Text, Flex, Box, IconButton, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Outlet } from 'react-router-dom';
+import SideBar from '../Sidebar';
+import bg from './../../assets/background.jpg';
 
 const NavBar = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -15,38 +17,42 @@ const NavBar = () => {
 				bg={'secondary'}
 				color={'primary'}
 				boxShadow={'rgba(0, 0, 0, 0.15) 0px 4px 4px;'}
-				position={'sticky'}
-				// zIndex={100000}
-			>
+				position={'sticky'}>
 				<IconButton
 					bg={'inherit'}
-					icon={isOpen ? <CloseIcon boxSize={'1.5rem'} /> : <HamburgerIcon boxSize={'1.5rem'} />}
+					icon={
+						isOpen ? (
+							<CloseIcon
+								boxSize={'1.25rem'}
+								color={'tertiary'}
+							/>
+						) : (
+							<HamburgerIcon
+								boxSize={'1.5rem'}
+								color={'primary'}
+							/>
+						)
+					}
 					boxSize={'1.5rem'}
 					onClick={isOpen ? onClose : onOpen}
 					aria-label={isOpen ? 'Close sidebar' : 'Open sidebar'}
 					color={'primary'}
+					transition="transform 0.3s ease-in-out, opacity 0.4s ease-in-out"
+					transform={isOpen ? 'rotate(90deg)' : 'rotate(0)'}
 				/>
 				<Text>Logo</Text>
 			</Flex>
-			<Box>
+			<Box
+				bgImg={bg}
+				h={'auto'}
+				p={'.25rem'}>
 				<Outlet />
 			</Box>
 
-			<Drawer
-				size="menu"
+			<SideBar
 				isOpen={isOpen}
-				placement="left"
-				onClose={onClose}>
-				<DrawerOverlay>
-					<DrawerContent>
-						<DrawerBody>
-							<Text>Link 1</Text>
-							<Text>Link 2</Text>
-							<Text>Link 3</Text>
-						</DrawerBody>
-					</DrawerContent>
-				</DrawerOverlay>
-			</Drawer>
+				onClose={onClose}
+			/>
 		</>
 	);
 };
