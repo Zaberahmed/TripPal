@@ -13,4 +13,18 @@ const fonts = {
 	body: 'Open sans',
 };
 
-export const theme = extendTheme({ colors, fonts });
+const Drawer = {
+	sizes: {
+		menu: {
+			dialog: { maxWidth: '13rem' },
+		},
+	},
+};
+
+export const theme = extendTheme({
+	colors,
+	fonts,
+	components: {
+		Drawer,
+	},
+});
