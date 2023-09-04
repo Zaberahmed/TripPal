@@ -19,6 +19,7 @@ const SignUpInputField = (props: SignUpInputFieldProps) => {
 	return (
 		<FormControl m={'.5rem 0'}>
 			<FormLabel
+				color={'ebony'}
 				htmlFor={id}
 				mb={0}>
 				{label}
@@ -33,6 +34,7 @@ const SignUpInputField = (props: SignUpInputFieldProps) => {
 					</InputLeftElement>
 				)}
 				<Input
+					// variant={'Flushed'}
 					id={id}
 					placeholder={placeholder}
 					type={type}

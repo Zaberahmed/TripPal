@@ -69,7 +69,7 @@ const LoginForm = () => {
 				<SubmitButton
 					width={'10rem'}
 					marginTop={'1.25rem'}
-					bgColor={'action'}
+					bgColor={'actionPrimary'}
 					color={'primary'}
 					borderRadius={'.85rem'}
 					isLoading={isLoading}

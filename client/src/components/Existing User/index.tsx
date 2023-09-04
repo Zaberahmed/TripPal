@@ -1,5 +1,4 @@
 import { Text, Box } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
 
 const ExistingUser = () => {
 	return (
@@ -9,7 +8,7 @@ const ExistingUser = () => {
 				<span style={{ marginLeft: '.5rem' }}>
 					<a
 						href="/login"
-						style={{ color: 'blue', textDecoration: 'underline' }}>
+						style={{ color: 'actionPrimary', textDecoration: 'underline' }}>
 						Login
 					</a>
 				</span>

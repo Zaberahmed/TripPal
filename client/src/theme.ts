@@ -1,12 +1,12 @@
 import { extendTheme } from '@chakra-ui/react';
 
 const colors = {
-	primary: '#FaFaFa', // beige
-	secondary: '#013B82', // navy blue
-	action: '#007BFF', //sky blue
-	urgent: '#FECB04', //yellow sun
-	hightlights: '#56CC9D', //seafoam green
-	cautious: '#ed411a', // sunset orange
+	primary: '#ECEDF3', // athens gray
+	secondary: '#091328', // firefly
+	tertiary: '#FECB04', //yellow sun
+	ebony: '#0E1420', //ebony
+	actionPrimary: '#064CE2', //science blue
+	actionSecondary: '#ed411a', // sunset orange
 };
 
 export const theme = extendTheme({ colors });
