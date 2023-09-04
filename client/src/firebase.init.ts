@@ -3,13 +3,13 @@ import { GoogleAuthProvider, getAuth } from 'firebase/auth';
 import { FacebookAuthProvider } from 'firebase/auth';
 
 const firebaseConfig = {
-	apiKey: 'AIzaSyDfuL9y5qcN_v-95kQQwJBLJd5VrAaAook',
-	authDomain: 'trippal-c64a7.firebaseapp.com',
-	projectId: 'trippal-c64a7',
-	storageBucket: 'trippal-c64a7.appspot.com',
-	messagingSenderId: '447046320128',
-	appId: '1:447046320128:web:d4af89a057bb6a7a23d8e5',
-	measurementId: 'G-WPZ824E5WP',
+	apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+	authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+	projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+	storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+	appId: import.meta.env.VITE_FIREBASE_APP_ID,
+	measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
