@@ -19,6 +19,7 @@ const SignUpInputField = (props: SignUpInputFieldProps) => {
 	return (
 		<FormControl m={'.5rem 0'}>
 			<FormLabel
+				fontWeight={'600'}
 				color={'ebony'}
 				htmlFor={id}
 				mb={0}>

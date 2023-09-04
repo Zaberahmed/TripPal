@@ -3,6 +3,7 @@ import { Flex, Divider, Text } from '@chakra-ui/react';
 const OrDivider = () => {
 	return (
 		<Flex
+			fontWeight={'500'}
 			alignItems={'center'}
 			gap={'1rem'}
 			m={'.75rem'}>

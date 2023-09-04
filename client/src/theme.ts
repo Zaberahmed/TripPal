@@ -8,5 +8,9 @@ const colors = {
 	actionPrimary: '#064CE2', //science blue
 	actionSecondary: '#ed411a', // sunset orange
 };
+const fonts = {
+	heading: 'Roboto',
+	body: 'Open sans',
+};
 
-export const theme = extendTheme({ colors });
+export const theme = extendTheme({ colors, fonts });

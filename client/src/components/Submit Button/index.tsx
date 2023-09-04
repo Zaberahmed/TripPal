@@ -14,6 +14,7 @@ type SubmitButton = {
 const SubmitButton = (props: SubmitButton) => {
 	return (
 		<Button
+			fontWeight={'600'}
 			w={props.width}
 			mt={props.marginTop}
 			color={props.color}
