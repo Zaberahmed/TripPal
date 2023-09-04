@@ -10,6 +10,9 @@ import OrDivider from '../Or Divider';
 import SubmitButton from '../Submit Button';
 import InputField from '../Input field/signup';
 import { useSignUpMutation } from '../../rtk-store/api/authApi';
+import ExistingUser from '../Existing User';
+import { useNavigate } from 'react-router-dom';
+import HeadingText from '../Heading';
 
 export type SignupFormData = {
 	name: string;
@@ -28,11 +31,16 @@ const SignupForm = () => {
 
 	const [signUp, { isLoading, isError, error }] = useSignUpMutation();
 
+	const navigate = useNavigate();
+
 	async function onSubmit(values: SignupFormData) {
 		try {
 			const { name, email, password, phone } = values;
 			const newUser = { name, email, password, phone };
 			const result = await signUp(newUser).unwrap();
+			if (result && result.email.length > 0) {
+				navigate('/login');
+			}
 		} catch (error) {
 			console.error('Error:', error);
 		}
@@ -40,6 +48,12 @@ const SignupForm = () => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
+			<Center>
+				<HeadingText
+					text={'Sign up'}
+					type={'h3'}
+				/>
+			</Center>
 			<InputField
 				register={register}
 				errors={errors}
@@ -104,6 +118,7 @@ const SignupForm = () => {
 			</Center>
 			<OrDivider />
 			<OauthButtons />
+			<ExistingUser />
 		</form>
 	);
 };

@@ -8,6 +8,9 @@ import SubmitButton from '../Submit Button';
 import LoginInputField from '../Input field/login';
 import OrDivider from '../Or Divider';
 import OauthButtons from '../Oauth Buttons';
+import { useAppDispatch } from '../../rtk-store/hooks';
+import { useNavigate } from 'react-router-dom';
+import { insertUser } from '../../rtk-store/slices/userSlice';
 
 export type LoginFormData = {
 	email: string;
@@ -21,10 +24,16 @@ const LoginForm = () => {
 		formState: { errors },
 	} = useForm<LoginFormData>({ resolver: loginResolver });
 	const [signIn, { isLoading, isError, error }] = useSignInMutation();
+	const dispatch = useAppDispatch();
+	const navigate = useNavigate();
 
 	async function onSubmit(values: LoginFormData) {
 		try {
 			const result = await signIn(values).unwrap();
+			if (result && result.email.length > 0) {
+				dispatch(insertUser(result));
+				navigate('/home');
+			}
 		} catch (error) {
 			console.error('Error:', error);
 		}
