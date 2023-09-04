@@ -1,10 +1,10 @@
-import { FieldErrors, UseFormRegisterReturn } from 'react-hook-form';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { FormControl, FormErrorMessage, FormLabel, Icon, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { SignupFormData } from '../Signup Form';
 import { IconType } from 'react-icons';
 
-type InputFieldProps = {
-	register: (input: keyof SignupFormData) => UseFormRegisterReturn<keyof SignupFormData>;
+type SignUpInputFieldProps = {
+	register: UseFormRegister<SignupFormData>;
 	errors: FieldErrors<SignupFormData>;
 	id: keyof SignupFormData;
 	placeholder: string;
@@ -13,7 +13,7 @@ type InputFieldProps = {
 	label: string;
 };
 
-const InputField = (props: InputFieldProps) => {
+const SignUpInputField = (props: SignUpInputFieldProps) => {
 	const { register, errors, id, placeholder, type, icon, label } = props;
 
 	return (
@@ -44,4 +44,4 @@ const InputField = (props: InputFieldProps) => {
 	);
 };
 
-export default InputField;
+export default SignUpInputField;

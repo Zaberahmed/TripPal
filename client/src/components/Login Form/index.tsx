@@ -1,9 +1,11 @@
 import { useForm } from 'react-hook-form';
-import { FormErrorMessage, FormLabel, FormControl, Input, Button, Center, Icon, InputLeftElement, InputGroup } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 import { MdEmail } from 'react-icons/md';
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { loginResolver } from './validator';
 import { useSignInMutation } from '../../rtk-store/api/authApi';
+import SubmitButton from '../Submit Button';
+import LoginInputField from '../Input field/login';
 
 export type LoginFormData = {
 	email: string;
@@ -29,52 +31,37 @@ const LoginForm = () => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<FormControl>
-				<FormLabel htmlFor="email">Email</FormLabel>
-				<InputGroup>
-					<InputLeftElement pointerEvents="none">
-						<Icon
-							as={MdEmail}
-							color="gray.400"
-						/>
-					</InputLeftElement>
-					<Input
-						id="email"
-						placeholder="example@example.com"
-						{...register('email')}
-					/>
-				</InputGroup>
-				{errors?.email && <FormErrorMessage>errors.email.message </FormErrorMessage>}
-			</FormControl>
+			<LoginInputField
+				register={register}
+				errors={errors}
+				id="email"
+				placeholder="example@example.com"
+				type="email"
+				icon={MdEmail}
+				label="Email"
+			/>
 
-			<FormControl mt={'.5rem'}>
-				<FormLabel htmlFor="password">Password</FormLabel>
-				<InputGroup>
-					<InputLeftElement pointerEvents={'none'}>
-						<Icon
-							as={RiLockPasswordFill}
-							color="gray.400"
-						/>
-					</InputLeftElement>
-					<Input
-						id="password"
-						placeholder="* * * * * * * *"
-						{...register('password')}
-					/>
-				</InputGroup>
-				{errors?.password && <FormErrorMessage>{errors.password.message}</FormErrorMessage>}
-			</FormControl>
+			<LoginInputField
+				register={register}
+				errors={errors}
+				id="password"
+				placeholder="* * * * * * * * *"
+				type="password"
+				icon={RiLockPasswordFill}
+				label="Password"
+			/>
+
 			<Center>
-				<Button
-					w={'10rem'}
-					mt={'4'}
+				<SubmitButton
+					width={'10rem'}
+					marginTop={'1.25rem'}
+					bgColor={'action'}
 					color={'primary'}
-					bg={'action'}
 					borderRadius={'.85rem'}
 					isLoading={isLoading}
-					type="submit">
-					Login
-				</Button>
+					type={'submit'}
+					text={'Sign in'}
+				/>
 			</Center>
 		</form>
 	);

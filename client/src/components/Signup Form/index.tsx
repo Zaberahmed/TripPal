@@ -8,7 +8,7 @@ import { signUpResolver } from './validator';
 import OauthButtons from '../Oauth Buttons';
 import OrDivider from '../Or Divider';
 import SubmitButton from '../Submit Button';
-import InputField from '../Input field';
+import InputField from '../Input field/signup';
 
 export type SignupFormData = {
 	name: string;
@@ -95,6 +95,7 @@ const SignupForm = () => {
 					borderRadius={'.85rem'}
 					isLoading={isSubmitting}
 					type={'submit'}
+					text={'Sign up'}
 				/>
 			</Center>
 			<OrDivider />

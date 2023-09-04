@@ -8,6 +8,7 @@ type SubmitButton = {
 	borderRadius: string;
 	isLoading?: boolean;
 	type?: 'button' | 'submit' | 'reset' | undefined;
+	text: string;
 };
 
 const SubmitButton = (props: SubmitButton) => {
@@ -20,7 +21,7 @@ const SubmitButton = (props: SubmitButton) => {
 			borderRadius={props.borderRadius}
 			isLoading={props.isLoading}
 			type={props.type}>
-			Register
+			{props.text}
 		</Button>
 	);
 };
