@@ -2,7 +2,7 @@ import { Center, Heading } from '@chakra-ui/react';
 
 const PageNotFound = () => {
 	return (
-		<Center>
+		<Center mt={'10rem'}>
 			<Heading>Page Not Found !</Heading>
 		</Center>
 	);
