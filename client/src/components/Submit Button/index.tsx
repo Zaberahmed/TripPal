@@ -7,7 +7,7 @@ type SubmitButton = {
 	color: string;
 	borderRadius: string;
 	isLoading?: boolean;
-	type?: 'button' | 'submit' | 'reset' | undefined;
+	type: 'button' | 'submit' | 'reset' | undefined;
 	text: string;
 };
 

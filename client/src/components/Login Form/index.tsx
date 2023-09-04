@@ -6,6 +6,8 @@ import { loginResolver } from './validator';
 import { useSignInMutation } from '../../rtk-store/api/authApi';
 import SubmitButton from '../Submit Button';
 import LoginInputField from '../Input field/login';
+import OrDivider from '../Or Divider';
+import OauthButtons from '../Oauth Buttons';
 
 export type LoginFormData = {
 	email: string;
@@ -23,7 +25,6 @@ const LoginForm = () => {
 	async function onSubmit(values: LoginFormData) {
 		try {
 			const result = await signIn(values).unwrap();
-			console.log('result:', result);
 		} catch (error) {
 			console.error('Error:', error);
 		}
@@ -63,6 +64,8 @@ const LoginForm = () => {
 					text={'Sign in'}
 				/>
 			</Center>
+			<OrDivider />
+			<OauthButtons />
 		</form>
 	);
 };

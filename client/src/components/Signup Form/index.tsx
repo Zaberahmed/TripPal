@@ -9,6 +9,7 @@ import OauthButtons from '../Oauth Buttons';
 import OrDivider from '../Or Divider';
 import SubmitButton from '../Submit Button';
 import InputField from '../Input field/signup';
+import { useSignUpMutation } from '../../rtk-store/api/authApi';
 
 export type SignupFormData = {
 	name: string;
@@ -22,16 +23,19 @@ const SignupForm = () => {
 	const {
 		handleSubmit,
 		register,
-		formState: { errors, isSubmitting },
+		formState: { errors },
 	} = useForm<SignupFormData>({ resolver: signUpResolver });
 
-	function onSubmit(values: SignupFormData): Promise<void> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				console.log(values);
-				resolve();
-			}, 1000);
-		});
+	const [signUp, { isLoading, isError, error }] = useSignUpMutation();
+
+	async function onSubmit(values: SignupFormData) {
+		try {
+			const { name, email, password, phone } = values;
+			const newUser = { name, email, password, phone };
+			const result = await signUp(newUser).unwrap();
+		} catch (error) {
+			console.error('Error:', error);
+		}
 	}
 
 	return (
@@ -93,7 +97,7 @@ const SignupForm = () => {
 					bgColor={'action'}
 					color={'primary'}
 					borderRadius={'.85rem'}
-					isLoading={isSubmitting}
+					isLoading={isLoading}
 					type={'submit'}
 					text={'Sign up'}
 				/>
