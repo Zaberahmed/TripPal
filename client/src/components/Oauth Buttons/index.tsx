@@ -1,7 +1,28 @@
 import { Flex, Button, Icon, Text } from '@chakra-ui/react';
+import { signInWithPopup } from 'firebase/auth';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
+import auth, { faceBookProvider, googleProvider } from '../../firebase.init';
 
 const OauthButtons = () => {
+	const handleGoogleOauth = async (event: React.MouseEvent<HTMLButtonElement>) => {
+		event.preventDefault();
+		try {
+			const result = await signInWithPopup(auth, googleProvider);
+			console.log(result);
+		} catch (error) {
+			console.error('Error:', error);
+		}
+	};
+
+	const handleFaceBookOauth = async (event: React.MouseEvent<HTMLButtonElement>) => {
+		event.preventDefault();
+		try {
+			const result = await signInWithPopup(auth, faceBookProvider);
+			console.log(result);
+		} catch (error) {
+			console.error('Error:', error);
+		}
+	};
 	return (
 		<Flex
 			gap={'1rem'}
@@ -9,7 +30,8 @@ const OauthButtons = () => {
 			alignItems={'center'}>
 			<Button
 				w={'10rem'}
-				bg={'skyblue'}>
+				bg={'skyblue'}
+				onClick={handleFaceBookOauth}>
 				<Flex gap={'.5rem'}>
 					<Icon as={BsFacebook} />
 					<Text>Facebook</Text>
@@ -17,7 +39,8 @@ const OauthButtons = () => {
 			</Button>
 			<Button
 				w={'10rem'}
-				bg={'red.400'}>
+				bg={'red.400'}
+				onClick={handleGoogleOauth}>
 				<Flex gap={'.5rem'}>
 					<Icon as={BsGoogle} />
 					<Text> Google</Text>

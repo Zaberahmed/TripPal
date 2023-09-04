@@ -14,6 +14,14 @@ export const signUp = async (req: Request, res: Response) => {
 		const hashedPassword = await bcrypt.hash(password, saltRounds);
 
 		const newUser = await createUser({ name, email, password: hashedPassword, phone });
+
+		const token = createSession(email);
+		res.cookie('accessToken', token, {
+			httpOnly: false,
+			secure: false,
+			sameSite: 'strict',
+		});
+
 		res.status(201).send(newUser);
 	} catch (error) {
 		console.error('Error while signing up an user at controller!');

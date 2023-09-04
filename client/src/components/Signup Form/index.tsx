@@ -13,6 +13,8 @@ import { useSignUpMutation } from '../../rtk-store/api/authApi';
 import ExistingUser from '../Existing User';
 import { useNavigate } from 'react-router-dom';
 import HeadingText from '../Heading';
+import { useAppDispatch } from '../../rtk-store/hooks';
+import { insertUser } from '../../rtk-store/slices/userSlice';
 
 export type SignupFormData = {
 	name: string;
@@ -31,15 +33,19 @@ const SignupForm = () => {
 
 	const [signUp, { isLoading, isError, error }] = useSignUpMutation();
 
+	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
 
 	async function onSubmit(values: SignupFormData) {
 		try {
 			const { name, email, password, phone } = values;
 			const newUser = { name, email, password, phone };
+
 			const result = await signUp(newUser).unwrap();
+
 			if (result && result.email.length > 0) {
-				navigate('/login');
+				dispatch(insertUser(result));
+				navigate('/home');
 			}
 		} catch (error) {
 			console.error('Error:', error);
