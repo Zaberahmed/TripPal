@@ -55,10 +55,7 @@ const SignupForm = () => {
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<Center>
-				<HeadingText
-					text={'Sign up'}
-					type={'h3'}
-				/>
+				<HeadingText text={'Create account'} />
 			</Center>
 			<InputField
 				register={register}

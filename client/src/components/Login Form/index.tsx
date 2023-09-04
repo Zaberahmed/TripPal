@@ -11,6 +11,7 @@ import OauthButtons from '../Oauth Buttons';
 import { useAppDispatch } from '../../rtk-store/hooks';
 import { useNavigate } from 'react-router-dom';
 import { insertUser } from '../../rtk-store/slices/userSlice';
+import HeadingText from '../Heading';
 
 export type LoginFormData = {
 	email: string;
@@ -41,6 +42,9 @@ const LoginForm = () => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
+			<Center>
+				<HeadingText text={'Login'} />
+			</Center>
 			<LoginInputField
 				register={register}
 				errors={errors}

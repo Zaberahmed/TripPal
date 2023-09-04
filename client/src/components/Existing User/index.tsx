@@ -7,11 +7,11 @@ const ExistingUser = () => {
 			<Text>
 				Already an user?
 				<span style={{ marginLeft: '.5rem' }}>
-					<Link
-						to={'/login'}
+					<a
+						href="/login"
 						style={{ color: 'blue', textDecoration: 'underline' }}>
 						Login
-					</Link>
+					</a>
 				</span>
 			</Text>
 		</Box>
