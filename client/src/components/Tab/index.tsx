@@ -1,5 +1,4 @@
 import * as React from 'react';
-import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
@@ -48,10 +47,6 @@ export default function FullWidthTabs() {
 		setValue(newValue);
 	};
 
-	const handleChangeIndex = (index: number) => {
-		setValue(index);
-	};
-
 	return (
 		<Box sx={{ bgcolor: 'background.paper', width: 500 }}>
 			<AppBar position="static">
@@ -61,7 +56,7 @@ export default function FullWidthTabs() {
 					indicatorColor="secondary"
 					textColor="inherit"
 					variant="fullWidth"
-					aria-label="full width tabs example">
+					aria-label="full width tab">
 					<Tab
 						label="Item One"
 						{...a11yProps(0)}
@@ -76,29 +71,25 @@ export default function FullWidthTabs() {
 					/>
 				</Tabs>
 			</AppBar>
-			<SwipeableViews
-				axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-				index={value}
-				onChangeIndex={handleChangeIndex}>
-				<TabPanel
-					value={value}
-					index={0}
-					dir={theme.direction}>
-					Item One
-				</TabPanel>
-				<TabPanel
-					value={value}
-					index={1}
-					dir={theme.direction}>
-					Item Two
-				</TabPanel>
-				<TabPanel
-					value={value}
-					index={2}
-					dir={theme.direction}>
-					Item Three
-				</TabPanel>
-			</SwipeableViews>
+
+			<TabPanel
+				value={value}
+				index={0}
+				dir={theme.direction}>
+				Item One
+			</TabPanel>
+			<TabPanel
+				value={value}
+				index={1}
+				dir={theme.direction}>
+				Item Two
+			</TabPanel>
+			<TabPanel
+				value={value}
+				index={2}
+				dir={theme.direction}>
+				Item Three
+			</TabPanel>
 		</Box>
 	);
 }

@@ -30,6 +30,8 @@ const GreetingText = () => {
 				<Icon
 					as={FaPlaneDeparture}
 					boxSize={'1.5rem'}
+					fill={'secondary'}
+					color={'secondary'}
 				/>
 			</Flex>
 		</Box>
