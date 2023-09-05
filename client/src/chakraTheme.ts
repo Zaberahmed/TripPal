@@ -21,7 +21,7 @@ const Drawer = {
 	},
 };
 
-export const theme = extendTheme({
+export const chakraTheme = extendTheme({
 	colors,
 	fonts,
 	components: {
