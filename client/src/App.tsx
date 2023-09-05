@@ -5,7 +5,7 @@ import SignUpPage from './pages/Signup';
 import NavBar from './components/Navbar';
 import HomePage from './pages/Home';
 import PageNotFound from './components/Page Not Found';
-import FullWidthTabs from './components/Tab';
+import FullWidthTabs from './components/Main Tab';
 
 function App() {
 	return (
