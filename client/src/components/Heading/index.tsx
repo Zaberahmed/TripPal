@@ -8,7 +8,8 @@ const HeadingText = (props: HeadingText) => {
 	return (
 		<Heading
 			as={'h4'}
-			color={'ebony'}>
+			color={'ebony'}
+			fontSize="1.65rem">
 			{props.text}
 		</Heading>
 	);

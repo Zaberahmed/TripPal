@@ -25,7 +25,7 @@ const GreetingText = () => {
 				<Text
 					fontWeight={'600'}
 					fontSize={'1.25rem'}>
-					Where are you off to <span style={{ color: '#064CE2', fontSize: '1.5rem', fontWeight: '600' }}>next?</span>
+					Where are you off to <span style={{ color: '#064CE2', fontSize: '1.5rem', fontWeight: '600' }}>Next?</span>
 				</Text>
 				<Icon
 					as={FaPlaneDeparture}
