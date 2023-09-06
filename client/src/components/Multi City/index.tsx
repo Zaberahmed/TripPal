@@ -1,8 +1,8 @@
 import { Box, Center, Flex, FormControl, FormLabel, Button, Input, Select, Text, IconButton } from '@chakra-ui/react';
-import { useForm, SubmitHandler, Controller, useFieldArray } from 'react-hook-form';
+import { useForm, SubmitHandler, Controller, useFieldArray, useWatch } from 'react-hook-form';
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type MultiCityFormData = {
 	cities: {
@@ -63,12 +63,29 @@ const MultiCityForm = () => {
 		}
 	};
 
+	const destinations = useWatch({
+		control,
+		name: 'cities',
+		defaultValue: [],
+	});
+
+	useEffect(() => {
+		if (fields.length > 1) {
+			const previousCity = destinations[fields.length - 2];
+			if (previousCity && previousCity.destination) {
+				setValue(`cities.${fields.length - 1}.source`, previousCity.destination);
+			}
+		}
+	}, [fields]);
+
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<Box>
 				{fields.map((field, index) => (
-					<div key={field.id}>
-						<FormControl isRequired>
+					<Box key={field.id}>
+						<FormControl
+							isRequired
+							mt={'1rem'}>
 							<FormLabel>Flying from</FormLabel>
 							<Controller
 								name={`cities.${index}.source`}
@@ -128,7 +145,7 @@ const MultiCityForm = () => {
 								Remove City
 							</Button>
 						)}
-					</div>
+					</Box>
 				))}
 
 				<FormControl
