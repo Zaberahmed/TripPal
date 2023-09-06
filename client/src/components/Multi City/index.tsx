@@ -1,13 +1,15 @@
-import { Box, Center, Flex, FormControl, FormLabel, IconButton, Input, Select, Text } from '@chakra-ui/react';
-import { useForm, SubmitHandler, Controller, useWatch } from 'react-hook-form';
+import { Box, Center, Flex, FormControl, FormLabel, Button, Input, Select, Text, IconButton } from '@chakra-ui/react';
+import { useForm, SubmitHandler, Controller, useFieldArray } from 'react-hook-form';
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 
 type MultiCityFormData = {
-	source: string;
-	destination: string;
-	departureDate: string;
+	cities: {
+		source: string;
+		destination: string;
+		departureDate: string;
+	}[];
 	passenger: number;
 	cabin: string;
 };
@@ -24,12 +26,21 @@ const MultiCityForm = () => {
 		getValues,
 	} = useForm<MultiCityFormData>({
 		defaultValues: {
-			source: 'Dhaka',
-			destination: "Cox's Bazar",
-			departureDate: new Date().toISOString().slice(0, 10),
+			cities: [
+				{
+					source: 'Dhaka',
+					destination: "Cox's Bazar",
+					departureDate: new Date().toISOString().slice(0, 10),
+				},
+			],
 			passenger: 1,
 			cabin: 'economy',
 		},
+	});
+
+	const { fields, append, remove } = useFieldArray({
+		control,
+		name: 'cities',
 	});
 
 	const onSubmit: SubmitHandler<MultiCityFormData> = (data) => {
@@ -55,54 +66,70 @@ const MultiCityForm = () => {
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<Box>
-				<FormControl isRequired>
-					<FormLabel>Flying from</FormLabel>
-					<Controller
-						name="source"
-						control={control}
-						render={({ field }) => (
-							<Input
-								{...field}
-								placeholder="Dhaka"
-								type="text"
+				{fields.map((field, index) => (
+					<div key={field.id}>
+						<FormControl isRequired>
+							<FormLabel>Flying from</FormLabel>
+							<Controller
+								name={`cities.${index}.source`}
+								control={control}
+								render={({ field }) => (
+									<Input
+										{...field}
+										placeholder="Dhaka"
+										type="text"
+									/>
+								)}
 							/>
-						)}
-					/>
-				</FormControl>
+						</FormControl>
 
-				<FormControl
-					mt="4"
-					isRequired>
-					<FormLabel>Flying to</FormLabel>
-					<Controller
-						name="destination"
-						control={control}
-						render={({ field }) => (
-							<Input
-								type="text"
-								{...field}
-								placeholder="Cox's bazar"
+						<FormControl
+							mt="4"
+							isRequired>
+							<FormLabel>Flying to</FormLabel>
+							<Controller
+								name={`cities.${index}.destination`}
+								control={control}
+								render={({ field }) => (
+									<Input
+										type="text"
+										{...field}
+										placeholder="Cox's Bazar"
+									/>
+								)}
 							/>
-						)}
-					/>
-				</FormControl>
+						</FormControl>
 
-				<FormControl
-					mt="4"
-					isRequired>
-					<FormLabel>Depart on</FormLabel>
-					<Controller
-						name="departureDate"
-						control={control}
-						render={({ field }) => (
-							<Input
-								type="date"
-								min={new Date().toISOString().split('T')[0]}
-								{...field}
+						<FormControl
+							mt="4"
+							isRequired>
+							<FormLabel>Depart on</FormLabel>
+							<Controller
+								name={`cities.${index}.departureDate`}
+								control={control}
+								render={({ field }) => (
+									<Input
+										type="date"
+										min={new Date().toISOString().split('T')[0]}
+										{...field}
+									/>
+								)}
 							/>
+						</FormControl>
+
+						{index > 0 && (
+							<Button
+								mt="4"
+								borderRadius={'1rem'}
+								variant="outline"
+								colorScheme="red"
+								leftIcon={<MinusIcon />}
+								onClick={() => remove(index)}>
+								Remove City
+							</Button>
 						)}
-					/>
-				</FormControl>
+					</div>
+				))}
 
 				<FormControl
 					mt="4"
@@ -149,6 +176,26 @@ const MultiCityForm = () => {
 						)}
 					/>
 				</FormControl>
+
+				<Button
+					mt="4"
+					borderRadius={'1rem'}
+					variant="outline"
+					colorScheme="blue"
+					leftIcon={<AddIcon />}
+					onClick={() =>
+						fields.length < 4 &&
+						append({
+							source: '',
+							destination: '',
+							departureDate: '',
+						})
+					}
+					disabled={fields.length >= 4}
+					isDisabled={fields.length >= 4}
+					_disabled={{ bg: 'gray.200', color: 'gray.500' }}>
+					Add City
+				</Button>
 
 				<Center>
 					<SubmitButton
