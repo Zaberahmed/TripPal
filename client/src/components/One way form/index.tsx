@@ -1,7 +1,8 @@
-import { Box, Flex, FormControl, FormLabel, IconButton, Input, Select } from '@chakra-ui/react';
+import { Box, Flex, FormControl, FormLabel, IconButton, Input, Select, Text } from '@chakra-ui/react';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
 
 type OneWayFormData = {
 	source: string;
@@ -12,6 +13,7 @@ type OneWayFormData = {
 };
 
 const OneWayForm = () => {
+	const [passengerCount, setPassengerCount] = useState<number>(1);
 	const {
 		handleSubmit,
 		control,
@@ -21,8 +23,8 @@ const OneWayForm = () => {
 		getValues,
 	} = useForm<OneWayFormData>({
 		defaultValues: {
-			source: 'DAC',
-			destination: 'CXB',
+			source: 'Dhaka',
+			destination: "Cox's Bazar",
 			date: new Date().toISOString().slice(0, 10),
 			passenger: 1,
 			cabin: 'economy',
@@ -30,13 +32,14 @@ const OneWayForm = () => {
 	});
 
 	const onSubmit: SubmitHandler<OneWayFormData> = (data) => {
-		console.log(data);
+		console.log('data:', data.passenger, 'type:', typeof data.passenger);
 	};
 
 	const handleIncrementPassenger = () => {
 		const currentPassengerCount = getValues('passenger');
 		if (currentPassengerCount < 5) {
 			setValue('passenger', currentPassengerCount + 1);
+			setPassengerCount(currentPassengerCount + 1);
 		}
 	};
 
@@ -44,6 +47,7 @@ const OneWayForm = () => {
 		const currentPassengerCount = getValues('passenger');
 		if (currentPassengerCount > 1) {
 			setValue('passenger', currentPassengerCount - 1);
+			setPassengerCount(currentPassengerCount - 1);
 		}
 	};
 
@@ -103,17 +107,21 @@ const OneWayForm = () => {
 					mt="4"
 					isRequired>
 					<FormLabel>Passenger</FormLabel>
-					<Flex>
+					<Flex
+						gap={'1rem'}
+						alignItems={'center'}>
 						<IconButton
 							aria-label="Increment passenger"
 							icon={<AddIcon />}
 							onClick={handleIncrementPassenger}
 						/>
 						<Input
+							p={'1rem'}
 							type="number"
 							max={5}
 							{...register('passenger')}
 						/>
+						<Text>{passengerCount > 1 ? 'persons' : 'person'}</Text>
 						<IconButton
 							aria-label="Decrement passenger"
 							icon={<MinusIcon />}
