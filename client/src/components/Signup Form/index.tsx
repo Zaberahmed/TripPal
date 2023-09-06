@@ -117,6 +117,7 @@ const SignupForm = () => {
 					isLoading={isLoading}
 					type={'submit'}
 					text={'Sign up'}
+					maxWidth={'20rem'}
 				/>
 			</Center>
 			<OrDivider />

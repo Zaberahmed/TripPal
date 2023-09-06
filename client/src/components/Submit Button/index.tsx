@@ -1,6 +1,7 @@
 import { Button } from '@chakra-ui/react';
 
 type SubmitButton = {
+	maxWidth: string;
 	width: string;
 	marginTop: string;
 	bgColor: string;
@@ -15,6 +16,7 @@ const SubmitButton = (props: SubmitButton) => {
 	return (
 		<Button
 			fontWeight={'600'}
+			maxWidth={props.maxWidth}
 			w={props.width}
 			mt={props.marginTop}
 			color={props.color}

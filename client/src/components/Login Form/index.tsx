@@ -75,6 +75,7 @@ const LoginForm = () => {
 					isLoading={isLoading}
 					type={'submit'}
 					text={'Sign in'}
+					maxWidth={'20rem'}
 				/>
 			</Center>
 			<OrDivider />
