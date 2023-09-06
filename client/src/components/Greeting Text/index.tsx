@@ -29,7 +29,7 @@ const GreetingText = () => {
 				</Text>
 				<Icon
 					as={FaPlaneDeparture}
-					boxSize={'1.5rem'}
+					boxSize={'1.65rem'}
 					fill={'secondary'}
 					color={'secondary'}
 				/>

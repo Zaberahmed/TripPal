@@ -1,4 +1,5 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel, Center } from '@chakra-ui/react';
+import OneWayForm from '../One way form';
 
 const FlightTab = () => {
 	return (
@@ -20,7 +21,7 @@ const FlightTab = () => {
 			</Center>
 			<TabPanels>
 				<TabPanel>
-					<p>One way</p>
+					<OneWayForm />
 				</TabPanel>
 				<TabPanel>
 					<p>Round trip</p>
