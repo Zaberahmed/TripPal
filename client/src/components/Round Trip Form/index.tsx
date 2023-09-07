@@ -151,6 +151,7 @@ const RoundTripForm = () => {
 							p={'1rem'}
 							type="number"
 							max={5}
+							textAlign={'center'}
 							{...register('passenger')}
 						/>
 						<Text>{passengerCount > 1 ? 'persons' : 'person'}</Text>

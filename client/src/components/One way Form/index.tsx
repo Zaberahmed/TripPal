@@ -3,6 +3,7 @@ import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
+import { searchOneWayFlights } from '../../services/api/flightApi';
 
 type OneWayFormData = {
 	source: string;
@@ -28,12 +29,18 @@ const OneWayForm = () => {
 			destination: "Cox's Bazar",
 			departureDate: new Date().toISOString().slice(0, 10),
 			passenger: 1,
-			cabin: 'economy',
+			cabin: 'ECONOMY',
 		},
 	});
 
-	const onSubmit: SubmitHandler<OneWayFormData> = (data) => {
+	const onSubmit: SubmitHandler<OneWayFormData> = async (data) => {
 		console.log(data);
+		try {
+			const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
+			console.log('result:', result);
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	const handleIncrementPassenger = () => {
@@ -120,6 +127,7 @@ const OneWayForm = () => {
 							p={'1rem'}
 							type="number"
 							max={5}
+							textAlign={'center'}
 							{...register('passenger')}
 						/>
 						<Text>{passengerCount > 1 ? 'persons' : 'person'}</Text>
@@ -141,10 +149,10 @@ const OneWayForm = () => {
 						render={({ field }) => (
 							<Select
 								{...field}
-								value={field.value || 'economy'}>
-								<option value="economy">Economy</option>
-								<option value="business">Business</option>
-								<option value="first">First</option>
+								value={field.value || 'ECONOMY'}>
+								<option value="ECONOMY">Economy</option>
+								<option value="BUSINESS">Business</option>
+								<option value="FIRST">First</option>
 							</Select>
 						)}
 					/>

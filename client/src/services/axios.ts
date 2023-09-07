@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const axiosInstance = axios.create({
-	baseURL: `${import.meta.env.VITE_BACKEND_URL}:${import.meta.env.VITE_BACKEND_PORT}`,
+const instance = axios.create({
+	baseURL: `${import.meta.env.VITE_RAPID_API_BASE_URL}`,
 	headers: {
-		'Content-Type': 'application/json',
+		'X-RapidAPI-Key': `${import.meta.env.VITE_RAPID_API_KEY}`,
+		'X-RapidAPI-Host': `${import.meta.env.VITE_RAPID_API_HOST}`,
 	},
-	withCredentials: true,
 });
 
-export default axiosInstance;
+export default instance;

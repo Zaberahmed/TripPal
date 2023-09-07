@@ -129,6 +129,7 @@ const HotelBookingForm = () => {
 							p={'1rem'}
 							type="number"
 							max={5}
+							textAlign={'center'}
 							{...register('guest')}
 						/>
 						<Text>{guestCount > 1 ? 'persons' : 'person'}</Text>
@@ -156,6 +157,7 @@ const HotelBookingForm = () => {
 							p={'1rem'}
 							type="number"
 							max={5}
+							textAlign={'center'}
 							{...register('room')}
 						/>
 						<Text>{roomCount > 1 ? 'rooms' : 'room'}</Text>

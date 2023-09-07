@@ -1,7 +1,7 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel, Center } from '@chakra-ui/react';
 import OneWayForm from '../One way Form';
 import RoundTripForm from '../Round Trip Form';
-import MultiCityForm from '../Multi City';
+import MultiCityForm from '../Multi City  Form';
 
 const FlightTab = () => {
 	return (
