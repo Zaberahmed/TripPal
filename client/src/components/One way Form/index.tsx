@@ -36,8 +36,8 @@ const OneWayForm = () => {
 	const onSubmit: SubmitHandler<OneWayFormData> = async (data) => {
 		console.log(data);
 		try {
-			const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
-			console.log('result:', result);
+			// const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
+			// console.log('result:', result);
 		} catch (error) {
 			console.error(error);
 		}

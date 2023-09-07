@@ -11,10 +11,9 @@ const MainTab = () => {
 			isFitted
 			variant="enclosed"
 			borderRadius="lg"
-			boxShadow="md"
+			boxShadow={'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px'}
 			m="1rem"
-			borderWidth="0.125rem"
-			borderColor="primary"
+			w={'22rem'}
 			maxW="55rem"
 			mx="auto">
 			<TabList

@@ -24,7 +24,7 @@ const NavBar = () => {
 						isOpen ? (
 							<CloseIcon
 								boxSize={'1.25rem'}
-								color={'tertiary'}
+								color={'actionSecondary'}
 							/>
 						) : (
 							<HamburgerIcon
