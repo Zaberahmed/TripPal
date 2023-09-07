@@ -33,12 +33,12 @@ const MainTab = () => {
 					<Icon as={FaHotel} />
 					Hotel
 				</Tab>
-				<Tab
+				{/* <Tab
 					gap={'1rem'}
 					_selected={{ color: 'actionPrimary' }}>
 					<Icon as={GiPalmTree} />
 					Holiday
-				</Tab>
+				</Tab> */}
 			</TabList>
 			<TabPanels>
 				<TabPanel>
@@ -47,9 +47,9 @@ const MainTab = () => {
 				<TabPanel>
 					<HotelBookingForm />
 				</TabPanel>
-				<TabPanel>
+				{/* <TabPanel>
 					<p>Holiday</p>
-				</TabPanel>
+				</TabPanel> */}
 			</TabPanels>
 		</Tabs>
 	);
