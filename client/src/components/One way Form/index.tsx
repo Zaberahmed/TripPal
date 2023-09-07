@@ -38,6 +38,7 @@ const OneWayForm = () => {
 		try {
 			// const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
 			// console.log('result:', result);
+			console.log('commented out for maintenance!');
 		} catch (error) {
 			console.error(error);
 		}

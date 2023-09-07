@@ -3,9 +3,24 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Outlet } from 'react-router-dom';
 import SideBar from '../Sidebar';
 import bg from './../../assets/background.jpg';
+import { useState, useEffect } from 'react';
 
 const NavBar = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	const [hasShadow, setHasShadow] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollY = window.scrollY;
+			setHasShadow(scrollY > 0);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 
 	return (
 		<>
@@ -16,8 +31,10 @@ const NavBar = () => {
 				alignItems={'center'}
 				bg={'secondary'}
 				color={'primary'}
-				boxShadow={'rgba(0, 0, 0, 0.15) 0px 4px 4px;'}
-				position={'sticky'}>
+				boxShadow={hasShadow ? 'rgba(0, 0, 0, 0.15) 0 .325rem .325rem' : 'none'}
+				position={'sticky'}
+				top={0}
+				zIndex={10}>
 				<IconButton
 					bg={'inherit'}
 					icon={
