@@ -2,6 +2,7 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel, Icon } from '@chakra-ui/react'
 import { FaHotel, FaPlane } from 'react-icons/fa';
 import { GiPalmTree } from 'react-icons/gi';
 import FlightTab from '../Flight Tab';
+import HotelBookingForm from '../Hotel Booking Form';
 
 const MainTab = () => {
 	return (
@@ -44,7 +45,7 @@ const MainTab = () => {
 					<FlightTab />
 				</TabPanel>
 				<TabPanel>
-					<p>Hotel</p>
+					<HotelBookingForm />
 				</TabPanel>
 				<TabPanel>
 					<p>Holiday</p>
