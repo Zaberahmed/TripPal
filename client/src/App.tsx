@@ -5,6 +5,7 @@ import SignUpPage from './pages/Signup';
 import NavBar from './components/Navbar';
 import HomePage from './pages/Home';
 import PageNotFound from './components/Page Not Found';
+import FlightPage from './pages/Flight';
 
 function App() {
 	return (
@@ -22,6 +23,9 @@ function App() {
 					<Route
 						path="/home"
 						element={<HomePage />}></Route>
+					<Route
+						path="/flight"
+						element={<FlightPage />}></Route>
 				</Route>
 				<Route
 					path="*"

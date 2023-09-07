@@ -5,7 +5,7 @@ import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import { searchOneWayFlights } from '../../services/api/flightApi';
 
-type OneWayFormData = {
+export type OneWayFormData = {
 	source: string;
 	destination: string;
 	departureDate: string;

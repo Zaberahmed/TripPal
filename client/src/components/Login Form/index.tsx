@@ -12,6 +12,7 @@ import { useAppDispatch } from '../../rtk-store/hooks';
 import { useNavigate } from 'react-router-dom';
 import { insertUser } from '../../rtk-store/slices/userSlice';
 import HeadingText from '../Heading';
+import { User } from '../../interfaces/user.interface';
 
 export type LoginFormData = {
 	email: string;
@@ -30,7 +31,7 @@ const LoginForm = () => {
 
 	async function onSubmit(values: LoginFormData) {
 		try {
-			const result = await signIn(values).unwrap();
+			const result: User = await signIn(values).unwrap();
 			if (result && result.email.length > 0) {
 				dispatch(insertUser(result));
 				navigate('/home');

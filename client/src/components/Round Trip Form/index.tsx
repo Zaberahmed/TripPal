@@ -4,7 +4,7 @@ import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 
-type RoundTripFormData = {
+export type RoundTripFormData = {
 	source: string;
 	destination: string;
 	departureDate: string;

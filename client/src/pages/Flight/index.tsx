@@ -1,5 +1,11 @@
+import TripInfoBox from '../../components/Trip Info Box';
+
 const FlightPage = () => {
-	return <div>FlightPage</div>;
+	return (
+		<>
+			<TripInfoBox />
+		</>
+	);
 };
 
 export default FlightPage;

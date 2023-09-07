@@ -11,7 +11,7 @@ const MainTab = () => {
 			isFitted
 			variant="enclosed"
 			borderRadius="lg"
-			boxShadow={'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px'}
+			boxShadow={' rgba(0, 0, 0, 0.35) 0 .313rem .938rem'}
 			m="1rem"
 			w={'22rem'}
 			maxW="55rem"

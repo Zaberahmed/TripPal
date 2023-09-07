@@ -4,7 +4,7 @@ import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 
-type MultiCityFormData = {
+export type MultiCityFormData = {
 	cities: {
 		source: string;
 		destination: string;
