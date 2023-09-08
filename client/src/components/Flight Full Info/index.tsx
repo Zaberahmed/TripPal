@@ -1,9 +1,14 @@
 import { Box, Button, Flex, VStack, Text } from '@chakra-ui/react';
-
 import ShowMoreInfo from '../Show More';
 import FlightDetails from '../Flight Details';
+import { useNavigate } from 'react-router-dom';
 
 const FlightFullInfoCard = () => {
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate('/payment');
+	};
 	return (
 		<Box
 			bg={'beige'}
@@ -37,6 +42,7 @@ const FlightFullInfoCard = () => {
 					</VStack>
 					<Text></Text>
 					<Button
+						onClick={handleClick}
 						bg={'actionSecondary'}
 						borderRadius={'md'}
 						boxShadow={'md'}

@@ -1,4 +1,4 @@
-import { Text, Button, Flex, Icon, VStack } from '@chakra-ui/react';
+import { Text, Flex, Icon, VStack } from '@chakra-ui/react';
 import { FaPlane } from 'react-icons/fa';
 
 const FlightDetails = () => {
