@@ -1,9 +1,9 @@
-import { Box, Button, Flex, Text, VStack, Image, Icon } from '@chakra-ui/react';
-import { BiDollarCircle } from 'react-icons/bi';
-import { FaPlane } from 'react-icons/fa';
-import ShowMoreInfo from '../Show More';
+import { Box, Button, Flex, VStack, Text } from '@chakra-ui/react';
 
-const FlightInfoCard = () => {
+import ShowMoreInfo from '../Show More';
+import FlightDetails from '../Flight Details';
+
+const FlightFullInfoCard = () => {
 	return (
 		<Box
 			bg={'beige'}
@@ -13,65 +13,7 @@ const FlightInfoCard = () => {
 			<Flex
 				mb={'1rem'}
 				direction={'column'}>
-				<Flex
-					gap={'.75rem'}
-					alignItems={'center'}>
-					<VStack
-						flex={1 / 3}
-						textAlign={'center'}
-						fontSize={'.625rem'}
-						fontWeight={'500'}>
-						{/* <Image>Airline Logo</Image> */}
-						<Text
-							as="b"
-							fontSize={'1.25rem'}
-							fontWeight={'700'}>
-							DAC
-						</Text>
-						<Text
-							as="b"
-							fontSize={'1rem'}
-							fontWeight={'700'}>
-							15:30
-						</Text>
-						<Text>Shahjalal International Airport</Text>
-						<Text>9th September, 2023</Text>
-					</VStack>
-					<VStack
-						flex={1 / 3}
-						textAlign={'center'}
-						fontSize={'.625rem'}
-						fontWeight={'500'}>
-						<Icon
-							as={FaPlane}
-							color={'actionPrimary'}
-							boxSize={'1rem'}
-						/>
-						<Text>Non-stop</Text>
-						<Text>01h 05m</Text>
-					</VStack>
-					<VStack
-						flex={1 / 3}
-						textAlign={'center'}
-						fontSize={'.625rem'}
-						fontWeight={'500'}>
-						{/* <Image>Airline Logo</Image> */}
-						<Text
-							as="b"
-							fontSize={'1.25rem'}
-							fontWeight={'700'}>
-							CXB
-						</Text>
-						<Text
-							as="b"
-							fontSize={'1rem'}
-							fontWeight={'700'}>
-							16:05
-						</Text>
-						<Text>Cox's Bazar Airport</Text>
-						<Text>9th September, 2023</Text>
-					</VStack>
-				</Flex>
+				<FlightDetails />
 				<Flex
 					p={'.5rem'}
 					mt={'1rem'}
@@ -108,4 +50,4 @@ const FlightInfoCard = () => {
 	);
 };
 
-export default FlightInfoCard;
+export default FlightFullInfoCard;

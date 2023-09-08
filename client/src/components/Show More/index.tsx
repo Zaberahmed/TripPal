@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Box, Text, List, ListItem, OrderedList } from '@chakra-ui/react';
+import { Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Box, Text, ListItem, OrderedList } from '@chakra-ui/react';
 
 const ShowMoreInfo = () => {
 	return (

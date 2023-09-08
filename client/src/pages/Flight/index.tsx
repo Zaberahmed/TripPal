@@ -1,5 +1,5 @@
 import FlightFilterButtonContainer from '../../components/Flight Filter Button Container';
-import FlightInfoCard from '../../components/Flight Full Info';
+import FlightFullInfoCard from '../../components/Flight Full Info';
 import TripInfoBox from '../../components/Trip Info Box';
 
 const FlightPage = () => {
@@ -7,7 +7,7 @@ const FlightPage = () => {
 		<>
 			<TripInfoBox />
 			<FlightFilterButtonContainer />
-			<FlightInfoCard></FlightInfoCard>
+			<FlightFullInfoCard></FlightFullInfoCard>
 		</>
 	);
 };

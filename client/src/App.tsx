@@ -6,6 +6,8 @@ import NavBar from './components/Navbar';
 import HomePage from './pages/Home';
 import PageNotFound from './components/Page Not Found';
 import FlightPage from './pages/Flight';
+import PaymentInfo from './pages/Payment';
+import { Success } from './pages/success';
 
 function App() {
 	return (
@@ -26,6 +28,12 @@ function App() {
 					<Route
 						path="/flight"
 						element={<FlightPage />}></Route>
+					<Route
+						path="/payment"
+						element={<PaymentInfo />}></Route>
+					<Route
+						path="/success"
+						element={<Success />}></Route>
 				</Route>
 				<Route
 					path="*"

@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import * as userController from './../controllers/user.controller';
+import * as paymentController from './../controllers/payment.controller';
 import { authenticator } from '../middlewares/authenticator';
 
 export const userRouter = Router();
@@ -11,3 +12,4 @@ userRouter.delete('/signout', authenticator, userController.signOut);
 
 userRouter.get('/getall', userController.getAllUsers);
 userRouter.get('/get/:id', userController.getUserById);
+userRouter.post('/payment/create-checkout-session', paymentController.pay);
