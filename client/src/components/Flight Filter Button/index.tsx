@@ -13,7 +13,7 @@ const FlightFilterButton = ({ text }: FilterButton) => {
 			p={'.25rem .5rem '}
 			bg={'inherit'}
 			borderRadius={'none'}
-			borderRight={'1px solid #e5e5ea'}
+			borderRight={'2px solid #e5e5ea'}
 			_last={{ borderRight: 'none' }}
 			transition={'all .2s ease-in'}>
 			<Text

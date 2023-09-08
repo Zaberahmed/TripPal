@@ -8,7 +8,7 @@ const TripInfoBox = () => {
 			direction={'column'}
 			p={'.5rem'}
 			boxShadow={'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}
-			bg="#fafafa"
+			bg={'#f5f5dc'}
 			borderRadius={'md'}>
 			<Text align={'center'}>DAC (Dhaka) - CXB (Cox's Bazar)</Text>
 			<Text>9th September, 2023</Text>
