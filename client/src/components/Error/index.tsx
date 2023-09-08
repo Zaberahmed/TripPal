@@ -1,7 +1,7 @@
-import { Center, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Center, Flex, Heading, Text, Image } from '@chakra-ui/react';
 import error404 from './../../assets/error404.svg';
 
-const PageNotFound = () => {
+const Error = () => {
 	return (
 		<Center mt={'8rem'}>
 			<Flex
@@ -21,11 +21,11 @@ const PageNotFound = () => {
 					fontFamily={'Dancing Script'}
 					fontWeight={'700'}
 					fontSize={'3rem'}>
-					Page Not Found
+					Something went wrong!
 				</Text>
 			</Flex>
 		</Center>
 	);
 };
 
-export default PageNotFound;
+export default Error;

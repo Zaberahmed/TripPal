@@ -1,4 +1,4 @@
-import { Text, Flex, Center, Button, Box, Badge } from '@chakra-ui/react';
+import { Text, Flex, Badge } from '@chakra-ui/react';
 
 const TripInfoBox = () => {
 	return (
@@ -43,13 +43,13 @@ const TripInfoBox = () => {
 				</Badge>
 			</Flex>
 
-			<Button
+			{/* <Button
 				mt={'1.5rem'}
 				bg={'actionPrimary'}
 				color={'primary'}
 				variant="solid">
 				Modify Search
-			</Button>
+			</Button> */}
 		</Flex>
 	);
 };

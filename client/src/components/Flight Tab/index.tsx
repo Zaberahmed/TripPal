@@ -1,4 +1,4 @@
-import { Tabs, TabList, Tab, TabPanels, TabPanel, Center } from '@chakra-ui/react';
+import { Tabs, TabList, Tab, TabPanels, TabPanel, Center, Text } from '@chakra-ui/react';
 import OneWayForm from '../One way Form';
 import RoundTripForm from '../Round Trip Form';
 import MultiCityForm from '../Multi City  Form';
@@ -6,11 +6,29 @@ import MultiCityForm from '../Multi City  Form';
 const FlightTab = () => {
 	return (
 		<Tabs
+			bg={'#ffffff'}
 			defaultIndex={1}
 			variant="unstyled"
-			isFitted>
+			isFitted
+			borderRadius="lg"
+			boxShadow={' rgba(0, 0, 0, 0.35) 0 .313rem .938rem'}
+			m="1rem"
+			w={'22rem'}
+			maxW="55rem"
+			mx="auto">
+			<Center
+				mt={'1rem'}
+				p={'.5rem'}>
+				<Text
+					fontSize={'1.5rem'}
+					fontWeight={'600'}>
+					Search Flights
+				</Text>
+			</Center>
+
 			<Center>
 				<TabList
+					mt={'.75rem'}
 					boxShadow="0px .25rem .25rem rgba(0, 0, 0, 0.15)"
 					whiteSpace={'nowrap'}
 					borderRadius={'1.25rem'}

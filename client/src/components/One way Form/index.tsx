@@ -4,6 +4,9 @@ import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import { searchOneWayFlights } from '../../services/api/flightApi';
+import ErrorPortal from '../Error Portal';
+import Error from '../Error';
+import { useNavigate } from 'react-router-dom';
 
 export type OneWayFormData = {
 	source: string;
@@ -15,6 +18,8 @@ export type OneWayFormData = {
 
 const OneWayForm = () => {
 	const [passengerCount, setPassengerCount] = useState<number>(1);
+	const [error, setError] = useState(false);
+	const navigate = useNavigate();
 
 	const {
 		handleSubmit,
@@ -34,11 +39,16 @@ const OneWayForm = () => {
 	});
 
 	const onSubmit: SubmitHandler<OneWayFormData> = async (data) => {
-		console.log(data);
 		try {
-			// const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
-			// console.log('result:', result);
-			console.log('commented out for maintenance!');
+			const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
+			// console.log('commented out for maintenance!');
+			if (result.data.status) {
+				const flights = result.data.data.flights;
+				localStorage.setItem('oneWayFlights', JSON.stringify(flights));
+				navigate('/flight', { state: { tripType: 'ONE_WAY' } });
+			} else {
+				setError(true);
+			}
 		} catch (error) {
 			console.error(error);
 		}
@@ -172,6 +182,11 @@ const OneWayForm = () => {
 					/>
 				</Center>
 			</Box>
+			{error && (
+				<ErrorPortal>
+					<Error />
+				</ErrorPortal>
+			)}
 		</form>
 	);
 };
