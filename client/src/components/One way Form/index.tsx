@@ -7,6 +7,13 @@ import { searchOneWayFlights } from '../../services/api/flightApi';
 import ErrorPortal from '../Error Portal';
 import Error from '../Error';
 import { useNavigate } from 'react-router-dom';
+import cities from './../../data/airports.json';
+
+type City = {
+	airportName: string;
+	iataCode: string;
+	cityName: string;
+};
 
 export type OneWayFormData = {
 	source: string;
@@ -20,6 +27,7 @@ const OneWayForm = () => {
 	const [passengerCount, setPassengerCount] = useState<number>(1);
 	const [error, setError] = useState(false);
 	const navigate = useNavigate();
+	const renderSuggestion = (suggestion: City) => <div>{suggestion.cityName}</div>;
 
 	const {
 		handleSubmit,
@@ -40,8 +48,16 @@ const OneWayForm = () => {
 
 	const onSubmit: SubmitHandler<OneWayFormData> = async (data) => {
 		try {
+			const sourceCity = cities.find((city) => city.cityName.toLowerCase() === data.source.toLowerCase());
+			const destinationCity = cities.find((city) => city.cityName.toLowerCase() === data.destination.toLowerCase());
+
+			if (sourceCity && destinationCity) {
+				data.source = sourceCity.iataCode;
+				data.destination = destinationCity.iataCode;
+			}
+
 			const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
-			// console.log('commented out for maintenance!');
+			console.log('commented out for maintenance!');
 			if (result.data.status) {
 				const flights = result.data.data.flights;
 				// console.log(flights);

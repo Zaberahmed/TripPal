@@ -1,0 +1,107 @@
+[
+	{
+		"airportName": "Hazrat Shahjalal International Airport",
+		"iataCode": "DAC",
+		"cityName": "Dhaka"
+	},
+	{
+		"airportName": "Suvarnabhumi Airport",
+		"iataCode": "BKK",
+		"cityName": "Bangkok"
+	},
+	{
+		"airportName": "Los Angeles International Airport",
+		"iataCode": "LAX",
+		"cityName": "Los Angeles"
+	},
+	{
+		"airportName": "Heathrow Airport",
+		"iataCode": "LHR",
+		"cityName": "London"
+	},
+	{
+		"airportName": "Narita International Airport",
+		"iataCode": "NRT",
+		"cityName": "Tokyo"
+	},
+	{
+		"airportName": "John F. Kennedy International Airport",
+		"iataCode": "JFK",
+		"cityName": "New York"
+	},
+	{
+		"airportName": "Charles de Gaulle Airport",
+		"iataCode": "CDG",
+		"cityName": "Paris"
+	},
+	{
+		"airportName": "Dubai International Airport",
+		"iataCode": "DXB",
+		"cityName": "Dubai"
+	},
+	{
+		"airportName": "Beijing Capital International Airport",
+		"iataCode": "PEK",
+		"cityName": "Beijing"
+	},
+	{
+		"airportName": "Sydney Kingsford Smith Airport",
+		"iataCode": "SYD",
+		"cityName": "Sydney"
+	},
+	{
+		"airportName": "San Francisco International Airport",
+		"iataCode": "SFO",
+		"cityName": "San Francisco"
+	},
+	{
+		"airportName": "Singapore Changi Airport",
+		"iataCode": "SIN",
+		"cityName": "Singapore"
+	},
+	{
+		"airportName": "O'Hare International Airport",
+		"iataCode": "ORD",
+		"cityName": "Chicago"
+	},
+	{
+		"airportName": "Hong Kong International Airport",
+		"iataCode": "HKG",
+		"cityName": "Hong Kong"
+	},
+	{
+		"airportName": "Toronto Pearson International Airport",
+		"iataCode": "YYZ",
+		"cityName": "Toronto"
+	},
+	{
+		"airportName": "Incheon International Airport",
+		"iataCode": "ICN",
+		"cityName": "Seoul"
+	},
+	{
+		"airportName": "Amsterdam Airport Schiphol",
+		"iataCode": "AMS",
+		"cityName": "Amsterdam"
+	},
+	{
+		"airportName": "Frankfurt Airport",
+		"iataCode": "FRA",
+		"cityName": "Frankfurt"
+	},
+	{
+		"airportName": "Munich Airport",
+		"iataCode": "MUC",
+		"cityName": "Munich"
+	},
+	{
+		"airportName": "Barcelona-El Prat Airport",
+		"iataCode": "BCN",
+		"cityName": "Barcelona"
+	},
+	{
+		"airportName": "Rome Fiumicino Airport",
+		"iataCode": "FCO",
+		"cityName": "Rome"
+	}
+]

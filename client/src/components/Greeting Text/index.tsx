@@ -2,10 +2,14 @@ import { Flex, Icon, Box, Text } from '@chakra-ui/react';
 import { FaPlaneDeparture } from 'react-icons/fa';
 import HeadingText from '../Heading';
 import { useEffect, useState } from 'react';
-import { User } from '../../interfaces/user.interface';
 
 const GreetingText = () => {
-	const [user, setUser] = useState<User>();
+	const [user, setUser] = useState({
+		name: '',
+		email: '',
+		password: '',
+		phone: '',
+	});
 
 	function capitalizeName(name: any) {
 		return name.toLowerCase().replace(/(^|\s)\S/g, (firstLetter: string) => firstLetter.toUpperCase());
