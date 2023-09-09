@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 import SideBar from '../Sidebar';
 import bg from './../../assets/background.jpg';
 import { useState, useEffect } from 'react';
-import Logo from '../logo';
 import logo from './../../components/logo/logo.svg';
 
 const NavBar = () => {
@@ -40,30 +39,24 @@ const NavBar = () => {
 				<IconButton
 					bg={'secondary'}
 					icon={
-						<HamburgerIcon
-							boxSize={'1.5rem'}
-							// color={'primary'}
-						/>
+						isOpen ? (
+							<CloseIcon
+								boxSize={'1.25rem'}
+								color={'primary'}
+							/>
+						) : (
+							<HamburgerIcon
+								boxSize={'1.5rem'}
+								color={'primary'}
+							/>
+						)
 					}
-					// icon={
-					// 	isOpen ? (
-					// 		<CloseIcon
-					// 			boxSize={'1.25rem'}
-					// 			color={'actionSecondary'}
-					// 		/>
-					// 	) : (
-					// 		<HamburgerIcon
-					// 			boxSize={'1.5rem'}
-					// 			color={'primary'}
-					// 		/>
-					// 	)
-					// }
 					boxSize={'1.5rem'}
 					onClick={isOpen ? onClose : onOpen}
 					aria-label={isOpen ? 'Close sidebar' : 'Open sidebar'}
 					color={'primary'}
-					// transition="transform 0.3s ease-in-out, opacity 0.4s ease-in-out"
-					// transform={isOpen ? 'rotate(90deg)' : 'rotate(0)'}
+					transition="transform 0.3s ease-in-out, opacity 0.4s ease-in-out"
+					transform={isOpen ? 'rotate(90deg)' : 'rotate(0)'}
 				/>
 				<Flex
 					justifyContent={'space-between'}
@@ -90,10 +83,10 @@ const NavBar = () => {
 				<Outlet />
 			</Box>
 
-			{/* <SideBar
+			<SideBar
 				isOpen={isOpen}
 				onClose={onClose}
-			/> */}
+			/>
 		</>
 	);
 };

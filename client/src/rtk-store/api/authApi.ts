@@ -6,29 +6,39 @@ export const authApi = createApi({
 	baseQuery: fetchBaseQuery({ baseUrl }),
 	endpoints: (builder) => ({
 		signUp: builder.mutation({
-			query: (credentials) => ({
+			query: (data) => ({
 				url: '/signup',
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json; charset=UTF-8',
 				},
-				body: credentials,
+				body: data,
 				credentials: 'include',
 			}),
 		}),
 
 		signIn: builder.mutation({
-			query: (credentials) => ({
+			query: (data) => ({
 				url: '/signin',
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json; charset=UTF-8',
 				},
-				body: credentials,
+				body: data,
+				credentials: 'include',
+			}),
+		}),
+		signOut: builder.mutation({
+			query: () => ({
+				url: '/signout',
+				method: 'DELETE',
+				headers: {
+					'Content-type': 'application/json; charset=UTF-8',
+				},
 				credentials: 'include',
 			}),
 		}),
 	}),
 });
 
-export const { useSignUpMutation, useSignInMutation } = authApi;
+export const { useSignUpMutation, useSignInMutation, useSignOutMutation } = authApi;

@@ -32,16 +32,20 @@ const PaymentInfo = () => {
 	}, []);
 
 	const handleCheckout = () => {
-		axios
-			.post('http://localhost:4000/user/payment/create-checkout-session', {
-				test: { price: flight.totalPrice * quantity, quantity: quantity },
-			})
-			.then((response) => {
-				if (response.data.url) {
-					window.location.href = response.data.url;
-				}
-			})
-			.catch((err) => console.log(err.message));
+		try {
+			axios
+				.post('http://localhost:4000/user/payment/create-checkout-session', {
+					test: { price: flight.totalPrice * quantity, quantity: quantity },
+				})
+				.then((response) => {
+					if (response.data.url) {
+						window.location.href = response.data.url;
+					}
+				})
+				.catch((err) => console.log(err.message));
+		} catch (error) {
+			console.error(error);
+		}
 	};
 	return (
 		<>

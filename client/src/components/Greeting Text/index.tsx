@@ -11,10 +11,6 @@ const GreetingText = () => {
 		phone: '',
 	});
 
-	function capitalizeName(name: any) {
-		return name.toLowerCase().replace(/(^|\s)\S/g, (firstLetter: string) => firstLetter.toUpperCase());
-	}
-
 	useEffect(() => {
 		const user = localStorage.getItem('user');
 		if (user) {
@@ -34,8 +30,9 @@ const GreetingText = () => {
 					fontWeight={'700'}
 					fontSize={'1.65rem'}
 					as="span"
-					color={'actionPrimary'}>
-					{capitalizeName(user?.name)}
+					color={'actionPrimary'}
+					textTransform={'capitalize'}>
+					{user?.name}
 				</Text>
 			</Flex>
 			<Flex
@@ -44,11 +41,11 @@ const GreetingText = () => {
 				<Text
 					fontWeight={'600'}
 					fontSize={'1.25rem'}>
-					Where are you off to <span style={{ color: '#064CE2', fontSize: '1.5rem', fontWeight: '600' }}>Next?</span>
+					Where are you off to <span style={{ color: '#064CE2', fontSize: '1.5rem', fontWeight: '600' }}>next?</span>
 				</Text>
 				<Icon
 					as={FaPlaneDeparture}
-					boxSize={'1.65rem'}
+					boxSize={'1.85rem'}
 					fill={'secondary'}
 					color={'secondary'}
 				/>

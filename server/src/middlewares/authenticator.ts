@@ -11,7 +11,7 @@ const authenticator = async (req: Request, res: Response, next: NextFunction) =>
 
 	const existingSession = getSession(token);
 	if (!existingSession) {
-		res.status(400).send('Session does not exist!');
+		res.status(400).send({ message: 'Session does not exist!' });
 		return;
 	}
 
