@@ -1,8 +1,23 @@
 import { Flex, Icon, Box, Text } from '@chakra-ui/react';
 import { FaPlaneDeparture } from 'react-icons/fa';
 import HeadingText from '../Heading';
+import { useEffect, useState } from 'react';
+import { User } from '../../interfaces/user.interface';
 
 const GreetingText = () => {
+	const [user, setUser] = useState<User>();
+
+	function capitalizeName(name: any) {
+		return name.toLowerCase().replace(/(^|\s)\S/g, (firstLetter: string) => firstLetter.toUpperCase());
+	}
+
+	useEffect(() => {
+		const user = localStorage.getItem('user');
+		if (user) {
+			const parsedUser = JSON.parse(user);
+			setUser(parsedUser);
+		}
+	}, []);
 	return (
 		<Box
 			p={'.5rem'}
@@ -16,7 +31,7 @@ const GreetingText = () => {
 					fontSize={'1.65rem'}
 					as="span"
 					color={'actionPrimary'}>
-					Zaber
+					{capitalizeName(user?.name)}
 				</Text>
 			</Flex>
 			<Flex

@@ -38,26 +38,32 @@ const NavBar = () => {
 				top={0}
 				zIndex={10}>
 				<IconButton
-					bg={'inherit'}
+					bg={'secondary'}
 					icon={
-						isOpen ? (
-							<CloseIcon
-								boxSize={'1.25rem'}
-								color={'actionSecondary'}
-							/>
-						) : (
-							<HamburgerIcon
-								boxSize={'1.5rem'}
-								color={'primary'}
-							/>
-						)
+						<HamburgerIcon
+							boxSize={'1.5rem'}
+							// color={'primary'}
+						/>
 					}
+					// icon={
+					// 	isOpen ? (
+					// 		<CloseIcon
+					// 			boxSize={'1.25rem'}
+					// 			color={'actionSecondary'}
+					// 		/>
+					// 	) : (
+					// 		<HamburgerIcon
+					// 			boxSize={'1.5rem'}
+					// 			color={'primary'}
+					// 		/>
+					// 	)
+					// }
 					boxSize={'1.5rem'}
 					onClick={isOpen ? onClose : onOpen}
 					aria-label={isOpen ? 'Close sidebar' : 'Open sidebar'}
 					color={'primary'}
-					transition="transform 0.3s ease-in-out, opacity 0.4s ease-in-out"
-					transform={isOpen ? 'rotate(90deg)' : 'rotate(0)'}
+					// transition="transform 0.3s ease-in-out, opacity 0.4s ease-in-out"
+					// transform={isOpen ? 'rotate(90deg)' : 'rotate(0)'}
 				/>
 				<Flex
 					justifyContent={'space-between'}

@@ -46,6 +46,7 @@ const SignupForm = () => {
 
 			if (result && result.email.length > 0) {
 				dispatch(insertUser(result));
+				localStorage.setItem('user', JSON.stringify(result));
 				navigate('/home');
 			}
 		} catch (error) {
