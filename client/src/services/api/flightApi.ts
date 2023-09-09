@@ -21,3 +21,17 @@ export const searchOneWayFlights = (sourceAirportCode: string, destinationAirpor
 		},
 	});
 };
+export const searchRoundTripFlights = (sourceAirportCode: string, destinationAirportCode: string, date: any, numAdults: number, classOfService: string) => {
+	return axiosInstance.get('/flights/searchFlights', {
+		params: {
+			sourceAirportCode,
+			destinationAirportCode,
+			date,
+			itineraryType: 'ROUND_TRIP',
+			sortOrder: 'PRICE',
+			numAdults,
+			numSeniors: '0',
+			classOfService,
+		},
+	});
+};

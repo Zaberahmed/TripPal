@@ -103,5 +103,115 @@
 		"airportName": "Rome Fiumicino Airport",
 		"iataCode": "FCO",
 		"cityName": "Rome"
+	},
+	{
+		"airportName": "Chhatrapati Shivaji Maharaj International Airport",
+		"iataCode": "BOM",
+		"cityName": "Mumbai"
+	},
+	{
+		"airportName": "Hongqiao International Airport",
+		"iataCode": "SHA",
+		"cityName": "Shanghai"
+	},
+	{
+		"airportName": "Atatürk Airport",
+		"iataCode": "IST",
+		"cityName": "Istanbul"
+	},
+	{
+		"airportName": "Jorge Chávez International Airport",
+		"iataCode": "LIM",
+		"cityName": "Lima"
+	},
+	{
+		"airportName": "Suvarnabhumi Airport",
+		"iataCode": "BKK",
+		"cityName": "Bangkok"
+	},
+	{
+		"airportName": "Charles de Gaulle Airport",
+		"iataCode": "CDG",
+		"cityName": "Paris"
+	},
+	{
+		"airportName": "Heathrow Airport",
+		"iataCode": "LHR",
+		"cityName": "London"
+	},
+	{
+		"airportName": "Los Angeles International Airport",
+		"iataCode": "LAX",
+		"cityName": "Los Angeles"
+	},
+	{
+		"airportName": "Toronto Pearson International Airport",
+		"iataCode": "YYZ",
+		"cityName": "Toronto"
+	},
+	{
+		"airportName": "Leonardo da Vinci–Fiumicino Airport",
+		"iataCode": "FCO",
+		"cityName": "Rome"
+	},
+	{
+		"airportName": "Adolfo Suárez Madrid–Barajas Airport",
+		"iataCode": "MAD",
+		"cityName": "Madrid"
+	},
+	{
+		"airportName": "Incheon International Airport",
+		"iataCode": "ICN",
+		"cityName": "Seoul"
+	},
+	{
+		"airportName": "Kingsford Smith Airport",
+		"iataCode": "SYD",
+		"cityName": "Sydney"
+	},
+	{
+		"airportName": "Berlin Tegel Airport",
+		"iataCode": "TXL",
+		"cityName": "Berlin"
+	},
+	{
+		"airportName": "Narita International Airport",
+		"iataCode": "NRT",
+		"cityName": "Tokyo"
+	},
+	{
+		"airportName": "Sheremetyevo International Airport",
+		"iataCode": "SVO",
+		"cityName": "Moscow"
+	},
+	{
+		"airportName": "Chhatrapati Shivaji International Airport",
+		"iataCode": "BOM",
+		"cityName": "Mumbai"
+	},
+	{
+		"airportName": "Indira Gandhi International Airport",
+		"iataCode": "DEL",
+		"cityName": "New Delhi"
+	},
+	{
+		"airportName": "Beijing Capital International Airport",
+		"iataCode": "PEK",
+		"cityName": "Beijing"
+	},
+	{
+		"airportName": "Soekarno–Hatta International Airport",
+		"iataCode": "CGK",
+		"cityName": "Jakarta"
+	},
+	{
+		"airportName": "Netaji Subhash Chandra Bose International Airport",
+		"iataCode": "CCU",
+		"cityName": "Kolkata"
+	},
+	{
+		"airportName": "Sardar Vallabhbhai Patel International Airport",
+		"iataCode": "AMD",
+		"cityName": "Ahmedabad"
 	}
 ]

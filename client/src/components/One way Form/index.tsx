@@ -27,7 +27,6 @@ const OneWayForm = () => {
 	const [passengerCount, setPassengerCount] = useState<number>(1);
 	const [error, setError] = useState(false);
 	const navigate = useNavigate();
-	const renderSuggestion = (suggestion: City) => <div>{suggestion.cityName}</div>;
 
 	const {
 		handleSubmit,
@@ -57,13 +56,14 @@ const OneWayForm = () => {
 			}
 
 			const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
-			console.log('commented out for maintenance!');
+
 			if (result.data.status) {
 				const flights = result.data.data.flights;
 				// console.log(flights);
 				localStorage.setItem('oneWayFlights', JSON.stringify(flights));
 				localStorage.setItem('oneWayFlightsFormData', JSON.stringify(data));
-				navigate('/flight', { state: { tripType: 'ONE_WAY' } });
+				localStorage.setItem('tripType', 'ONE_WAY');
+				navigate('/flight');
 			} else {
 				setError(true);
 			}

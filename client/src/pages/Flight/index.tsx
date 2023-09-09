@@ -7,8 +7,6 @@ import FlightFilterButton from '../../components/Flight Filter Button';
 import { Center, Flex } from '@chakra-ui/react';
 
 const FlightPage = () => {
-	const location = useLocation();
-	const tripType = location.state.tripType;
 	const [flightSearchList, setFlightSearchList] = useState<any[]>([]);
 	const [filteredFlights, setFilteredFlights] = useState<any[]>([]);
 
@@ -64,15 +62,15 @@ const FlightPage = () => {
 		}
 
 		const oneWayFlightCleanData = {
-			tripType,
 			flightSearchList,
 		};
-		if (!localStorage.getItem('oneWayFlightCleanData')) localStorage.setItem('oneWayFlightCleanData', JSON.stringify(oneWayFlightCleanData));
+		localStorage.setItem('oneWayFlightCleanData', JSON.stringify(oneWayFlightCleanData));
 	}, []);
 
-	// useEffect(() => {
-	// 	console.log(flightSearchList);
-	// }, [flightSearchList]);
+	useEffect(() => {
+		console.log(flightSearchList);
+		console.log(filteredFlights);
+	}, [flightSearchList]);
 
 	useEffect(() => {
 		setFilteredFlights(flightSearchList);
@@ -82,7 +80,6 @@ const FlightPage = () => {
 		let filteredList = [...flightSearchList];
 
 		if (filterType === 'Earliest Flights') {
-			// Implement logic to sort by departureDateTime (earliest first)
 			filteredList.sort((a: any, b: any) => {
 				const dateA = new Date(a.departureDateTime);
 				const dateB = new Date(b.departureDateTime);
@@ -90,12 +87,9 @@ const FlightPage = () => {
 				return dateA.getTime() - dateB.getTime();
 			});
 		} else if (filterType === 'Cheapest Flights') {
-			// Implement logic to sort by totalPrice (cheapest first)
 			filteredList.sort((a, b) => a.totalPrice - b.totalPrice);
 		} else if (filterType === 'Fastest Flights') {
-			// Implement logic to sort by duration or any other metric you have
 			filteredList.sort((a: any, b: any) => {
-				// Calculate duration for a and b and compare
 				const durationA = new Date(a.arrivalDateTime).getTime() - new Date(a.departureDateTime).getTime();
 				const durationB = new Date(b.arrivalDateTime).getTime() - new Date(b.departureDateTime).getTime();
 				return durationA - durationB;

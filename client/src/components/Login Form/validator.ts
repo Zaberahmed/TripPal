@@ -1,6 +1,6 @@
 import { Resolver } from 'react-hook-form';
 import { LoginFormData } from '.';
-import { isValidEmail } from '../../utils/helperFunctions/emailValidator';
+import { isValidEmail } from '../../utils/_helperFunctions/emailValidator';
 
 export const loginResolver: Resolver<LoginFormData> = async (values) => {
 	const errors: Record<string, { type: string; message: string }> = {};

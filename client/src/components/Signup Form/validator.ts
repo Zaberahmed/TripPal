@@ -1,8 +1,8 @@
 import { Resolver } from 'react-hook-form';
-import { isValidPhoneNumber } from '../../utils/helperFunctions/phoneNumberValidator';
-import { isValidEmail } from '../../utils/helperFunctions/emailValidator';
+import { isValidPhoneNumber } from '../../utils/_helperFunctions/phoneNumberValidator';
+import { isValidEmail } from '../../utils/_helperFunctions/emailValidator';
 import { SignupFormData } from '.';
-import { isStrongAndValidPassword } from '../../utils/helperFunctions/passwordValidator';
+import { isStrongAndValidPassword } from '../../utils/_helperFunctions/passwordValidator';
 
 export const signUpResolver: Resolver<SignupFormData> = async (values) => {
 	const errors: Record<string, { type: string; message: string }> = {};
