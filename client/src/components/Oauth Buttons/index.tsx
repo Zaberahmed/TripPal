@@ -30,7 +30,7 @@ const OauthButtons = () => {
 			alignItems={'center'}>
 			<Button
 				w={'10rem'}
-				bg={'skyblue'}
+				bg={'actionPrimary'}
 				onClick={handleFaceBookOauth}>
 				<Flex gap={'.5rem'}>
 					<Icon as={BsFacebook} />

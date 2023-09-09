@@ -2,11 +2,13 @@ import { Button, Text } from '@chakra-ui/react';
 
 type FilterButton = {
 	text: string;
+	onClick: () => void;
 };
 
-const FlightFilterButton = ({ text }: FilterButton) => {
+const FlightFilterButton = ({ text, onClick }: FilterButton) => {
 	return (
 		<Button
+			onClick={() => onClick()}
 			_selected={{ bg: 'actionPrimary', color: 'primary', cursor: 'pointer', transition: 'all .2s ease-out' }}
 			h={'3rem'}
 			w={'33.33333%'}

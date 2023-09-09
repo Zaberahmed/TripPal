@@ -30,13 +30,15 @@ const LoginInputField = (props: LoginInputFieldProps) => {
 					<InputLeftElement pointerEvents="none">
 						<Icon
 							as={icon}
-							color="gray.400"
+							color="black.400"
 						/>
 					</InputLeftElement>
 				)}
 				<Input
+					border={'1px solid black'}
 					id={id}
 					placeholder={placeholder}
+					_placeholder={{ color: 'black' }}
 					type={type}
 					{...register(id)}
 				/>
