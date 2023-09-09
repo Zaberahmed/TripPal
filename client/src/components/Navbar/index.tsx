@@ -1,9 +1,11 @@
-import { Text, Flex, Box, IconButton, useDisclosure } from '@chakra-ui/react';
+import { Text, Flex, Box, IconButton, useDisclosure, Image } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Outlet } from 'react-router-dom';
 import SideBar from '../Sidebar';
 import bg from './../../assets/background.jpg';
 import { useState, useEffect } from 'react';
+import Logo from '../logo';
+import logo from './../../components/logo/logo.svg';
 
 const NavBar = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -57,7 +59,23 @@ const NavBar = () => {
 					transition="transform 0.3s ease-in-out, opacity 0.4s ease-in-out"
 					transform={isOpen ? 'rotate(90deg)' : 'rotate(0)'}
 				/>
-				<Text>Logo</Text>
+				<Flex
+					justifyContent={'space-between'}
+					alignItems={'center'}>
+					<Image
+						src={logo}
+						alt="logo"
+						width="70"
+						height="70"
+					/>
+					<Text
+						color={'primary'}
+						fontFamily={'Dancing Script'}
+						fontSize={'2rem'}
+						fontWeight={'700'}>
+						Trippal
+					</Text>
+				</Flex>
 			</Flex>
 			<Box
 				bgImg={bg}
@@ -66,10 +84,10 @@ const NavBar = () => {
 				<Outlet />
 			</Box>
 
-			<SideBar
+			{/* <SideBar
 				isOpen={isOpen}
 				onClose={onClose}
-			/>
+			/> */}
 		</>
 	);
 };
