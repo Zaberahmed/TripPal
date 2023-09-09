@@ -1,6 +1,53 @@
 import { Text, Flex, Badge } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
+
+const getFormattedDate = (dateString: string) => {
+	const date = new Date(dateString);
+	const day = date.getDate();
+	const month = date.toLocaleDateString('en-US', { month: 'long' });
+	const year = date.getFullYear();
+
+	let dayString;
+
+	switch (day) {
+		case 1:
+		case 21:
+		case 31:
+			dayString = `${day}st`;
+			break;
+		case 2:
+		case 22:
+			dayString = `${day}nd`;
+			break;
+		case 3:
+		case 23:
+			dayString = `${day}rd`;
+			break;
+		default:
+			dayString = `${day}th`;
+			break;
+	}
+
+	return `${dayString} ${month}, ${year}`;
+};
 
 const TripInfoBox = () => {
+	const [formData, setFormData] = useState({
+		source: '',
+		destination: '',
+		departureDate: '',
+		cabin: '',
+		passenger: 0,
+	});
+
+	useEffect(() => {
+		const savedFormData = localStorage.getItem('oneWayFlightsFormData');
+		if (savedFormData) {
+			const parsedFormData = JSON.parse(savedFormData);
+			setFormData(parsedFormData);
+		}
+	}, []);
+
 	return (
 		<Flex
 			gap={'.25rem'}
@@ -15,7 +62,9 @@ const TripInfoBox = () => {
 				colorScheme="orange"
 				borderRadius={'md'}
 				m={'.25rem 0'}>
-				<Text fontSize={'.875rem'}>DAC (Dhaka) - CXB (Cox's Bazar)</Text>
+				<Text fontSize={'.875rem'}>
+					{formData.source} - {formData.destination}
+				</Text>
 			</Badge>
 
 			<Flex gap={'.25rem'}>
@@ -24,7 +73,7 @@ const TripInfoBox = () => {
 					colorScheme="blue"
 					borderRadius={'md'}
 					m={'.25rem 0'}>
-					<Text fontSize={'.875rem'}>9th September, 2023</Text>
+					<Text fontSize={'.875rem'}>{getFormattedDate(formData.departureDate)}</Text>
 				</Badge>
 
 				<Badge
@@ -32,14 +81,14 @@ const TripInfoBox = () => {
 					colorScheme="green"
 					borderRadius={'md'}
 					m={'.25rem 0'}>
-					<Text fontSize={'.875rem'}>Economy</Text>
+					<Text fontSize={'.875rem'}>{formData.cabin}</Text>
 				</Badge>
 				<Badge
 					p={'.25rem'}
 					colorScheme="blue"
 					borderRadius={'md'}
 					m={'.25rem 0'}>
-					<Text fontSize={'.875rem'}>1 person</Text>
+					<Text fontSize={'.875rem'}>{formData.passenger} person(s)</Text>
 				</Badge>
 			</Flex>
 

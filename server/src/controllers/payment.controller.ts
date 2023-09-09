@@ -7,39 +7,25 @@ const stripe = new Stripe('sk_test_51No4fxCFvEFo4mlsj4z9S60B0hMFivytq9Iielym7BgS
 
 export const pay: RequestHandler = async (req, res) => {
 	const { test } = req.body;
-
-	// const line_items = req.body.cartItems?.map((item: any) => {
-	// 	return {
-	// 		price_data: {
-	// 			currency: 'usd',
-	// 			product_data: {
-	// 				name: item?.productInfo?.productName,
-	// 				metadata: {
-	// 					productId: item?.productInfo?._id,
-	// 				},
-	// 			},
-	// 			unit_amount: item?.productInfo?.basePrice,
-	// 		},
-	// 		quantity: 1,
-	// 	};
-	// });
+	const { price, quantity } = test;
+	const unitAmount = Math.round(price * 100);
 	const session = await stripe.checkout.sessions.create({
 		line_items: [
 			{
 				price_data: {
 					currency: 'usd',
 					product_data: {
-						name: 'test',
+						name: 'Booking',
 					},
-					unit_amount: 1000,
+					unit_amount: unitAmount,
 				},
-				quantity: 1,
+				quantity: quantity,
 			},
 		],
 
 		mode: 'payment',
-		success_url: `http://localhost:5173/success`,
-		cancel_url: `http://localhost:5173/fail`,
+		success_url: `http://localhost:5173/home`,
+		cancel_url: `http://localhost:5173/flight`,
 	});
-	res.send({ url: session.url });
+	res.send({ url: session.url, price });
 };

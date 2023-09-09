@@ -44,7 +44,9 @@ const OneWayForm = () => {
 			// console.log('commented out for maintenance!');
 			if (result.data.status) {
 				const flights = result.data.data.flights;
+				// console.log(flights);
 				localStorage.setItem('oneWayFlights', JSON.stringify(flights));
+				localStorage.setItem('oneWayFlightsFormData', JSON.stringify(data));
 				navigate('/flight', { state: { tripType: 'ONE_WAY' } });
 			} else {
 				setError(true);

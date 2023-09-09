@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import FlightFilterButtonContainer from '../../components/Flight Filter Button Container';
 import FlightFullInfoCard from '../../components/Flight Full Info';
@@ -7,19 +7,24 @@ import TripInfoBox from '../../components/Trip Info Box';
 const FlightPage = () => {
 	const location = useLocation();
 	const tripType = location.state.tripType;
+	const [flightSearchList, setFlightSearchList] = useState<any[]>([]);
+
 	useEffect(() => {
 		const flightsString = localStorage.getItem('oneWayFlights');
-		const flightSearchList: any = [];
 
 		if (flightsString) {
 			const flights = JSON.parse(flightsString);
 
 			if (flights) {
-				const flightSegments = flights.map((flight: any) => flight.segments);
-				const legs = flightSegments.map((segment: any) => segment[0].legs);
+				flights.forEach((flight: any) => {
+					const segments = flight.segments;
+					const purchaseLinks = flight.purchaseLinks;
 
-				legs.forEach((leg: any) => {
-					leg.forEach((legInfo: any) => {
+					const purchaseLink = purchaseLinks[0];
+
+					const legs = segments[0].legs;
+
+					legs.forEach((legInfo: any) => {
 						const originStationCode = legInfo.originStationCode;
 						const destinationStationCode = legInfo.destinationStationCode;
 						const departureDateTime = legInfo.departureDateTime;
@@ -34,7 +39,7 @@ const FlightPage = () => {
 						const logoUrl = operatingCarrier.logoUrl;
 						const displayName = operatingCarrier.displayName;
 
-						flightSearchList.push({
+						const newFlightDetails = {
 							originStationCode,
 							destinationStationCode,
 							departureDateTime,
@@ -45,39 +50,48 @@ const FlightPage = () => {
 							distanceInKM,
 							logoUrl,
 							displayName,
-						});
-					});
-				});
-
-				const purchaseLinks = flights.map((flight: any) => flight.purchaseLinks);
-
-				purchaseLinks.forEach((links: any) => {
-					links.forEach((purchaseLink: any) => {
-						const currency = purchaseLink.currency;
-						const totalPrice = purchaseLink.totalPrice;
-
-						flightSearchList[flightSearchList.length - 1] = {
-							...flightSearchList[flightSearchList.length - 1],
-							currency,
-							totalPrice,
+							currency: purchaseLink.currency,
+							totalPrice: purchaseLink.totalPrice,
 						};
+
+						setFlightSearchList((prev: any[]) => [...prev, newFlightDetails]);
 					});
 				});
 			}
 		}
+
 		const oneWayFlightCleanData = {
 			tripType,
 			flightSearchList,
 		};
+		if (!localStorage.getItem('oneWayFlightCleanData')) localStorage.setItem('oneWayFlightCleanData', JSON.stringify(oneWayFlightCleanData));
+	}, []);
 
-		localStorage.setItem('oneWayFlightCleanData', JSON.stringify(oneWayFlightCleanData));
-	}, [tripType]);
-
+	useEffect(() => {
+		console.log(flightSearchList);
+	}, [flightSearchList]);
 	return (
 		<>
 			<TripInfoBox />
 			<FlightFilterButtonContainer />
-			<FlightFullInfoCard></FlightFullInfoCard>
+
+			{flightSearchList.map((flight: any, index: number) => (
+				<FlightFullInfoCard
+					key={index}
+					originStationCode={flight.originStationCode}
+					destinationStationCode={flight.destinationStationCode}
+					departureDateTime={flight.departureDateTime}
+					arrivalDateTime={flight.arrivalDateTime}
+					classOfService={flight.classOfService}
+					flightNumber={flight.flightNumber}
+					numStops={flight.numStops}
+					distanceInKM={flight.distanceInKM}
+					logoUrl={flight.logoUrl}
+					displayName={flight.displayName}
+					currency={flight.currency}
+					totalPrice={flight.totalPrice}
+				/>
+			))}
 		</>
 	);
 };

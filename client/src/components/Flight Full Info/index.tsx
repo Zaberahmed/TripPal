@@ -3,12 +3,30 @@ import ShowMoreInfo from '../Show More';
 import FlightDetails from '../Flight Details';
 import { useNavigate } from 'react-router-dom';
 
-const FlightFullInfoCard = () => {
+interface FlightFullInfoCardProps {
+	originStationCode: string;
+	destinationStationCode: string;
+	departureDateTime: string;
+	arrivalDateTime: string;
+	classOfService: string;
+	flightNumber: number;
+	numStops: number;
+	distanceInKM: number;
+	logoUrl: string;
+	displayName: string;
+	currency: string;
+	totalPrice: number;
+}
+
+const FlightFullInfoCard: React.FC<FlightFullInfoCardProps> = ({ originStationCode, destinationStationCode, departureDateTime, arrivalDateTime, classOfService, flightNumber, numStops, distanceInKM, logoUrl, displayName, currency, totalPrice }) => {
 	const navigate = useNavigate();
+	const flight = { originStationCode, destinationStationCode, departureDateTime, arrivalDateTime, classOfService, flightNumber, numStops, distanceInKM, logoUrl, displayName, currency, totalPrice };
 
 	const handleClick = () => {
+		localStorage.setItem('choosenFlight', JSON.stringify(flight));
 		navigate('/payment');
 	};
+
 	return (
 		<Box
 			bg={'beige'}
@@ -18,7 +36,15 @@ const FlightFullInfoCard = () => {
 			<Flex
 				mb={'1rem'}
 				direction={'column'}>
-				<FlightDetails />
+				<FlightDetails
+					originStationCode={originStationCode}
+					destinationStationCode={destinationStationCode}
+					departureDateTime={departureDateTime}
+					arrivalDateTime={arrivalDateTime}
+					numStops={numStops}
+					logoUrl={logoUrl}
+					displayName={displayName}
+				/>
 				<Flex
 					p={'.5rem'}
 					mt={'1rem'}
@@ -31,7 +57,7 @@ const FlightFullInfoCard = () => {
 							fontSize={'1.5rem'}
 							fontWeight={'600'}
 							color={'actionPrimary'}>
-							152 USD
+							{totalPrice} {currency}
 						</Text>
 						<Text
 							textAlign={'center'}
@@ -40,7 +66,7 @@ const FlightFullInfoCard = () => {
 							(per person)
 						</Text>
 					</VStack>
-					<Text></Text>
+
 					<Button
 						onClick={handleClick}
 						bg={'actionSecondary'}

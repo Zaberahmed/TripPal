@@ -1,12 +1,40 @@
 import { Box, Button, Center, Flex, Text } from '@chakra-ui/react';
 import axios from 'axios';
 import FlightDetails from '../../components/Flight Details';
+import { useEffect, useState } from 'react';
 
 const PaymentInfo = () => {
+	const [flight, setFlight] = useState({
+		originStationCode: '',
+		destinationStationCode: '',
+		departureDateTime: '',
+		arrivalDateTime: '',
+		numStops: 0,
+		displayName: '',
+		logoUrl: '',
+		currency: '',
+		totalPrice: 0,
+	});
+	const [quantity, setQuantity] = useState(1);
+	const [price, setPrice] = useState(0);
+
+	useEffect(() => {
+		const flight = localStorage.getItem('choosenFlight');
+		if (flight) {
+			const parsedFlight = JSON.parse(flight);
+			if (parsedFlight) setFlight(parsedFlight);
+		}
+		const formData = localStorage.getItem('oneWayFormData');
+		if (formData) {
+			const quantity = JSON.parse(formData).quantity;
+			setQuantity(quantity);
+		}
+	}, []);
+
 	const handleCheckout = () => {
 		axios
 			.post('http://localhost:4000/user/payment/create-checkout-session', {
-				test: { price: 1000, quantity: 2 },
+				test: { price: flight.totalPrice * quantity, quantity: quantity },
 			})
 			.then((response) => {
 				if (response.data.url) {
@@ -27,7 +55,15 @@ const PaymentInfo = () => {
 						Flight details:
 					</Text>
 				</Center>
-				<FlightDetails />
+				<FlightDetails
+					originStationCode={flight.originStationCode}
+					destinationStationCode={flight.destinationStationCode}
+					departureDateTime={flight.departureDateTime}
+					arrivalDateTime={flight.arrivalDateTime}
+					numStops={flight.numStops}
+					displayName={flight.displayName}
+					logoUrl={flight.logoUrl}
+				/>
 
 				<Box
 					p={'.5rem'}
@@ -57,7 +93,9 @@ const PaymentInfo = () => {
 						p={'.25rem'}
 						m={'.25rem 0'}>
 						<Text>Ticket fare:</Text>
-						<Text>1000 USD</Text>
+						<Text>
+							{flight.totalPrice} {flight.currency}
+						</Text>
 					</Flex>
 
 					<Flex
@@ -66,7 +104,10 @@ const PaymentInfo = () => {
 						p={'.25rem'}
 						m={'.25rem 0'}>
 						<Text> Total payable:</Text>
-						<Text> 1000 USD</Text>
+						<Text>
+							{' '}
+							{flight.totalPrice * quantity} {flight.currency}
+						</Text>
 					</Flex>
 					<Center>
 						<Button
