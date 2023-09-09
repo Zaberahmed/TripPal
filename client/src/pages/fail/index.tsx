@@ -1,9 +1,9 @@
 import { Flex, Image, Text } from '@chakra-ui/react';
-import greenTick from './../../assets/icons8-tick-box.svg';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import redCross from './../../assets/icons8-cross-mark-48.png';
 
-export const Success = () => {
+const Fail = () => {
 	const navigate = useNavigate();
 	useEffect(() => {
 		setTimeout(() => {
@@ -17,7 +17,7 @@ export const Success = () => {
 			align="center"
 			h="60vh">
 			<Image
-				src={greenTick}
+				src={redCross}
 				boxSize={'6rem'}
 			/>
 
@@ -27,15 +27,17 @@ export const Success = () => {
 				color={'ebony'}
 				fontSize={'2rem'}
 				fontWeight={'700'}>
-				Success!
+				Failed!
 			</Text>
 			<Text
 				textAlign={'center'}
 				color={'ebony'}
 				fontSize={'1.25rem'}
 				fontWeight={'600'}>
-				You have successfully booked your flight
+				Unable to book flight due to unknown error
 			</Text>
 		</Flex>
 	);
 };
+
+export default Fail;

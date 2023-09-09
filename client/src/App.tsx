@@ -9,6 +9,7 @@ import FlightPage from './pages/Flight';
 import PaymentInfo from './pages/Payment';
 import { Success } from './pages/success';
 import GetStarted from './components/landingPages/GetStarted.page';
+import Fail from './pages/fail';
 
 function App() {
 	return (
@@ -39,6 +40,9 @@ function App() {
 					<Route
 						path="/success"
 						element={<Success />}></Route>
+					<Route
+						path="/fail"
+						element={<Fail />}></Route>
 				</Route>
 				<Route
 					path="*"

@@ -34,7 +34,9 @@ const getFormattedDate = (dateString: string) => {
 const TripInfoBox = () => {
 	const [formData, setFormData] = useState({
 		source: '',
+		sourceCity: '',
 		destination: '',
+		destinationCity: '',
 		departureDate: '',
 		cabin: '',
 		passenger: 0,
@@ -63,7 +65,7 @@ const TripInfoBox = () => {
 				borderRadius={'md'}
 				m={'.25rem 0'}>
 				<Text fontSize={'.875rem'}>
-					{formData.source} - {formData.destination}
+					({formData.sourceCity}) {formData.source} - {formData.destination} ({formData.destinationCity})
 				</Text>
 			</Badge>
 

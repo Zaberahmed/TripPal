@@ -2,13 +2,22 @@ import { Flex, Button, Icon, Text } from '@chakra-ui/react';
 import { signInWithPopup } from 'firebase/auth';
 import { BsFacebook, BsGoogle } from 'react-icons/bs';
 import auth, { faceBookProvider, googleProvider } from '../../firebase.init';
+import { useNavigate } from 'react-router-dom';
 
 const OauthButtons = () => {
+	const navigate = useNavigate();
+
 	const handleGoogleOauth = async (event: React.MouseEvent<HTMLButtonElement>) => {
 		event.preventDefault();
 		try {
 			const result = await signInWithPopup(auth, googleProvider);
-			console.log(result);
+			if (result.user.emailVerified) {
+				const { displayName, email } = result.user;
+				const googleAuthUser = { name: displayName, email };
+				localStorage.setItem('user', JSON.stringify(googleAuthUser));
+				console.log(result.user);
+				navigate('/home');
+			}
 		} catch (error) {
 			console.error('Error:', error);
 		}

@@ -17,7 +17,9 @@ type City = {
 
 export type OneWayFormData = {
 	source: string;
+	sourceCity?: string;
 	destination: string;
+	destinationCity?: string;
 	departureDate: string;
 	passenger: number;
 	cabin: string;
@@ -37,8 +39,10 @@ const OneWayForm = () => {
 		getValues,
 	} = useForm<OneWayFormData>({
 		defaultValues: {
-			source: 'Dhaka',
-			destination: "Cox's Bazar",
+			source: 'DAC',
+			sourceCity: 'Dhaka',
+			destination: 'CXB',
+			destinationCity: "Cox's Bazar",
 			departureDate: new Date().toISOString().slice(0, 10),
 			passenger: 1,
 			cabin: 'ECONOMY',
@@ -47,6 +51,9 @@ const OneWayForm = () => {
 
 	const onSubmit: SubmitHandler<OneWayFormData> = async (data) => {
 		try {
+			data.sourceCity = data.source;
+			data.destinationCity = data.destination;
+
 			const sourceCity = cities.find((city) => city.cityName.toLowerCase() === data.source.toLowerCase());
 			const destinationCity = cities.find((city) => city.cityName.toLowerCase() === data.destination.toLowerCase());
 
@@ -94,7 +101,7 @@ const OneWayForm = () => {
 				<FormControl isRequired>
 					<FormLabel>Flying from</FormLabel>
 					<Controller
-						name="source"
+						name="sourceCity"
 						control={control}
 						render={({ field }) => (
 							<Input
@@ -111,7 +118,7 @@ const OneWayForm = () => {
 					isRequired>
 					<FormLabel>Flying to</FormLabel>
 					<Controller
-						name="destination"
+						name="destinationCity"
 						control={control}
 						render={({ field }) => (
 							<Input
