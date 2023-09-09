@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import FlightFilterButtonContainer from '../../components/Flight Filter Button Container';
 import FlightFullInfoCard from '../../components/Flight Full Info';
 import TripInfoBox from '../../components/Trip Info Box';
 import FlightFilterButton from '../../components/Flight Filter Button';

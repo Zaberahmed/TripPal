@@ -9,12 +9,6 @@ import Error from '../Error';
 import { useNavigate } from 'react-router-dom';
 import cities from './../../data/airports.json';
 
-type City = {
-	airportName: string;
-	iataCode: string;
-	cityName: string;
-};
-
 export type OneWayFormData = {
 	source: string;
 	sourceCity?: string;
@@ -30,14 +24,7 @@ const OneWayForm = () => {
 	const [error, setError] = useState(false);
 	const navigate = useNavigate();
 
-	const {
-		handleSubmit,
-		control,
-		register,
-		formState: { errors },
-		setValue,
-		getValues,
-	} = useForm<OneWayFormData>({
+	const { handleSubmit, control, register, setValue, getValues } = useForm<OneWayFormData>({
 		defaultValues: {
 			source: 'DAC',
 			sourceCity: 'Dhaka',

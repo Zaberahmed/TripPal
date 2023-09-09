@@ -1,8 +1,5 @@
 import { Text, Flex, Icon, VStack, Image } from '@chakra-ui/react';
 import { FaPlane } from 'react-icons/fa';
-import { airportDictionary } from '../../data/airportDictionary';
-import { formatTime } from '../../utils/_helperFunctions/formatTime';
-import { formatDate } from '../../utils/_helperFunctions/formatDate';
 import { calculateDuration } from '../../utils/_helperFunctions/calculateDistance';
 import FlightHalfInfo from '../Flight half Info';
 

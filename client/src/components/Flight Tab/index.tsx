@@ -10,14 +10,14 @@ const FlightTab = () => {
 			defaultIndex={1}
 			variant="unstyled"
 			isFitted
-			borderRadius="lg"
+			borderRadius="1rem"
 			boxShadow={' rgba(0, 0, 0, 0.35) 0 .313rem .938rem'}
-			m="1rem"
+			m={'1rem'}
 			w={'22rem'}
 			maxW="55rem"
 			mx="auto">
 			<Center
-				mt={'1rem'}
+				mt={'.75rem'}
 				p={'.5rem'}>
 				<Text
 					fontSize={'1.5rem'}
@@ -28,7 +28,7 @@ const FlightTab = () => {
 
 			<Center>
 				<TabList
-					mt={'.75rem'}
+					m={'.75rem 0'}
 					boxShadow="0px .25rem .25rem rgba(0, 0, 0, 0.15)"
 					whiteSpace={'nowrap'}
 					borderRadius={'1.25rem'}
