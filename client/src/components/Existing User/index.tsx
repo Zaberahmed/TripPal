@@ -5,7 +5,9 @@ const ExistingUser = () => {
 		<Box
 			mt={'1rem'}
 			fontWeight={'500'}>
-			<Text>
+			<Text
+				fontSize={'1.15rem'}
+				fontWeight={'600'}>
 				Already an user?
 				<span style={{ marginLeft: '.5rem' }}>
 					<a

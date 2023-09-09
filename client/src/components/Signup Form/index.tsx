@@ -15,6 +15,7 @@ import { useNavigate } from 'react-router-dom';
 import HeadingText from '../Heading';
 import { useAppDispatch } from '../../rtk-store/hooks';
 import { insertUser } from '../../rtk-store/slices/userSlice';
+import Logo from '../logo';
 
 export type SignupFormData = {
 	name: string;
@@ -54,6 +55,9 @@ const SignupForm = () => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
+			<Center>
+				<Logo />
+			</Center>
 			<Center>
 				<HeadingText text={'Create account'} />
 			</Center>
@@ -122,7 +126,7 @@ const SignupForm = () => {
 			</Center>
 			<OrDivider />
 			<OauthButtons />
-			<ExistingUser />
+			{/* <ExistingUser /> */}
 		</form>
 	);
 };

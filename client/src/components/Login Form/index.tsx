@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import { insertUser } from '../../rtk-store/slices/userSlice';
 import HeadingText from '../Heading';
 import { User } from '../../interfaces/user.interface';
+import Logo from '../logo';
 
 export type LoginFormData = {
 	email: string;
@@ -44,6 +45,9 @@ const LoginForm = () => {
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<Center>
+				<Logo />
+			</Center>
+			<Center mt={'1rem'}>
 				<HeadingText text={'Login'} />
 			</Center>
 			<LoginInputField

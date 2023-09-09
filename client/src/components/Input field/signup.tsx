@@ -30,12 +30,14 @@ const SignUpInputField = (props: SignUpInputFieldProps) => {
 					<InputLeftElement pointerEvents="none">
 						<Icon
 							as={icon}
-							color="gray.400"
+							color="black.400"
 						/>
 					</InputLeftElement>
 				)}
 				<Input
 					// variant={'Flushed'}
+					border={'1px solid black'}
+					_placeholder={{ color: 'black' }}
 					id={id}
 					placeholder={placeholder}
 					type={type}

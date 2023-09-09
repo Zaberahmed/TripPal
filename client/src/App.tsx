@@ -8,11 +8,16 @@ import PageNotFound from './components/Page Not Found';
 import FlightPage from './pages/Flight';
 import PaymentInfo from './pages/Payment';
 import { Success } from './pages/success';
+import GetStarted from './components/landingPages/GetStarted.page';
 
 function App() {
 	return (
 		<Router>
 			<Routes>
+				<Route
+					path="/"
+					element={<GetStarted />}
+				/>
 				<Route
 					path="/login"
 					element={<LoginPage />}
