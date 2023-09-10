@@ -3,7 +3,7 @@ import ShowMoreInfo from '../Show More';
 import FlightDetails from '../Flight Details';
 import { useNavigate } from 'react-router-dom';
 
-interface FlightFullInfoCardProps {
+export interface FlightDetails {
 	originStationCode: string;
 	destinationStationCode: string;
 	departureDateTime: string;
@@ -18,7 +18,7 @@ interface FlightFullInfoCardProps {
 	totalPrice: number;
 }
 
-const FlightFullInfoCard: React.FC<FlightFullInfoCardProps> = ({ originStationCode, destinationStationCode, departureDateTime, arrivalDateTime, classOfService, flightNumber, numStops, distanceInKM, logoUrl, displayName, currency, totalPrice }) => {
+const FlightFullInfoCard: React.FC<FlightDetails> = ({ originStationCode, destinationStationCode, departureDateTime, arrivalDateTime, classOfService, flightNumber, numStops, distanceInKM, logoUrl, displayName, currency, totalPrice }) => {
 	const navigate = useNavigate();
 	const flight = { originStationCode, destinationStationCode, departureDateTime, arrivalDateTime, classOfService, flightNumber, numStops, distanceInKM, logoUrl, displayName, currency, totalPrice };
 

@@ -1,3 +1,5 @@
+import { Trip } from './trip.interface';
+
 export interface User {
 	_id?: string;
 	name: string;
@@ -8,4 +10,5 @@ export interface User {
 	nationality?: string;
 	date_of_birth?: Date;
 	passportId?: string;
+	trips?: Trip[];
 }

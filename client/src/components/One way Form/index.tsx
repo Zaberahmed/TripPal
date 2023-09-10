@@ -11,9 +11,9 @@ import cities from './../../data/airports.json';
 
 export type OneWayFormData = {
 	source: string;
-	sourceCity?: string;
+	sourceCity: string;
 	destination: string;
-	destinationCity?: string;
+	destinationCity: string;
 	departureDate: string;
 	passenger: number;
 	cabin: string;

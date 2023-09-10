@@ -10,6 +10,7 @@ const userSchema = new Schema({
 	nationality: { type: String, required: false },
 	date_of_birth: { type: Date, required: false },
 	passportId: { type: String, required: false },
+	trips: [{ type: Types.ObjectId, ref: 'TripModel' }],
 });
 
 const UserModel = model<User>('User', userSchema);

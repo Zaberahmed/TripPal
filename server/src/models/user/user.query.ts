@@ -1,5 +1,7 @@
 import { Types } from '../../database';
+import { Trip } from '../../interfaces/trip.interface';
 import { User } from '../../interfaces/user.interface';
+import { TripModel } from '../trip/trip.model';
 import { UserModel } from './user.model';
 
 export const createUser = async (user: User) => {
@@ -32,3 +34,4 @@ export const findAllUsers = async () => {
 		console.error('Error while getting all users in query!');
 	}
 };
+

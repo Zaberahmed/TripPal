@@ -1,3 +1,4 @@
+import { FlightDetails } from '../components/Flight Full Info';
 import { MultiCityFormData } from '../components/Multi City  Form';
 import { OneWayFormData } from '../components/One way Form';
 import { RoundTripFormData } from '../components/Round Trip Form';
@@ -7,4 +8,5 @@ export interface Trip {
 	oneWayTrip?: OneWayFormData | null;
 	roundTrip?: RoundTripFormData | null;
 	multiCityTrip?: MultiCityFormData | null;
+	flightDetails?: FlightDetails | null;
 }
