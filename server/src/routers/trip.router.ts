@@ -5,3 +5,4 @@ import { authenticator } from '../middlewares/authenticator';
 export const tripRouter = Router();
 
 tripRouter.post('/create', authenticator, tripController.createTrip);
+tripRouter.get('/get-all', authenticator, tripController.getAllTrips);
