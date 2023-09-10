@@ -14,7 +14,7 @@ import ExistingUser from '../Existing User';
 import { useNavigate } from 'react-router-dom';
 import HeadingText from '../Heading';
 import { useAppDispatch } from '../../rtk-store/hooks';
-import { insertUser } from '../../rtk-store/slices/userSlice';
+import { insertUser } from '../../rtk-store/features/userSlice';
 import Logo from '../logo';
 
 export type SignupFormData = {

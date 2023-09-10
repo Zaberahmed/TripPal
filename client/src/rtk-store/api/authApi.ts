@@ -1,13 +1,12 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { LoginFormData } from '../../components/Login Form';
+import { SignupFormData } from '../../components/Signup Form';
+import { apiSlice } from './apiSlice';
 
-const baseUrl = `${import.meta.env.VITE_BACKEND_URL}:${import.meta.env.VITE_BACKEND_PORT}/user`;
-
-export const authApi = createApi({
-	baseQuery: fetchBaseQuery({ baseUrl }),
-	endpoints: (builder) => ({
+export const authApi = apiSlice.injectEndpoints({
+	endpoints: (builder: any) => ({
 		signUp: builder.mutation({
-			query: (data) => ({
-				url: '/signup',
+			query: (data: SignupFormData) => ({
+				url: '/user/signup',
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json; charset=UTF-8',
@@ -18,8 +17,8 @@ export const authApi = createApi({
 		}),
 
 		signIn: builder.mutation({
-			query: (data) => ({
-				url: '/signin',
+			query: (data: LoginFormData) => ({
+				url: '/user/signin',
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json; charset=UTF-8',
@@ -30,7 +29,7 @@ export const authApi = createApi({
 		}),
 		signOut: builder.mutation({
 			query: () => ({
-				url: '/signout',
+				url: '/user/signout',
 				method: 'DELETE',
 				headers: {
 					'Content-type': 'application/json; charset=UTF-8',

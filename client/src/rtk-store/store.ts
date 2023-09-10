@@ -1,15 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
-import userSlice from './slices/userSlice';
-import tripSlice from './slices/tripSlice';
-import { authApi } from './api/authApi';
+import userSlice from './features/userSlice';
+import tripSlice from './features/tripSlice';
+
+import { apiSlice } from './api/apiSlice';
 
 export const store = configureStore({
 	reducer: {
+		[apiSlice.reducerPath]: apiSlice.reducer,
 		user: userSlice,
 		trip: tripSlice,
-		[authApi.reducerPath]: authApi.reducer,
 	},
-	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(authApi.middleware),
+
+	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
 });
 
 export type AppDispatch = typeof store.dispatch;

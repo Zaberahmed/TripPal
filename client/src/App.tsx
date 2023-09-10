@@ -10,6 +10,7 @@ import PaymentInfo from './pages/Payment';
 import { Success } from './pages/success';
 import GetStarted from './components/landingPages/GetStarted.page';
 import Fail from './pages/fail';
+import MyBookings from './components/My Bookings';
 
 function App() {
 	return (
@@ -37,6 +38,9 @@ function App() {
 					<Route
 						path="/payment"
 						element={<PaymentInfo />}></Route>
+					<Route
+						path="/bookings"
+						element={<MyBookings />}></Route>
 					<Route
 						path="/success"
 						element={<Success />}></Route>

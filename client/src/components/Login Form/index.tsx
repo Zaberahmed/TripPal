@@ -10,7 +10,7 @@ import OrDivider from '../Or Divider';
 import OauthButtons from '../Oauth Buttons';
 import { useAppDispatch } from '../../rtk-store/hooks';
 import { useNavigate } from 'react-router-dom';
-import { insertUser } from '../../rtk-store/slices/userSlice';
+import { insertUser } from '../../rtk-store/features/userSlice';
 import HeadingText from '../Heading';
 import { User } from '../../interfaces/user.interface';
 import Logo from '../logo';
