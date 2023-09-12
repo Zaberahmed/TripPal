@@ -9,10 +9,19 @@ const FlightPage = () => {
 	const [filteredFlights, setFilteredFlights] = useState<any[]>([]);
 
 	useEffect(() => {
-		const flightsString = localStorage.getItem('oneWayFlights');
-
-		if (flightsString) {
-			const flights = JSON.parse(flightsString);
+		const tripType = localStorage.getItem('tripType');
+		let parsedTripType;
+		if (tripType) parsedTripType = JSON.parse(tripType);
+		let flightString;
+		if (parsedTripType === 'ONE_WAY') {
+			flightString = localStorage.getItem('oneWayFlights');
+		} else if (parsedTripType === 'ROUND_TRIP') {
+			flightString = localStorage.getItem('roundTripFlights');
+		} else if (parsedTripType === 'MULTI_CITY') {
+			flightString = localStorage.getItem('multiCityFlights');
+		}
+		if (flightString) {
+			const flights = JSON.parse(flightString);
 
 			if (flights) {
 				flights.forEach((flight: any) => {
@@ -59,22 +68,23 @@ const FlightPage = () => {
 			}
 		}
 
-		const oneWayFlightCleanData = {
+		const flightCleanData = {
 			flightSearchList,
 		};
-		localStorage.setItem('oneWayFlightCleanData', JSON.stringify(oneWayFlightCleanData));
+		localStorage.setItem('flightCleanData', JSON.stringify(flightCleanData));
 	}, []);
 
-	useEffect(() => {
-		console.log(flightSearchList);
-		console.log(filteredFlights);
-	}, [flightSearchList]);
+	// useEffect(() => {
+	// 	console.log(flightSearchList);
+	// 	console.log(filteredFlights);
+	// }, [flightSearchList]);
 
 	useEffect(() => {
 		setFilteredFlights(flightSearchList);
 	}, [flightSearchList]);
 
 	const filterFlights = (filterType: any) => {
+		console.log('filter type:', filterType);
 		let filteredList = [...flightSearchList];
 
 		if (filterType === 'Earliest Flights') {
@@ -119,23 +129,24 @@ const FlightPage = () => {
 					/>
 				</Flex>
 			</Center>
-			{filteredFlights.map((flight: any, index: number) => (
-				<FlightFullInfoCard
-					key={index}
-					originStationCode={flight.originStationCode}
-					destinationStationCode={flight.destinationStationCode}
-					departureDateTime={flight.departureDateTime}
-					arrivalDateTime={flight.arrivalDateTime}
-					classOfService={flight.classOfService}
-					flightNumber={flight.flightNumber}
-					numStops={flight.numStops}
-					distanceInKM={flight.distanceInKM}
-					logoUrl={flight.logoUrl}
-					displayName={flight.displayName}
-					currency={flight.currency}
-					totalPrice={flight.totalPrice}
-				/>
-			))}
+			{filteredFlights &&
+				filteredFlights.map((flight: any, index: number) => (
+					<FlightFullInfoCard
+						key={index}
+						originStationCode={flight.originStationCode}
+						destinationStationCode={flight.destinationStationCode}
+						departureDateTime={flight.departureDateTime}
+						arrivalDateTime={flight.arrivalDateTime}
+						classOfService={flight.classOfService}
+						flightNumber={flight.flightNumber}
+						numStops={flight.numStops}
+						distanceInKM={flight.distanceInKM}
+						logoUrl={flight.logoUrl}
+						displayName={flight.displayName}
+						currency={flight.currency}
+						totalPrice={flight.totalPrice}
+					/>
+				))}
 		</>
 	);
 };

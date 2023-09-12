@@ -32,23 +32,39 @@ const getFormattedDate = (dateString: string) => {
 };
 
 const TripInfoBox = () => {
+	const [tripType, setTripType] = useState('');
 	const [formData, setFormData] = useState({
 		source: '',
 		sourceCity: '',
 		destination: '',
 		destinationCity: '',
 		departureDate: '',
+		returnDate: '',
 		cabin: '',
 		passenger: 0,
 	});
 
 	useEffect(() => {
-		const savedFormData = localStorage.getItem('oneWayFlightsFormData');
-		if (savedFormData) {
-			const parsedFormData = JSON.parse(savedFormData);
-			setFormData(parsedFormData);
+		let savedFormData;
+		const tripType = localStorage.getItem('tripType');
+		if (tripType) {
+			const parsedTripType = JSON.parse(tripType);
+			if (parsedTripType === 'ONE_WAY') savedFormData = localStorage.getItem('oneWayFlightsFormData');
+			else if (parsedTripType === 'ROUND_TRIP') savedFormData = localStorage.getItem('roundTripFlightsFormData');
+			else if (parsedTripType === 'MULTI_CITY') savedFormData = localStorage.getItem('multiCityFlightsFormData');
+
+			if (savedFormData) {
+				const parsedFormData = JSON.parse(savedFormData);
+
+				setFormData(parsedFormData);
+			}
 		}
 	}, []);
+
+	// useEffect(() => {
+	// 	console.log('trip type:', tripType);
+	// 	console.log('form Data:', formData);
+	// }, []);
 
 	return (
 		<Flex

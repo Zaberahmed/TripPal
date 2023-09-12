@@ -11,7 +11,7 @@ const MyBookings = () => {
 		return dateTimeA - dateTimeB;
 	};
 
-	const sortedTrips = bookedTrips.slice().sort(compareDepartureDateTime);
+	const sortedTrips = bookedTrips?.slice()?.sort(compareDepartureDateTime);
 
 	if (isLoading) {
 		return <div>Loading...</div>;
