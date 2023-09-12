@@ -1,7 +1,9 @@
 import { RequestHandler } from 'express';
+import * as dotenv from 'dotenv';
 import Stripe from 'stripe';
 
-const stripe = new Stripe('sk_test_51No4fxCFvEFo4mlsj4z9S60B0hMFivytq9Iielym7BgSroIUtAKrvqNbEra2aa4tVpoMPjBPsfdiBA6mETj72toO00OEYPPkiA', {
+dotenv.config({ path: __dirname + '/../.env' });
+const stripe = new Stripe(`${process.env.STRIPE_SECRET_KEY}`, {
 	apiVersion: '2023-08-16',
 });
 
@@ -24,8 +26,8 @@ export const pay: RequestHandler = async (req, res) => {
 		],
 
 		mode: 'payment',
-		success_url: `http://localhost:5173/home`,
-		cancel_url: `http://localhost:5173/flight`,
+		success_url: `${process.env.STRIPE_SUCCESS_URL}`,
+		cancel_url: `${process.env.STRIPE_CANCEL_URL}`,
 	});
 	res.send({ url: session.url, price });
 };

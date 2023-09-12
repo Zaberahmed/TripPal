@@ -2,8 +2,13 @@ import { Box, Button, Center, Flex, Text } from '@chakra-ui/react';
 import axios from 'axios';
 import FlightDetails from '../../components/Flight Details';
 import { useEffect, useState } from 'react';
+import { usePostTripMutation } from '../../rtk-store/api/tripApi';
+import { OneWayFormData } from '../../components/One way Form';
+import { RoundTripFormData } from '../../components/Round Trip Form';
+import { MultiCityFormData } from '../../components/Multi City  Form';
 
 const PaymentInfo = () => {
+	const { postTrip } = usePostTripMutation();
 	const [flight, setFlight] = useState({
 		originStationCode: '',
 		destinationStationCode: '',
@@ -16,7 +21,8 @@ const PaymentInfo = () => {
 		totalPrice: 0,
 	});
 	const [quantity, setQuantity] = useState(1);
-	const [price, setPrice] = useState(0);
+	const [tripType, setTripType] = useState('');
+	const [formData, setFormData] = useState<OneWayFormData | RoundTripFormData | MultiCityFormData | null>();
 
 	useEffect(() => {
 		const flight = localStorage.getItem('choosenFlight');
@@ -24,12 +30,29 @@ const PaymentInfo = () => {
 			const parsedFlight = JSON.parse(flight);
 			if (parsedFlight) setFlight(parsedFlight);
 		}
-		const formData = localStorage.getItem('oneWayFormData');
-		if (formData) {
-			const quantity = JSON.parse(formData).quantity;
-			setQuantity(quantity);
+		const tripType = localStorage.getItem('tripType');
+		if (tripType) {
+			const parsedTripType = JSON.parse(tripType);
+			setTripType(parsedTripType);
+			if (tripType === 'ONE_WAY') {
+				const formData = localStorage.getItem('oneWayFlightsFormData');
+				setFormData(JSON.parse(formData!));
+			} else if (tripType === 'ROUND_TRIP') {
+				const formData = localStorage.getItem('roundTripFlightsFormData');
+				setFormData(JSON.parse(formData!));
+			} else {
+				const formData = localStorage.getItem('multiCityFlightsFormData');
+				setFormData(JSON.parse(formData!));
+			}
 		}
 	}, []);
+
+	useEffect(() => {
+		console.log('formData:', formData);
+		if (formData) {
+			setQuantity(formData!.passenger);
+		}
+	}, [formData]);
 
 	const handleCheckout = () => {
 		try {
@@ -37,8 +60,36 @@ const PaymentInfo = () => {
 				.post('http://localhost:4000/user/payment/create-checkout-session', {
 					test: { price: flight.totalPrice * quantity, quantity: quantity },
 				})
-				.then((response) => {
+				.then(async (response) => {
 					if (response.data.url) {
+						let data = {};
+						if (tripType === 'ONE_WAY') {
+							data = {
+								tripType: tripType,
+								oneWayTrip: formData,
+								roundTrip: null,
+								multiCity: null,
+								flightDetails: flight,
+							};
+						} else if (tripType === 'ROUND_TRIP') {
+							data = {
+								tripType: tripType,
+								oneWayTrip: null,
+								roundTrip: formData,
+								multiCity: null,
+								flightDetails: flight,
+							};
+						} else {
+							data = {
+								tripType: tripType,
+								oneWayTrip: null,
+								roundTrip: null,
+								multiCity: formData,
+								flightDetails: flight,
+							};
+						}
+						const result = await postTrip(data);
+						console.log(result);
 						window.location.href = response.data.url;
 					}
 				})

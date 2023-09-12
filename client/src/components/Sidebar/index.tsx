@@ -104,6 +104,7 @@ const SideBar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
 								gap={'.5rem'}
 								onClick={() => {
 									handleLinkClick();
+									navigate('/home');
 								}}>
 								<Icon
 									as={MdFlight}
@@ -113,7 +114,7 @@ const SideBar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
 									whiteSpace={'nowrap'}
 									fontSize="1.15rem"
 									fontWeight="500">
-									Flight Tracker
+									Flight
 								</Text>
 							</Flex>
 						</Flex>

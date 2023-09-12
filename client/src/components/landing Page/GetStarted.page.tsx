@@ -38,7 +38,8 @@ const GetStarted: React.FC = () => {
 					<Heading
 						as="h1"
 						size="xl"
-						fontWeight={'700'}>
+						fontWeight={'700'}
+						textAlign={'center'}>
 						A World Of Flights At Your Fingertips
 					</Heading>
 

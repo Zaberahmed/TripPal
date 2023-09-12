@@ -56,7 +56,7 @@ const OneWayForm = () => {
 				// console.log(flights);
 				localStorage.setItem('oneWayFlights', JSON.stringify(flights));
 				localStorage.setItem('oneWayFlightsFormData', JSON.stringify(data));
-				localStorage.setItem('tripType', 'ONE_WAY');
+				localStorage.setItem('tripType', JSON.stringify('ONE_WAY'));
 				navigate('/flight');
 			} else {
 				setError(true);
