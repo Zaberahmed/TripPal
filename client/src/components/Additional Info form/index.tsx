@@ -1,8 +1,12 @@
 import { useForm, SubmitHandler, Controller, FieldValues } from 'react-hook-form';
-import { Box, Input, Radio, RadioGroup, Stack, Button, Text } from '@chakra-ui/react';
+import { Box, Input, Radio, RadioGroup, Stack, Button, Text, FormControl, FormLabel } from '@chakra-ui/react';
+import Select from 'react-select';
+import { nationalities } from '../../data/nationalities';
 
 const AdditionalInfoForm = () => {
 	const { control, handleSubmit } = useForm();
+
+	const nationalityOptions = nationalities.map((nationality: string) => ({ label: nationality, value: nationality }));
 
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log(data);
@@ -10,60 +14,61 @@ const AdditionalInfoForm = () => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<Text
-				textAlign={'center'}
-				fontWeight={'600'}
-				fontSize={'1rem'}
-				mt={'1.25rem'}>
-				Additional Information:
-			</Text>
 			<Box
 				p={'.5rem'}
-				color={'ebony'}
-				fontWeight={'500'}>
-				<label>Nationality</label>
-				<Controller
-					name="nationality"
-					control={control}
-					defaultValue=""
-					render={({ field }) => (
-						<Input
-							{...field}
-							mt={'.5rem'}
-						/>
-					)}
-				/>
+				fontWeight={'500'}
+				color={'ebony'}>
+				<Text
+					textAlign={'center'}
+					fontWeight={'600'}
+					fontSize={'1rem'}
+					mt={'1.5rem'}>
+					Additional Information
+				</Text>
+				<FormControl>
+					<FormLabel mt={'1rem'}>Nationality</FormLabel>
+					<Controller
+						name="nationality"
+						control={control}
+						defaultValue=""
+						render={({ field }) => (
+							<Select
+								{...field}
+								options={nationalityOptions}
+								isSearchable
+								placeholder="Select nationality..."
+							/>
+						)}
+					/>
+				</FormControl>
 
-				<label>Gender</label>
-				<Controller
-					name="gender"
-					control={control}
-					defaultValue=""
-					render={({ field }) => (
-						<RadioGroup
-							{...field}
-							mt={'.5rem'}>
-							<Stack direction="row">
-								<Radio value="male">Male</Radio>
-								<Radio value="female">Female</Radio>
-								<Radio value="other">Other</Radio>
-							</Stack>
-						</RadioGroup>
-					)}
-				/>
+				<FormControl>
+					<FormLabel mt={'.5rem'}>Gender</FormLabel>
+					<Controller
+						name="gender"
+						control={control}
+						defaultValue=""
+						render={({ field }) => (
+							<RadioGroup {...field}>
+								<Stack direction="row">
+									<Radio value="male">Male</Radio>
+									<Radio value="female">Female</Radio>
+									<Radio value="other">Other</Radio>
+								</Stack>
+							</RadioGroup>
+						)}
+					/>
+				</FormControl>
 
-				<label>Passport ID</label>
-				<Controller
-					name="passportId"
-					control={control}
-					defaultValue=""
-					render={({ field }) => (
-						<Input
-							{...field}
-							mt={'.5rem'}
-						/>
-					)}
-				/>
+				<FormControl>
+					<FormLabel mt={'.5rem'}>Passport ID</FormLabel>
+					<Controller
+						name="passportId"
+						control={control}
+						defaultValue=""
+						render={({ field }) => <Input {...field} />}
+					/>
+				</FormControl>
 
 				<Button
 					type="submit"
