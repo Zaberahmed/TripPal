@@ -5,6 +5,14 @@ import FlightDetails from '../Flight Details';
 const MyBookings = () => {
 	const { data: bookedTrips, isError, isLoading } = useFetchAllTripsQuery();
 
+	const compareDepartureDateTime = (a: any, b: any) => {
+		const dateTimeA = new Date(a.flightDetails.departureDateTime).getTime();
+		const dateTimeB = new Date(b.flightDetails.departureDateTime).getTime();
+		return dateTimeA - dateTimeB;
+	};
+
+	const sortedTrips = bookedTrips.slice().sort(compareDepartureDateTime);
+
 	if (isLoading) {
 		return <div>Loading...</div>;
 	}
@@ -20,8 +28,8 @@ const MyBookings = () => {
 				textAlign={'center'}>
 				My Bookings
 			</Heading>
-			{bookedTrips && bookedTrips.length > 0
-				? bookedTrips.map((trip: any, index: number) => {
+			{sortedTrips && sortedTrips.length > 0
+				? sortedTrips.map((trip: any, index: number) => {
 						return (
 							<Box
 								key={index}

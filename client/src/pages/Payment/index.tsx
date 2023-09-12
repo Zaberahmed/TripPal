@@ -8,7 +8,7 @@ import { RoundTripFormData } from '../../components/Round Trip Form';
 import { MultiCityFormData } from '../../components/Multi City  Form';
 
 const PaymentInfo = () => {
-	const { postTrip } = usePostTripMutation();
+	const [postTrip] = usePostTripMutation();
 	const [flight, setFlight] = useState({
 		originStationCode: '',
 		destinationStationCode: '',
@@ -54,46 +54,48 @@ const PaymentInfo = () => {
 		}
 	}, [formData]);
 
-	const handleCheckout = () => {
+	const handleCheckout = async () => {
 		try {
-			axios
-				.post('http://localhost:4000/user/payment/create-checkout-session', {
-					test: { price: flight.totalPrice * quantity, quantity: quantity },
-				})
-				.then(async (response) => {
-					if (response.data.url) {
-						let data = {};
-						if (tripType === 'ONE_WAY') {
-							data = {
-								tripType: tripType,
-								oneWayTrip: formData,
-								roundTrip: null,
-								multiCity: null,
-								flightDetails: flight,
-							};
-						} else if (tripType === 'ROUND_TRIP') {
-							data = {
-								tripType: tripType,
-								oneWayTrip: null,
-								roundTrip: formData,
-								multiCity: null,
-								flightDetails: flight,
-							};
-						} else {
-							data = {
-								tripType: tripType,
-								oneWayTrip: null,
-								roundTrip: null,
-								multiCity: formData,
-								flightDetails: flight,
-							};
+			let data = {};
+			if (tripType === 'ONE_WAY') {
+				data = {
+					tripType: tripType,
+					oneWayTrip: formData,
+					roundTrip: null,
+					multiCity: null,
+					flightDetails: flight,
+				};
+			} else if (tripType === 'ROUND_TRIP') {
+				data = {
+					tripType: tripType,
+					oneWayTrip: null,
+					roundTrip: formData,
+					multiCity: null,
+					flightDetails: flight,
+				};
+			} else {
+				data = {
+					tripType: tripType,
+					oneWayTrip: null,
+					roundTrip: null,
+					multiCity: formData,
+					flightDetails: flight,
+				};
+			}
+			const result = await postTrip(data);
+			console.log(result);
+			if (result) {
+				axios
+					.post('http://localhost:4000/user/payment/create-checkout-session', {
+						test: { price: flight.totalPrice * quantity, quantity: quantity },
+					})
+					.then((response) => {
+						if (response.data.url) {
+							window.location.href = response.data.url;
 						}
-						const result = await postTrip(data);
-						console.log(result);
-						window.location.href = response.data.url;
-					}
-				})
-				.catch((err) => console.log(err.message));
+					})
+					.catch((err) => console.log(err.message));
+			}
 		} catch (error) {
 			console.error(error);
 		}
