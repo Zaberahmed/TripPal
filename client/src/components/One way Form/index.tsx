@@ -26,7 +26,7 @@ const OneWayForm = () => {
 
 	const { handleSubmit, control, register, setValue, getValues } = useForm<OneWayFormData>({
 		defaultValues: {
-			source: 'Dhaka',
+			source: 'DAC',
 			sourceCity: 'Dhaka',
 			destination: 'CXB',
 			destinationCity: "Cox's Bazar",

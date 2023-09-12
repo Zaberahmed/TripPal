@@ -3,10 +3,17 @@ import { useForm, SubmitHandler, Controller, useWatch } from 'react-hook-form';
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
+import cities from './../../data/airports.json';
+import { searchRoundTripFlights } from '../../services/api/flightApi';
+import { useNavigate } from 'react-router-dom';
+import ErrorPortal from '../Error Portal';
+import Error from '../Error';
 
 export type RoundTripFormData = {
 	source: string;
+	sourceCity: string;
 	destination: string;
+	destinationCity: string;
 	departureDate: string;
 	returnDate: string;
 	passenger: number;
@@ -15,6 +22,8 @@ export type RoundTripFormData = {
 
 const RoundTripForm = () => {
 	const [passengerCount, setPassengerCount] = useState<number>(1);
+	const navigate = useNavigate();
+	const [error, setError] = useState(false);
 
 	const {
 		handleSubmit,
@@ -25,17 +34,45 @@ const RoundTripForm = () => {
 		getValues,
 	} = useForm<RoundTripFormData>({
 		defaultValues: {
-			source: 'Dhaka',
-			destination: "Cox's Bazar",
+			source: 'DAC',
+			sourceCity: 'Dhaka',
+			destination: 'CXB',
+			destinationCity: "Cox's Bazar",
 			departureDate: new Date().toISOString().slice(0, 10),
 			returnDate: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10),
 			passenger: 1,
-			cabin: 'economy',
+			cabin: 'ECONOMY',
 		},
 	});
 
-	const onSubmit: SubmitHandler<RoundTripFormData> = (data) => {
-		console.log(data);
+	const onSubmit: SubmitHandler<RoundTripFormData> = async (data) => {
+		try {
+			data.sourceCity = data.source;
+			data.destinationCity = data.destination;
+
+			const sourceCity = cities.find((city) => city.cityName.toLowerCase() === data.source.toLowerCase());
+			const destinationCity = cities.find((city) => city.cityName.toLowerCase() === data.destination.toLowerCase());
+
+			if (sourceCity && destinationCity) {
+				data.source = sourceCity.iataCode;
+				data.destination = destinationCity.iataCode;
+			}
+
+			const result = await searchRoundTripFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin, data.returnDate);
+
+			if (result.data.status) {
+				const flights = result.data.data.flights;
+
+				localStorage.setItem('roundTripFlights', JSON.stringify(flights));
+				localStorage.setItem('roundTripFlightsFormData', JSON.stringify(data));
+				localStorage.setItem('tripType', JSON.stringify('ROUND_TRIP'));
+				navigate('/flight');
+			} else {
+				setError(true);
+			}
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	const handleIncrementPassenger = () => {
@@ -65,6 +102,18 @@ const RoundTripForm = () => {
 
 		setValue('returnDate', defaultReturnDate);
 	}, [departureDate, setValue]);
+
+	const handleCloseError = () => {
+		setError(false);
+	};
+
+	if (error) {
+		return (
+			<ErrorPortal>
+				<Error onClose={handleCloseError} />
+			</ErrorPortal>
+		);
+	}
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
@@ -173,10 +222,10 @@ const RoundTripForm = () => {
 						render={({ field }) => (
 							<Select
 								{...field}
-								value={field.value || 'economy'}>
-								<option value="economy">Economy</option>
-								<option value="business">Business</option>
-								<option value="first">First</option>
+								value={field.value || 'ECONOMY'}>
+								<option value="ECONOMY">Economy</option>
+								<option value="BUSINESS">Business</option>
+								<option value="FIRST">First</option>
 							</Select>
 						)}
 					/>
