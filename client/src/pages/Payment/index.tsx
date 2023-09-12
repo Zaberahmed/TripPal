@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Text } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 import axios from 'axios';
 import FlightDetails from '../../components/Flight Details';
 import { useEffect, useState } from 'react';
@@ -6,6 +6,7 @@ import { usePostTripMutation } from '../../rtk-store/api/tripApi';
 import { OneWayFormData } from '../../components/One way Form';
 import { RoundTripFormData } from '../../components/Round Trip Form';
 import { MultiCityFormData } from '../../components/Multi City  Form';
+import PaymentDetails from '../../components/Payment Details';
 
 const PaymentInfo = () => {
 	const [postTrip] = usePostTripMutation();
@@ -85,7 +86,7 @@ const PaymentInfo = () => {
 			console.log(result);
 			if (result) {
 				axios
-					.post('http://localhost:4000/user/payment/create-checkout-session', {
+					.post(`${import.meta.env.VITE_BACKEND_URL}:${import.meta.env.VITE_BACKEND_PORT}/user/payment/create-checkout-session`, {
 						test: { price: flight.totalPrice * quantity, quantity: quantity },
 					})
 					.then((response) => {
@@ -121,60 +122,12 @@ const PaymentInfo = () => {
 					logoUrl={flight.logoUrl}
 				/>
 
-				<Box
-					p={'.5rem'}
-					mt={'2rem'}
-					bg={'inherit'}
-					border={'1px solid'}
-					borderColor={'ebony'}
-					borderRadius={'lg'}
-					boxShadow={'lg'}>
-					<Center mb={'1rem'}>
-						<Text
-							fontSize={'1.25rem'}
-							fontWeight={'600'}>
-							Payment details:
-						</Text>
-					</Center>
-					<Flex
-						justifyContent={'space-between'}
-						p={'.25rem'}
-						m={'.25rem 0'}>
-						<Text>Ticket quantity:</Text>
-						<Text>1</Text>
-					</Flex>
-
-					<Flex
-						justifyContent={'space-between'}
-						p={'.25rem'}
-						m={'.25rem 0'}>
-						<Text>Ticket fare:</Text>
-						<Text>
-							{flight.totalPrice} {flight.currency}
-						</Text>
-					</Flex>
-
-					<Flex
-						justify={'center'}
-						gap={'1rem'}
-						p={'.25rem'}
-						m={'.25rem 0'}>
-						<Text> Total payable:</Text>
-						<Text>
-							{' '}
-							{flight.totalPrice * quantity} {flight.currency}
-						</Text>
-					</Flex>
-					<Center>
-						<Button
-							onClick={handleCheckout}
-							bg={'actionSecondary'}
-							color={'primary'}
-							boxShadow={'md'}>
-							Pay Now
-						</Button>
-					</Center>
-				</Box>
+				<PaymentDetails
+					quantity={quantity}
+					totalPrice={flight.totalPrice}
+					currency={flight.currency}
+					handleCheckout={handleCheckout}
+				/>
 			</Box>
 		</>
 	);

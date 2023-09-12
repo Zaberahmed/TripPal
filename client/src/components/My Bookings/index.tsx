@@ -1,6 +1,5 @@
 import { Box, Heading } from '@chakra-ui/react';
 import { useFetchAllTripsQuery } from '../../rtk-store/api/tripApi';
-import FlightDetails from '../Flight Details';
 import BookingTab from '../Bookings Tab';
 import { useEffect, useState } from 'react';
 
@@ -34,30 +33,7 @@ const MyBookings = () => {
 				textAlign={'center'}>
 				My Bookings
 			</Heading>
-			{/* {sortedTrips && sortedTrips.length > 0
-				? sortedTrips.map((trip: any, index: number) => {
-						return (
-							<Box
-								key={index}
-								p={'.5rem'}
-								m={'1rem 0'}
-								bg={'beige'}
-								borderRadius={'lg'}
-								boxShadow={'lg'}>
-								<FlightDetails
-									key={index}
-									originStationCode={trip.flightDetails.originStationCode}
-									destinationStationCode={trip.flightDetails.destinationStationCode}
-									departureDateTime={trip.flightDetails.departureDateTime}
-									arrivalDateTime={trip.flightDetails.arrivalDateTime}
-									numStops={trip.flightDetails.numStops}
-									displayName={trip.flightDetails.displayName}
-									logoUrl={trip.flightDetails.logoUrl}
-								/>
-							</Box>
-						);
-				  })
-				: null} */}
+
 			<BookingTab trips={sortedTrips} />
 		</Box>
 	);
