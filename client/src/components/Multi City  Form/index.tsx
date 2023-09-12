@@ -21,14 +21,7 @@ const MultiCityForm = () => {
 	const [passengerCount, setPassengerCount] = useState<number>(1);
 	const [error, setError] = useState<boolean>(false);
 
-	const {
-		handleSubmit,
-		control,
-		register,
-		formState: { errors },
-		setValue,
-		getValues,
-	} = useForm<MultiCityFormData>({
+	const { handleSubmit, control, register, setValue, getValues } = useForm<MultiCityFormData>({
 		defaultValues: {
 			cities: [
 				{

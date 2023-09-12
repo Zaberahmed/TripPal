@@ -25,14 +25,7 @@ const RoundTripForm = () => {
 	const navigate = useNavigate();
 	const [error, setError] = useState(false);
 
-	const {
-		handleSubmit,
-		control,
-		register,
-		formState: { errors },
-		setValue,
-		getValues,
-	} = useForm<RoundTripFormData>({
+	const { handleSubmit, control, register, setValue, getValues } = useForm<RoundTripFormData>({
 		defaultValues: {
 			source: 'DAC',
 			sourceCity: 'Dhaka',

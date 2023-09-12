@@ -1,17 +1,23 @@
 import { Box, Heading } from '@chakra-ui/react';
 import { useFetchAllTripsQuery } from '../../rtk-store/api/tripApi';
 import FlightDetails from '../Flight Details';
+import BookingTab from '../Bookings Tab';
+import { useEffect, useState } from 'react';
 
 const MyBookings = () => {
 	const { data: bookedTrips, isError, isLoading } = useFetchAllTripsQuery();
+
+	useEffect(() => {
+		const sortedTrips = bookedTrips?.slice()?.sort(compareDepartureDateTime);
+		setSortedTrips(sortedTrips);
+	}, [bookedTrips]);
+	const [sortedTrips, setSortedTrips] = useState([]);
 
 	const compareDepartureDateTime = (a: any, b: any) => {
 		const dateTimeA = new Date(a.flightDetails.departureDateTime).getTime();
 		const dateTimeB = new Date(b.flightDetails.departureDateTime).getTime();
 		return dateTimeA - dateTimeB;
 	};
-
-	const sortedTrips = bookedTrips?.slice()?.sort(compareDepartureDateTime);
 
 	if (isLoading) {
 		return <div>Loading...</div>;
@@ -28,7 +34,7 @@ const MyBookings = () => {
 				textAlign={'center'}>
 				My Bookings
 			</Heading>
-			{sortedTrips && sortedTrips.length > 0
+			{/* {sortedTrips && sortedTrips.length > 0
 				? sortedTrips.map((trip: any, index: number) => {
 						return (
 							<Box
@@ -51,7 +57,8 @@ const MyBookings = () => {
 							</Box>
 						);
 				  })
-				: null}
+				: null} */}
+			<BookingTab trips={sortedTrips} />
 		</Box>
 	);
 };
