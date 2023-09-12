@@ -8,9 +8,11 @@ import PageNotFound from './components/Page Not Found';
 import FlightPage from './pages/Flight';
 import PaymentInfo from './pages/Payment';
 import { Success } from './pages/success';
-import GetStarted from './components/landingPages/GetStarted.page';
+import GetStarted from './components/landing Page/GetStarted.page';
 import Fail from './pages/fail';
 import MyBookings from './components/My Bookings';
+import Bookings from './pages/Bookings';
+import ProfilePage from './pages/Profile';
 
 function App() {
 	return (
@@ -40,7 +42,10 @@ function App() {
 						element={<PaymentInfo />}></Route>
 					<Route
 						path="/bookings"
-						element={<MyBookings />}></Route>
+						element={<Bookings />}></Route>
+					<Route
+						path="/profile"
+						element={<ProfilePage />}></Route>
 					<Route
 						path="/success"
 						element={<Success />}></Route>

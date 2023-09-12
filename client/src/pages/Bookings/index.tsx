@@ -1,5 +1,11 @@
+import MyBookings from '../../components/My Bookings';
+
 const Bookings = () => {
-	return <div>Bookings</div>;
+	return (
+		<>
+			<MyBookings />
+		</>
+	);
 };
 
 export default Bookings;

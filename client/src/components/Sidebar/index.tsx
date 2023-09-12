@@ -10,6 +10,10 @@ const SideBar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
 	const [signOutMutation] = useSignOutMutation();
 	const navigate = useNavigate();
 
+	const handleLinkClick = () => {
+		onClose();
+	};
+
 	const handleLogoutClick = async () => {
 		try {
 			const result = await signOutMutation({});
@@ -45,7 +49,11 @@ const SideBar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
 								fontSize="1.15rem"
 								fontWeight="500"
 								mb={4}
-								gap={'.5rem'}>
+								gap={'.5rem'}
+								onClick={() => {
+									navigate('/profile');
+									handleLinkClick();
+								}}>
 								<Icon
 									as={CgProfile}
 									boxSize="1.5rem"
@@ -67,7 +75,11 @@ const SideBar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
 								mb={4}
 								justify={'center'}
 								align={'center'}
-								gap={'.5rem'}>
+								gap={'.5rem'}
+								onClick={() => {
+									navigate('/bookings');
+									handleLinkClick();
+								}}>
 								<Icon
 									as={MdAirplaneTicket}
 									boxSize="1.5rem"
@@ -89,7 +101,10 @@ const SideBar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
 								mb={4}
 								justify={'center'}
 								align={'center'}
-								gap={'.5rem'}>
+								gap={'.5rem'}
+								onClick={() => {
+									handleLinkClick();
+								}}>
 								<Icon
 									as={MdFlight}
 									boxSize="1.5rem"

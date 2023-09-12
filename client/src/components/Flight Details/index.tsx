@@ -37,7 +37,8 @@ const FlightDetails: React.FC<FlightDetailsProps> = ({ originStationCode, destin
 						color={'actionPrimary'}
 						boxSize={'1rem'}
 					/>
-					<Text>{numStops === 0 ? 'Non-stop' : `${numStops} Stops`}</Text>
+					<Text>{numStops === 0 ? 'Non-stop' : numStops > 1 ? `${numStops} stops` : `${numStops} stop`}</Text>
+
 					<Text>{calculateDuration(departureDateTime, arrivalDateTime)}</Text>
 				</VStack>
 				<FlightHalfInfo
