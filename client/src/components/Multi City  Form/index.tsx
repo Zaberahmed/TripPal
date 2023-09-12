@@ -3,6 +3,9 @@ import { useForm, SubmitHandler, Controller, useFieldArray, useWatch } from 'rea
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
+import { searchMultiCityFlights } from '../../services/api/flightApi';
+import ErrorPortal from '../Error Portal';
+import Error from '../Error';
 
 export type MultiCityFormData = {
 	cities: {
@@ -16,6 +19,7 @@ export type MultiCityFormData = {
 
 const MultiCityForm = () => {
 	const [passengerCount, setPassengerCount] = useState<number>(1);
+	const [error, setError] = useState<boolean>(false);
 
 	const {
 		handleSubmit,
@@ -34,7 +38,7 @@ const MultiCityForm = () => {
 				},
 			],
 			passenger: 1,
-			cabin: 'economy',
+			cabin: 'ECONOMY',
 		},
 	});
 
@@ -43,8 +47,19 @@ const MultiCityForm = () => {
 		name: 'cities',
 	});
 
-	const onSubmit: SubmitHandler<MultiCityFormData> = (data) => {
+	const onSubmit: SubmitHandler<MultiCityFormData> = async (data) => {
 		console.log(data);
+		try {
+			const result = await searchMultiCityFlights(data.cities[0].source, data.cities[0].destination, data.cities[0].departureDate, data.passenger, data.cabin);
+			console.log(result);
+			if (result.data.status) {
+				console.log(result.data.data.flights);
+			} else {
+				setError(true);
+			}
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	const handleIncrementPassenger = () => {
@@ -77,6 +92,18 @@ const MultiCityForm = () => {
 			}
 		}
 	}, [fields]);
+
+	const handleCloseError = () => {
+		setError(false);
+	};
+
+	if (error) {
+		return (
+			<ErrorPortal>
+				<Error onClose={handleCloseError} />
+			</ErrorPortal>
+		);
+	}
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
@@ -186,10 +213,10 @@ const MultiCityForm = () => {
 						render={({ field }) => (
 							<Select
 								{...field}
-								value={field.value || 'economy'}>
-								<option value="economy">Economy</option>
-								<option value="business">Business</option>
-								<option value="first">First</option>
+								value={field.value || 'ECONOMY'}>
+								<option value="ECONOMY">Economy</option>
+								<option value="BUSINESS">Business</option>
+								<option value="FIRST">First</option>
 							</Select>
 						)}
 					/>

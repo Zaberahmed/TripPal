@@ -48,7 +48,6 @@ const PaymentInfo = () => {
 	}, []);
 
 	useEffect(() => {
-		console.log('formData:', formData);
 		if (formData) {
 			setQuantity(formData!.passenger);
 		}

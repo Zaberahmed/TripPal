@@ -34,7 +34,7 @@ const HotelBookingForm = () => {
 	});
 
 	const onSubmit: SubmitHandler<HotelBookingFormData> = (data) => {
-		console.log(data);
+		// console.log(data);
 	};
 
 	const handleIncrement = (field: 'guest' | 'room') => {

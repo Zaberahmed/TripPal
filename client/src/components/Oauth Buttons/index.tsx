@@ -15,7 +15,7 @@ const OauthButtons = () => {
 				const { displayName, email } = result.user;
 				const googleAuthUser = { name: displayName, email };
 				localStorage.setItem('user', JSON.stringify(googleAuthUser));
-				console.log(result.user);
+
 				navigate('/home');
 			}
 		} catch (error) {

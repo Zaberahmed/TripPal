@@ -84,7 +84,6 @@ const FlightPage = () => {
 	}, [flightSearchList]);
 
 	const filterFlights = (filterType: any) => {
-		console.log('filter type:', filterType);
 		let filteredList = [...flightSearchList];
 
 		if (filterType === 'Earliest Flights') {
