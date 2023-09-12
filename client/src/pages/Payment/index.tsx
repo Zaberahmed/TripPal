@@ -109,8 +109,9 @@ const PaymentInfo = () => {
 				<Center>
 					<Text
 						fontSize={'1.25rem'}
-						fontWeight={'600'}>
-						Flight details:
+						fontWeight={'600'}
+						mb={'1rem'}>
+						Flight details
 					</Text>
 				</Center>
 				<FlightDetails

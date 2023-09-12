@@ -21,7 +21,7 @@ const AdditionalInfoForm = () => {
 				<Text
 					textAlign={'center'}
 					fontWeight={'600'}
-					fontSize={'1rem'}
+					fontSize={'1.25rem'}
 					mt={'1.5rem'}>
 					Additional Information
 				</Text>

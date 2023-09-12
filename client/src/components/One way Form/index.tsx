@@ -1,4 +1,4 @@
-import { Box, Center, Flex, FormControl, FormLabel, IconButton, Input, Select, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, FormControl, FormLabel, IconButton, Input, Select as ChakraSelect, Text } from '@chakra-ui/react';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
@@ -7,7 +7,8 @@ import { searchOneWayFlights } from '../../services/api/flightApi';
 import ErrorPortal from '../Error Portal';
 import Error from '../Error';
 import { useNavigate } from 'react-router-dom';
-import cities from './../../data/airports.json';
+import Select from 'react-select';
+import airports from './../../data/newAirports.json';
 
 export type OneWayFormData = {
 	source: string;
@@ -24,6 +25,14 @@ const OneWayForm = () => {
 	const [error, setError] = useState(false);
 	const navigate = useNavigate();
 
+	const airportOptions = airports.map((airport) => ({
+		label: `${airport.city} (${airport.iata_code}) (${airport.name})`,
+		value: airport.iata_code,
+	}));
+
+	const [selectedSourceCity, setSelectedSourceCity] = useState<{ label: string; value: string }>({ label: 'Dhaka', value: '' });
+	const [selectedDestinationCity, setSelectedDestinationCity] = useState<{ label: string; value: string }>({ label: "Cox's Bazar", value: '' });
+
 	const { handleSubmit, control, register, setValue, getValues } = useForm<OneWayFormData>({
 		defaultValues: {
 			source: 'DAC',
@@ -38,16 +47,11 @@ const OneWayForm = () => {
 
 	const onSubmit: SubmitHandler<OneWayFormData> = async (data) => {
 		try {
-			data.sourceCity = data.source;
-			data.destinationCity = data.destination;
+			data.source = selectedSourceCity.value;
+			data.sourceCity = selectedSourceCity.label.split(' ')[0];
 
-			const sourceCity = cities.find((city) => city.cityName.toLowerCase() === data.source.toLowerCase());
-			const destinationCity = cities.find((city) => city.cityName.toLowerCase() === data.destination.toLowerCase());
-
-			if (sourceCity && destinationCity) {
-				data.source = sourceCity.iataCode;
-				data.destination = destinationCity.iataCode;
-			}
+			data.destination = selectedDestinationCity.value;
+			data.destinationCity = selectedDestinationCity.label.split(' ')[0];
 
 			const result = await searchOneWayFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin);
 
@@ -103,10 +107,13 @@ const OneWayForm = () => {
 						name="sourceCity"
 						control={control}
 						render={({ field }) => (
-							<Input
+							<Select
 								{...field}
+								value={selectedSourceCity}
+								onChange={(option: any) => setSelectedSourceCity(option)}
+								options={airportOptions}
+								isSearchable
 								placeholder="Dhaka"
-								type="text"
 							/>
 						)}
 					/>
@@ -120,10 +127,13 @@ const OneWayForm = () => {
 						name="destinationCity"
 						control={control}
 						render={({ field }) => (
-							<Input
-								type="text"
+							<Select
 								{...field}
-								placeholder="Cox's bazar"
+								value={selectedDestinationCity}
+								onChange={(option: any) => setSelectedDestinationCity(option)}
+								options={airportOptions}
+								isSearchable
+								placeholder="Cox's Bazar"
 							/>
 						)}
 					/>
@@ -182,13 +192,13 @@ const OneWayForm = () => {
 						name="cabin"
 						control={control}
 						render={({ field }) => (
-							<Select
+							<ChakraSelect
 								{...field}
 								value={field.value || 'ECONOMY'}>
 								<option value="ECONOMY">Economy</option>
 								<option value="BUSINESS">Business</option>
 								<option value="FIRST">First</option>
-							</Select>
+							</ChakraSelect>
 						)}
 					/>
 				</FormControl>

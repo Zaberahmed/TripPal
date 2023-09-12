@@ -15,7 +15,7 @@ const PaymentDetails = ({ quantity, totalPrice, currency, handleCheckout }: { qu
 				<Text
 					fontSize={'1.25rem'}
 					fontWeight={'600'}>
-					Payment details:
+					Payment details
 				</Text>
 			</Center>
 			<Flex

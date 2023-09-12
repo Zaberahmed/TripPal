@@ -1,13 +1,14 @@
-import { Box, Center, Flex, FormControl, FormLabel, IconButton, Input, Select, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, FormControl, FormLabel, IconButton, Input, Select as ChakraSelect, Text } from '@chakra-ui/react';
 import { useForm, SubmitHandler, Controller, useWatch } from 'react-hook-form';
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
-import cities from './../../data/airports.json';
 import { searchRoundTripFlights } from '../../services/api/flightApi';
 import { useNavigate } from 'react-router-dom';
 import ErrorPortal from '../Error Portal';
 import Error from '../Error';
+import Select from 'react-select';
+import airports from './../../data/newAirports.json';
 
 export type RoundTripFormData = {
 	source: string;
@@ -25,6 +26,14 @@ const RoundTripForm = () => {
 	const navigate = useNavigate();
 	const [error, setError] = useState(false);
 
+	const airportOptions = airports.map((airport) => ({
+		label: `${airport.city} (${airport.iata_code}) (${airport.name})`,
+		value: airport.iata_code,
+	}));
+
+	const [selectedSourceCity, setSelectedSourceCity] = useState<{ label: string; value: string }>({ label: 'Dhaka', value: '' });
+	const [selectedDestinationCity, setSelectedDestinationCity] = useState<{ label: string; value: string }>({ label: "Cox's Bazar", value: '' });
+
 	const { handleSubmit, control, register, setValue, getValues } = useForm<RoundTripFormData>({
 		defaultValues: {
 			source: 'DAC',
@@ -40,22 +49,15 @@ const RoundTripForm = () => {
 
 	const onSubmit: SubmitHandler<RoundTripFormData> = async (data) => {
 		try {
-			data.sourceCity = data.source;
-			data.destinationCity = data.destination;
+			data.source = selectedSourceCity.value;
+			data.sourceCity = selectedSourceCity.label.split(' ')[0];
 
-			const sourceCity = cities.find((city) => city.cityName.toLowerCase() === data.source.toLowerCase());
-			const destinationCity = cities.find((city) => city.cityName.toLowerCase() === data.destination.toLowerCase());
-
-			if (sourceCity && destinationCity) {
-				data.source = sourceCity.iataCode;
-				data.destination = destinationCity.iataCode;
-			}
+			data.destination = selectedDestinationCity.value;
+			data.destinationCity = selectedDestinationCity.label.split(' ')[0];
 
 			const result = await searchRoundTripFlights(data.source, data.destination, data.departureDate, data.passenger, data.cabin, data.returnDate);
-
 			if (result.data.status) {
 				const flights = result.data.data.flights;
-
 				localStorage.setItem('roundTripFlights', JSON.stringify(flights));
 				localStorage.setItem('roundTripFlightsFormData', JSON.stringify(data));
 				localStorage.setItem('tripType', JSON.stringify('ROUND_TRIP'));
@@ -117,10 +119,13 @@ const RoundTripForm = () => {
 						name="source"
 						control={control}
 						render={({ field }) => (
-							<Input
+							<Select
 								{...field}
+								value={selectedSourceCity}
+								onChange={(option: any) => setSelectedSourceCity(option)}
+								options={airportOptions}
+								isSearchable
 								placeholder="Dhaka"
-								type="text"
 							/>
 						)}
 					/>
@@ -134,10 +139,13 @@ const RoundTripForm = () => {
 						name="destination"
 						control={control}
 						render={({ field }) => (
-							<Input
-								type="text"
+							<Select
 								{...field}
-								placeholder="Cox's bazar"
+								value={selectedDestinationCity}
+								onChange={(option: any) => setSelectedDestinationCity(option)}
+								options={airportOptions}
+								isSearchable
+								placeholder="Cox's Bazar"
 							/>
 						)}
 					/>
@@ -213,13 +221,13 @@ const RoundTripForm = () => {
 						name="cabin"
 						control={control}
 						render={({ field }) => (
-							<Select
+							<ChakraSelect
 								{...field}
 								value={field.value || 'ECONOMY'}>
 								<option value="ECONOMY">Economy</option>
 								<option value="BUSINESS">Business</option>
 								<option value="FIRST">First</option>
-							</Select>
+							</ChakraSelect>
 						)}
 					/>
 				</FormControl>
