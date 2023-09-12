@@ -18,7 +18,7 @@ const FlightDetails: React.FC<FlightDetailsProps> = ({ originStationCode, destin
 		<>
 			<Flex
 				gap={'.75rem'}
-				alignItems={'center'}>
+				alignItems={'flex-start'}>
 				<FlightHalfInfo
 					stationCode={originStationCode}
 					dateTime={departureDateTime}

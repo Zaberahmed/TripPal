@@ -213,5 +213,10 @@
 		"airportName": "Sardar Vallabhbhai Patel International Airport",
 		"iataCode": "AMD",
 		"cityName": "Ahmedabad"
+	},
+	{
+		"airportName": "Cox's Bazar Airport",
+		"iataCode": "CXB",
+		"cityName": "Cox's Bazar"
 	}
 ]

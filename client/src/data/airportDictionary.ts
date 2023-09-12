@@ -31,4 +31,5 @@ export const airportDictionary = {
 	CGK: 'Soekarno–Hatta International Airport',
 	CCU: 'Netaji Subhash Chandra Bose International Airport',
 	AMD: 'Sardar Vallabhbhai Patel International Airport',
+	CXB: "Cox's Bazar Airport",
 };

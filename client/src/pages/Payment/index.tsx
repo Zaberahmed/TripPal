@@ -7,6 +7,7 @@ import { OneWayFormData } from '../../components/One way Form';
 import { RoundTripFormData } from '../../components/Round Trip Form';
 import { MultiCityFormData } from '../../components/Multi City  Form';
 import PaymentDetails from '../../components/Payment Details';
+import AdditionalInfoForm from '../../components/Additional Info form';
 
 const PaymentInfo = () => {
 	const [postTrip] = usePostTripMutation();
@@ -121,6 +122,8 @@ const PaymentInfo = () => {
 					displayName={flight.displayName}
 					logoUrl={flight.logoUrl}
 				/>
+
+				<AdditionalInfoForm />
 
 				<PaymentDetails
 					quantity={quantity}
