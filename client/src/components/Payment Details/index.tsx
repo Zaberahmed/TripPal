@@ -1,4 +1,5 @@
-import { Box, Text, Flex, Center, Button } from '@chakra-ui/react';
+import { Box, Text, Flex, Center, Button, Image } from '@chakra-ui/react';
+import barcode from './../../assets/barcode.png';
 
 const PaymentDetails = ({ quantity, totalPrice, currency, handleCheckout }: { quantity: number; totalPrice: number; currency: string; handleCheckout: () => void }) => {
 	return (
@@ -45,7 +46,7 @@ const PaymentDetails = ({ quantity, totalPrice, currency, handleCheckout }: { qu
 					{totalPrice * quantity} {currency}
 				</Text>
 			</Flex>
-			<Center>
+			<Center mt={'1rem'}>
 				<Button
 					onClick={handleCheckout}
 					bg={'actionSecondary'}
@@ -54,6 +55,11 @@ const PaymentDetails = ({ quantity, totalPrice, currency, handleCheckout }: { qu
 					Pay Now
 				</Button>
 			</Center>
+			<Image
+				src={barcode}
+				w={'15.625rem'}
+				m={'0 auto'}
+			/>
 		</Box>
 	);
 };
