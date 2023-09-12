@@ -1,7 +1,10 @@
-import { Flex, Heading, Text, Image } from '@chakra-ui/react';
+import { Flex, Heading, Text, Image, Button } from '@chakra-ui/react';
 import error404 from './../../assets/error404.svg';
 
-const Error = () => {
+const Error = ({ onClose }: { onClose: () => void }) => {
+	const handleClose = () => {
+		onClose();
+	};
 	return (
 		<Flex
 			bg={'beige'}
@@ -26,6 +29,11 @@ const Error = () => {
 				fontSize={'3rem'}>
 				Something went wrong!
 			</Text>
+			<Button
+				onClick={handleClose}
+				bg={'red.400'}>
+				Close
+			</Button>
 		</Flex>
 	);
 };

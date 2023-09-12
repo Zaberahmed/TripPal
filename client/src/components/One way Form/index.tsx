@@ -26,7 +26,7 @@ const OneWayForm = () => {
 
 	const { handleSubmit, control, register, setValue, getValues } = useForm<OneWayFormData>({
 		defaultValues: {
-			source: 'DAC',
+			source: 'Dhaka',
 			sourceCity: 'Dhaka',
 			destination: 'CXB',
 			destinationCity: "Cox's Bazar",
@@ -53,7 +53,7 @@ const OneWayForm = () => {
 
 			if (result.data.status) {
 				const flights = result.data.data.flights;
-				// console.log(flights);
+
 				localStorage.setItem('oneWayFlights', JSON.stringify(flights));
 				localStorage.setItem('oneWayFlightsFormData', JSON.stringify(data));
 				localStorage.setItem('tripType', JSON.stringify('ONE_WAY'));
@@ -81,6 +81,18 @@ const OneWayForm = () => {
 			setPassengerCount(currentPassengerCount - 1);
 		}
 	};
+
+	const handleCloseError = () => {
+		setError(false);
+	};
+
+	if (error) {
+		return (
+			<ErrorPortal>
+				<Error onClose={handleCloseError} />
+			</ErrorPortal>
+		);
+	}
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
@@ -194,11 +206,6 @@ const OneWayForm = () => {
 					/>
 				</Center>
 			</Box>
-			{error && (
-				<ErrorPortal>
-					<Error />
-				</ErrorPortal>
-			)}
 		</form>
 	);
 };
