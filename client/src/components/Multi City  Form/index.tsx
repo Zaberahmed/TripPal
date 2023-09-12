@@ -1,4 +1,4 @@
-import { Box, Center, Flex, FormControl, FormLabel, Button, Input, Select, Text, IconButton } from '@chakra-ui/react';
+import { Box, Center, Flex, FormControl, FormLabel, Button, Input, Select as ChakraSelect, Text, IconButton } from '@chakra-ui/react';
 import { useForm, SubmitHandler, Controller, useFieldArray, useWatch } from 'react-hook-form';
 import SubmitButton from '../Submit Button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
@@ -6,11 +6,16 @@ import { useEffect, useState } from 'react';
 import { searchMultiCityFlights } from '../../services/api/flightApi';
 import ErrorPortal from '../Error Portal';
 import Error from '../Error';
+import { useNavigate } from 'react-router-dom';
+import Select from 'react-select';
+import airports from './../../data/newAirports.json';
 
 export type MultiCityFormData = {
 	cities: {
 		source: string;
+		sourceCity: string;
 		destination: string;
+		destinationCity: string;
 		departureDate: string;
 	}[];
 	passenger: number;
@@ -20,13 +25,24 @@ export type MultiCityFormData = {
 const MultiCityForm = () => {
 	const [passengerCount, setPassengerCount] = useState<number>(1);
 	const [error, setError] = useState<boolean>(false);
+	const navigate = useNavigate();
+
+	const airportOptions = airports.map((airport) => ({
+		label: `${airport.city} (${airport.iata_code}) (${airport.name})`,
+		value: airport.iata_code,
+	}));
+
+	const [selectedSourceCities, setSelectedSourceCities] = useState<{ label: string; value: string }[]>([{ label: 'Dhaka', value: '' }]);
+	const [selectedDestinationCities, setSelectedDestinationCities] = useState<{ label: string; value: string }[]>([{ label: "Cox's Bazar", value: '' }]);
 
 	const { handleSubmit, control, register, setValue, getValues } = useForm<MultiCityFormData>({
 		defaultValues: {
 			cities: [
 				{
-					source: 'Dhaka',
-					destination: "Cox's Bazar",
+					source: 'DAC',
+					sourceCity: 'Dhaka',
+					destination: 'CXB',
+					destinationCity: "Cox's Bazar",
 					departureDate: new Date().toISOString().slice(0, 10),
 				},
 			],
@@ -41,15 +57,15 @@ const MultiCityForm = () => {
 	});
 
 	const onSubmit: SubmitHandler<MultiCityFormData> = async (data) => {
-		console.log(data);
 		try {
-			const result = await searchMultiCityFlights(data.cities[0].source, data.cities[0].destination, data.cities[0].departureDate, data.passenger, data.cabin);
-			console.log(result);
-			if (result.data.status) {
-				console.log(result.data.data.flights);
-			} else {
-				setError(true);
-			}
+			console.log('fields:', fields);
+			// const result = await searchMultiCityFlights(data.cities[0].source, data.cities[0].destination, data.cities[0].departureDate, data.passenger, data.cabin);
+			// console.log(result);
+			// if (result.data.status) {
+			// 	console.log(result.data.data.flights);
+			// } else {
+			// 	setError(true);
+			// }
 		} catch (error) {
 			console.error(error);
 		}
@@ -111,10 +127,13 @@ const MultiCityForm = () => {
 								name={`cities.${index}.source`}
 								control={control}
 								render={({ field }) => (
-									<Input
+									<Select
 										{...field}
+										value={selectedSourceCities}
+										onChange={(option: any) => setSelectedSourceCities((prev) => [...prev, option])}
+										options={airportOptions}
+										isSearchable
 										placeholder="Dhaka"
-										type="text"
 									/>
 								)}
 							/>
@@ -128,9 +147,12 @@ const MultiCityForm = () => {
 								name={`cities.${index}.destination`}
 								control={control}
 								render={({ field }) => (
-									<Input
-										type="text"
+									<Select
 										{...field}
+										value={selectedDestinationCities}
+										onChange={(option: any) => setSelectedDestinationCities((prev) => [...prev, option])}
+										options={airportOptions}
+										isSearchable
 										placeholder="Cox's Bazar"
 									/>
 								)}
@@ -204,13 +226,13 @@ const MultiCityForm = () => {
 						name="cabin"
 						control={control}
 						render={({ field }) => (
-							<Select
+							<ChakraSelect
 								{...field}
 								value={field.value || 'ECONOMY'}>
 								<option value="ECONOMY">Economy</option>
 								<option value="BUSINESS">Business</option>
 								<option value="FIRST">First</option>
-							</Select>
+							</ChakraSelect>
 						)}
 					/>
 				</FormControl>
@@ -225,7 +247,9 @@ const MultiCityForm = () => {
 						fields.length < 4 &&
 						append({
 							source: '',
+							sourceCity: '',
 							destination: '',
+							destinationCity: '',
 							departureDate: '',
 						})
 					}

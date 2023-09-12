@@ -24,7 +24,7 @@ const PaymentInfo = () => {
 	});
 	const [quantity, setQuantity] = useState(1);
 	const [tripType, setTripType] = useState('');
-	const [formData, setFormData] = useState<OneWayFormData | RoundTripFormData | MultiCityFormData | null>();
+	const [formData, setFormData] = useState<OneWayFormData | RoundTripFormData | MultiCityFormData | null>(null);
 
 	useEffect(() => {
 		const flight = localStorage.getItem('choosenFlight');
@@ -38,22 +38,33 @@ const PaymentInfo = () => {
 			setTripType(parsedTripType);
 			if (tripType === 'ONE_WAY') {
 				const formData = localStorage.getItem('oneWayFlightsFormData');
-				setFormData(JSON.parse(formData!));
+				if (formData) {
+					const parsedFormData = JSON.parse(formData);
+					setFormData(parsedFormData);
+				}
 			} else if (tripType === 'ROUND_TRIP') {
 				const formData = localStorage.getItem('roundTripFlightsFormData');
-				setFormData(JSON.parse(formData!));
+				if (formData) {
+					console.log(formData);
+					const parsedFormData = JSON.parse(formData);
+					setFormData(parsedFormData);
+				}
 			} else {
 				const formData = localStorage.getItem('multiCityFlightsFormData');
-				setFormData(JSON.parse(formData!));
+				if (formData) {
+					const parsedFormData = JSON.parse(formData);
+					setFormData(parsedFormData);
+				}
 			}
 		}
 	}, []);
 
 	useEffect(() => {
+		console.log('formData:', formData);
 		if (formData) {
 			setQuantity(formData!.passenger);
 		}
-	}, [formData]);
+	}, []);
 
 	const handleCheckout = async () => {
 		try {
