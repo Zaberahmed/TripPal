@@ -18,6 +18,7 @@ export const searchOneWayFlights = (sourceAirportCode: string, destinationAirpor
 			numAdults,
 			numSeniors: '0',
 			classOfService,
+			currency: 'USD',
 		},
 	});
 };
@@ -33,6 +34,7 @@ export const searchRoundTripFlights = (sourceAirportCode: string, destinationAir
 			numSeniors: '0',
 			classOfService,
 			returnDate,
+			currency: 'USD',
 		},
 	});
 };
@@ -47,6 +49,7 @@ export type MultiCityParams = {
 	legs: string; //stringified params are required to call the api
 	classOfService: string;
 	sortOrder: string;
+	currency?: string;
 };
 
 export const searchMultiCityFlights = (params: MultiCityParams) => {

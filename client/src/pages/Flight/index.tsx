@@ -88,18 +88,22 @@ const FlightPage = () => {
 		let filteredList = [...flightSearchList];
 
 		if (filterType === 'Earliest Flights') {
-			filteredList.sort((a: any, b: any) => {
-				const dateA = new Date(a.departureDateTime);
-				const dateB = new Date(b.departureDateTime);
+			filteredList.sort((a: any[], b: any[]) => {
+				const dateA = new Date(a[0][0].departureDateTime);
+				const dateB = new Date(b[0][0].departureDateTime);
 
 				return dateA.getTime() - dateB.getTime();
 			});
 		} else if (filterType === 'Cheapest Flights') {
-			filteredList.sort((a, b) => a.totalPrice - b.totalPrice);
+			filteredList.sort((a, b) => {
+				const totalPriceA = a.reduce((acc: number, flight: any) => acc + flight.totalPrice, 0);
+				const totalPriceB = b.reduce((acc: number, flight: any) => acc + flight.totalPrice, 0);
+				return totalPriceA - totalPriceB;
+			});
 		} else if (filterType === 'Fastest Flights') {
-			filteredList.sort((a: any, b: any) => {
-				const durationA = new Date(a.arrivalDateTime).getTime() - new Date(a.departureDateTime).getTime();
-				const durationB = new Date(b.arrivalDateTime).getTime() - new Date(b.departureDateTime).getTime();
+			filteredList.sort((a: any[], b: any[]) => {
+				const durationA = new Date(a[0][0].arrivalDateTime).getTime() - new Date(a[0][0].departureDateTime).getTime();
+				const durationB = new Date(b[0][0].arrivalDateTime).getTime() - new Date(b[0][0].departureDateTime).getTime();
 				return durationA - durationB;
 			});
 		}

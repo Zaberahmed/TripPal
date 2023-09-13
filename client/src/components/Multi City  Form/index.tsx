@@ -71,6 +71,7 @@ const MultiCityForm = () => {
 				legs: JSON.stringify(formattedLegs),
 				classOfService: `${data.cabin}`,
 				sortOrder: 'PRICE',
+				currency: 'USD',
 			};
 			console.log('params:', params);
 
@@ -118,9 +119,6 @@ const MultiCityForm = () => {
 			const previousCity = destinations[fields.length - 2];
 			if (previousCity && previousCity.destination) {
 				setValue(`cities.${fields.length - 1}.source`, previousCity.destination);
-				// const updateWatchedSourceCity: any[] = [...selectedSourceCities];
-				// updateWatchedSourceCity[fields.length - 1] = previousCity.destination;
-				// setSelectedSourceCities(updateWatchedSourceCity);
 			}
 		}
 	}, [fields]);
