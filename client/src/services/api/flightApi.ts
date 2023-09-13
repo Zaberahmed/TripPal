@@ -37,17 +37,20 @@ export const searchRoundTripFlights = (sourceAirportCode: string, destinationAir
 	});
 };
 
-export const searchMultiCityFlights = (sourceAirportCode: string, destinationAirportCode: string, date: any, numAdults: number, classOfService: string) => {
-	return axiosInstance.get('/flights/searchFlights', {
-		params: {
-			sourceAirportCode,
-			destinationAirportCode,
-			date,
-			itineraryType: 'ROUND_TRIP',
-			sortOrder: 'PRICE',
-			numAdults,
-			numSeniors: '0',
-			classOfService,
-		},
+export type Leg = {
+	sourceAirportCode: string;
+	destinationAirportCode: string;
+	date: string;
+};
+
+export type MultiCityParams = {
+	legs: string; //stringified params are required to call the api
+	classOfService: string;
+	sortOrder: string;
+};
+
+export const searchMultiCityFlights = (params: MultiCityParams) => {
+	return axiosInstance.get('/flights/searchFlightsMultiCity', {
+		params: params,
 	});
 };

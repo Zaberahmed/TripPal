@@ -36,16 +36,15 @@ const PaymentInfo = () => {
 		if (tripType) {
 			const parsedTripType = JSON.parse(tripType);
 			setTripType(parsedTripType);
-			if (tripType === 'ONE_WAY') {
+			if (parsedTripType === 'ONE_WAY') {
 				const formData = localStorage.getItem('oneWayFlightsFormData');
 				if (formData) {
 					const parsedFormData = JSON.parse(formData);
 					setFormData(parsedFormData);
 				}
-			} else if (tripType === 'ROUND_TRIP') {
+			} else if (parsedTripType === 'ROUND_TRIP') {
 				const formData = localStorage.getItem('roundTripFlightsFormData');
 				if (formData) {
-					console.log(formData);
 					const parsedFormData = JSON.parse(formData);
 					setFormData(parsedFormData);
 				}
@@ -60,11 +59,10 @@ const PaymentInfo = () => {
 	}, []);
 
 	useEffect(() => {
-		console.log('formData:', formData);
 		if (formData) {
 			setQuantity(formData!.passenger);
 		}
-	}, []);
+	}, [tripType]);
 
 	const handleCheckout = async () => {
 		try {

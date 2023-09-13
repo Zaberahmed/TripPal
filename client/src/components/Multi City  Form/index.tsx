@@ -9,6 +9,7 @@ import Error from '../Error';
 import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 import airports from './../../data/newAirports.json';
+import { AnyIfEmpty } from 'react-redux';
 
 export type MultiCityFormData = {
 	cities: {
@@ -32,9 +33,6 @@ const MultiCityForm = () => {
 		value: airport.iata_code,
 	}));
 
-	const [selectedSourceCities, setSelectedSourceCities] = useState<{ label: string; value: string }[]>([{ label: 'Dhaka', value: '' }]);
-	const [selectedDestinationCities, setSelectedDestinationCities] = useState<{ label: string; value: string }[]>([{ label: "Cox's Bazar", value: '' }]);
-
 	const { handleSubmit, control, register, setValue, getValues } = useForm<MultiCityFormData>({
 		defaultValues: {
 			cities: [
@@ -56,11 +54,29 @@ const MultiCityForm = () => {
 		name: 'cities',
 	});
 
+	const [selectedSourceCities, setSelectedSourceCities] = useState(fields.map(() => ({ label: 'Dhaka', value: '' })));
+	const [selectedDestinationCities, setSelectedDestinationCities] = useState(fields.map(() => ({ label: "Cox's Bazar", value: '' })));
+
 	const onSubmit: SubmitHandler<MultiCityFormData> = async (data) => {
 		try {
 			console.log('fields:', fields);
-			// const result = await searchMultiCityFlights(data.cities[0].source, data.cities[0].destination, data.cities[0].departureDate, data.passenger, data.cabin);
-			// console.log(result);
+			console.log('data:', data);
+
+			const formattedLegs = data.cities.map((city) => ({
+				sourceAirportCode: city.source,
+				destinationAirportCode: city.destination,
+				date: city.departureDate,
+			}));
+
+			const params = {
+				legs: JSON.stringify(formattedLegs),
+				classOfService: `${data.cabin}`,
+				sortOrder: 'PRICE',
+			};
+			console.log('params:', params);
+
+			const result = await searchMultiCityFlights(params);
+			console.log(result);
 			// if (result.data.status) {
 			// 	console.log(result.data.data.flights);
 			// } else {
@@ -98,6 +114,9 @@ const MultiCityForm = () => {
 			const previousCity = destinations[fields.length - 2];
 			if (previousCity && previousCity.destination) {
 				setValue(`cities.${fields.length - 1}.source`, previousCity.destination);
+				// const updateWatchedSourceCity: any[] = [...selectedSourceCities];
+				// updateWatchedSourceCity[fields.length - 1] = previousCity.destination;
+				// setSelectedSourceCities(updateWatchedSourceCity);
 			}
 		}
 	}, [fields]);
@@ -114,6 +133,16 @@ const MultiCityForm = () => {
 		);
 	}
 
+	const handleSourceCityChange = (index: number, option: any) => {
+		setValue(`cities.${index}.source`, option.value);
+		setValue(`cities.${index}.sourceCity`, option.label);
+	};
+
+	const handleDestinationCityChange = (index: number, option: any) => {
+		setValue(`cities.${index}.destination`, option.value);
+		setValue(`cities.${index}.destinationCity`, option.label);
+	};
+
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<Box>
@@ -129,8 +158,13 @@ const MultiCityForm = () => {
 								render={({ field }) => (
 									<Select
 										{...field}
-										value={selectedSourceCities}
-										onChange={(option: any) => setSelectedSourceCities((prev) => [...prev, option])}
+										value={selectedSourceCities[index]}
+										onChange={(option) => {
+											const updatedSelectedSourceCities: any[] = [...selectedSourceCities];
+											updatedSelectedSourceCities[index] = option;
+											setSelectedSourceCities(updatedSelectedSourceCities);
+											handleSourceCityChange(index, option);
+										}}
 										options={airportOptions}
 										isSearchable
 										placeholder="Dhaka"
@@ -149,8 +183,13 @@ const MultiCityForm = () => {
 								render={({ field }) => (
 									<Select
 										{...field}
-										value={selectedDestinationCities}
-										onChange={(option: any) => setSelectedDestinationCities((prev) => [...prev, option])}
+										value={selectedDestinationCities[index]}
+										onChange={(option) => {
+											const updatedSelectedDestinationCities: any[] = [...selectedDestinationCities];
+											updatedSelectedDestinationCities[index] = option;
+											setSelectedDestinationCities(updatedSelectedDestinationCities);
+											handleDestinationCityChange(index, option);
+										}}
 										options={airportOptions}
 										isSearchable
 										placeholder="Cox's Bazar"
