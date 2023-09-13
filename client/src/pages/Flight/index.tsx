@@ -7,6 +7,7 @@ import { Center, Flex } from '@chakra-ui/react';
 const FlightPage = () => {
 	const [flightSearchList, setFlightSearchList] = useState<any[]>([]);
 	const [filteredFlights, setFilteredFlights] = useState<any[]>([]);
+	const [totalFlightPrice, setTotalFlightPrice] = useState<number>(0);
 
 	useEffect(() => {
 		const tripType = localStorage.getItem('tripType');
@@ -30,54 +31,59 @@ const FlightPage = () => {
 
 					const purchaseLink = purchaseLinks[0];
 
-					const legs = segments[0].legs;
+					// const legs = segments[0].legs;
+					segments.forEach((segment: any) => {
+						const legs = segment.legs;
 
-					legs.forEach((legInfo: any) => {
-						const originStationCode = legInfo.originStationCode;
-						const destinationStationCode = legInfo.destinationStationCode;
-						const departureDateTime = legInfo.departureDateTime;
-						const arrivalDateTime = legInfo.arrivalDateTime;
+						legs.forEach((legInfo: any) => {
+							const originStationCode = legInfo.originStationCode;
+							const destinationStationCode = legInfo.destinationStationCode;
+							const departureDateTime = legInfo.departureDateTime;
+							const arrivalDateTime = legInfo.arrivalDateTime;
 
-						const classOfService = legInfo.classOfService;
-						const flightNumber = legInfo.flightNumber;
-						const numStops = legInfo.numStops;
-						const distanceInKM = legInfo.distanceInKM;
+							const classOfService = legInfo.classOfService;
+							const flightNumber = legInfo.flightNumber;
+							const numStops = legInfo.numStops;
+							const distanceInKM = legInfo.distanceInKM;
 
-						const operatingCarrier = legInfo.operatingCarrier;
-						const logoUrl = operatingCarrier.logoUrl;
-						const displayName = operatingCarrier.displayName;
+							const operatingCarrier = legInfo.operatingCarrier;
+							const logoUrl = operatingCarrier.logoUrl;
+							const displayName = operatingCarrier.displayName;
 
-						const newFlightDetails = {
-							originStationCode,
-							destinationStationCode,
-							departureDateTime,
-							arrivalDateTime,
-							classOfService,
-							flightNumber,
-							numStops,
-							distanceInKM,
-							logoUrl,
-							displayName,
-							currency: purchaseLink.currency,
-							totalPrice: purchaseLink.totalPrice,
-						};
+							const newFlightDetails = {
+								originStationCode,
+								destinationStationCode,
+								departureDateTime,
+								arrivalDateTime,
+								classOfService,
+								flightNumber,
+								numStops,
+								distanceInKM,
+								logoUrl,
+								displayName,
+								currency: purchaseLink.currency,
+								totalPrice: purchaseLink.totalPrice,
+							};
 
-						setFlightSearchList((prev: any[]) => [...prev, newFlightDetails]);
+							setFlightSearchList((prev: any[]) => [...prev, newFlightDetails]);
+						});
 					});
 				});
 			}
 		}
-
-		const flightCleanData = {
-			flightSearchList,
-		};
-		localStorage.setItem('flightCleanData', JSON.stringify(flightCleanData));
 	}, []);
 
 	// useEffect(() => {
 	// 	console.log(flightSearchList);
 	// 	console.log(filteredFlights);
 	// }, [flightSearchList]);
+
+	useEffect(() => {
+		const flightCleanData = {
+			flightSearchList,
+		};
+		localStorage.setItem('flightCleanData', JSON.stringify(flightCleanData));
+	}, [flightSearchList]);
 
 	useEffect(() => {
 		setFilteredFlights(flightSearchList);

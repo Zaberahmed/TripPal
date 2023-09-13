@@ -77,11 +77,16 @@ const MultiCityForm = () => {
 
 			const result = await searchMultiCityFlights(params);
 			console.log(result);
-			// if (result.data.status) {
-			// 	console.log(result.data.data.flights);
-			// } else {
-			// 	setError(true);
-			// }
+			if (result.data.status) {
+				console.log(result.data.data.flights);
+				const flights = result.data.data.flights;
+				localStorage.setItem('multiCityFlights', JSON.stringify(flights));
+				localStorage.setItem('multiCityFlightsFormData', JSON.stringify(data));
+				localStorage.setItem('tripType', JSON.stringify('MULTI_CITY'));
+				navigate('/flight');
+			} else {
+				setError(true);
+			}
 		} catch (error) {
 			console.error(error);
 		}
