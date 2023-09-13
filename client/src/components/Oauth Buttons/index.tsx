@@ -13,6 +13,7 @@ const OauthButtons = () => {
 			const result = await signInWithPopup(auth, googleProvider);
 			if (result.user.emailVerified) {
 				const { displayName, email } = result.user;
+				console.log(result.user);
 				const googleAuthUser = { name: displayName, email };
 				localStorage.setItem('user', JSON.stringify(googleAuthUser));
 

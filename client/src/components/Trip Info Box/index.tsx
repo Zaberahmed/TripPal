@@ -71,11 +71,6 @@ const TripInfoBox = () => {
 		}
 	}, [tripType]);
 
-	useEffect(() => {
-		console.log('trip type:', tripType);
-		console.log('form Data:', formData);
-	}, [tripType]);
-
 	return (
 		<>
 			{tripType === 'MULTI_CITY' ? (
@@ -97,7 +92,7 @@ const TripInfoBox = () => {
 									borderRadius={'md'}
 									m={'.25rem 0'}>
 									<Text fontSize={'.875rem'}>
-										({city.sourceCity.split(' ')[0]}){city.source} - {city.destination} ({city.destinationCity.split(' ')[0]})
+										{city.sourceCity.split(' ')[0]} ({city.source}) - ({city.destination}) ({city.destinationCity.split(' ')[0]})
 									</Text>
 								</Badge>
 								<Badge
@@ -146,7 +141,7 @@ const TripInfoBox = () => {
 							borderRadius={'md'}
 							m={'.25rem 0'}>
 							<Text fontSize={'.875rem'}>
-								({formData.sourceCity}) {formData.source} - {formData.destination} ({formData.destinationCity})
+								{formData.sourceCity} ({formData.source}) - ({formData.destination}) {formData.destinationCity}
 							</Text>
 						</Badge>
 

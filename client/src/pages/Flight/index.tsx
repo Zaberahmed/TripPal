@@ -84,6 +84,7 @@ const FlightPage = () => {
 		setFilteredFlights(flightSearchList);
 	}, [flightSearchList]);
 
+	//filtering logic
 	const filterFlights = (filterType: any) => {
 		let filteredList = [...flightSearchList];
 
@@ -96,8 +97,8 @@ const FlightPage = () => {
 			});
 		} else if (filterType === 'Cheapest Flights') {
 			filteredList.sort((a, b) => {
-				const totalPriceA = a.reduce((acc: number, flight: any) => acc + flight.totalPrice, 0);
-				const totalPriceB = b.reduce((acc: number, flight: any) => acc + flight.totalPrice, 0);
+				const totalPriceA = a.reduce((price: number, flight: any) => price + flight.totalPrice, 0);
+				const totalPriceB = b.reduce((price: number, flight: any) => price + flight.totalPrice, 0);
 				return totalPriceA - totalPriceB;
 			});
 		} else if (filterType === 'Fastest Flights') {
