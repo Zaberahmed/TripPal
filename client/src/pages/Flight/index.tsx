@@ -7,7 +7,6 @@ import { Center, Flex } from '@chakra-ui/react';
 const FlightPage = () => {
 	const [flightSearchList, setFlightSearchList] = useState<any[]>([]);
 	const [filteredFlights, setFilteredFlights] = useState<any[]>([]);
-	const [totalFlightPrice, setTotalFlightPrice] = useState<number>(0);
 
 	useEffect(() => {
 		const tripType = localStorage.getItem('tripType');

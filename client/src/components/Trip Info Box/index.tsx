@@ -34,6 +34,15 @@ const getFormattedDate = (dateString: string) => {
 const TripInfoBox = () => {
 	const [tripType, setTripType] = useState('');
 	const [formData, setFormData] = useState({
+		cities: [
+			{
+				source: '',
+				sourceCity: '',
+				destination: '',
+				destinationCity: '',
+				departureDate: '',
+			},
+		],
 		source: '',
 		sourceCity: '',
 		destination: '',
@@ -62,76 +71,122 @@ const TripInfoBox = () => {
 		}
 	}, [tripType]);
 
-	// useEffect(() => {
-	// 	console.log('trip type:', tripType);
-	// 	console.log('form Data:', formData);
-	// }, []);
+	useEffect(() => {
+		console.log('trip type:', tripType);
+		console.log('form Data:', formData);
+	}, [tripType]);
 
 	return (
 		<>
-			<Flex
-				gap={'.25rem'}
-				p={'.5rem'}
-				direction={'column'}
-				alignItems={'center'}
-				boxShadow={'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}
-				bg={'beige'}
-				borderRadius={'md'}>
-				<Badge
-					p={'.25rem'}
-					colorScheme="orange"
-					borderRadius={'md'}
-					m={'.25rem 0'}>
-					<Text fontSize={'.875rem'}>
-						({formData.sourceCity}) {formData.source} - {formData.destination} ({formData.destinationCity})
-					</Text>
-				</Badge>
-
+			{tripType === 'MULTI_CITY' ? (
 				<Flex
 					gap={'.25rem'}
-					wrap={'wrap'}>
-					<Badge
-						p={'.25rem'}
-						colorScheme="blue"
-						borderRadius={'md'}
-						m={'.25rem 0'}>
-						<Text fontSize={'.875rem'}>{getFormattedDate(formData.departureDate)}</Text>
-					</Badge>
-
-					<Badge
-						p={'.25rem'}
-						colorScheme="green"
-						borderRadius={'md'}
-						m={'.25rem 0'}>
-						<Text fontSize={'.875rem'}>{formData.cabin}</Text>
-					</Badge>
-					<Badge
-						p={'.25rem'}
-						colorScheme="blue"
-						borderRadius={'md'}
-						m={'.25rem 0'}>
-						<Text fontSize={'.875rem'}>{formData.passenger} person(s)</Text>
-					</Badge>
-
-					{tripType === 'ROUND_TRIP' && formData.returnDate ? (
+					p={'.5rem'}
+					direction={'column'}
+					alignItems={'center'}
+					boxShadow={'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}
+					bg={'beige'}
+					borderRadius={'md'}>
+					{formData.cities.map((city) => {
+						return (
+							<>
+								<Badge
+									p={'.25rem'}
+									colorScheme="orange"
+									borderRadius={'md'}
+									m={'.25rem 0'}>
+									<Text fontSize={'.875rem'}>
+										({city.sourceCity.split(' ')[0]}){city.source} - {city.destination} ({city.destinationCity.split(' ')[0]})
+									</Text>
+								</Badge>
+								<Badge
+									p={'.25rem'}
+									colorScheme="blue"
+									borderRadius={'md'}
+									m={'.25rem 0'}>
+									<Text fontSize={'.875rem'}>{getFormattedDate(city.departureDate)}</Text>
+								</Badge>
+							</>
+						);
+					})}
+					<Flex
+						gap={'.25rem'}
+						wrap={'wrap'}>
+						<Badge
+							p={'.25rem'}
+							colorScheme="green"
+							borderRadius={'md'}
+							m={'.25rem 0'}>
+							<Text fontSize={'.875rem'}>{formData.cabin}</Text>
+						</Badge>
 						<Badge
 							p={'.25rem'}
 							colorScheme="blue"
 							borderRadius={'md'}
 							m={'.25rem 0'}>
-							<Text fontSize={'.875rem'}> {getFormattedDate(formData.returnDate)}</Text>
+							<Text fontSize={'.875rem'}>{formData.passenger} person(s)</Text>
 						</Badge>
-					) : null}
+					</Flex>
 				</Flex>
+			) : (
+				<>
+					<Flex
+						gap={'.25rem'}
+						p={'.5rem'}
+						direction={'column'}
+						alignItems={'center'}
+						boxShadow={'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}
+						bg={'beige'}
+						borderRadius={'md'}>
+						<Badge
+							p={'.25rem'}
+							colorScheme="orange"
+							borderRadius={'md'}
+							m={'.25rem 0'}>
+							<Text fontSize={'.875rem'}>
+								({formData.sourceCity}) {formData.source} - {formData.destination} ({formData.destinationCity})
+							</Text>
+						</Badge>
 
-				{/* <Button
-				mt={'1.5rem'}
-				bg={'actionPrimary'}
-				color={'primary'}
-				variant="solid">
-				Modify Search
-			</Button> */}
-			</Flex>
+						<Flex
+							gap={'.25rem'}
+							wrap={'wrap'}>
+							<Badge
+								p={'.25rem'}
+								colorScheme="blue"
+								borderRadius={'md'}
+								m={'.25rem 0'}>
+								<Text fontSize={'.875rem'}>{getFormattedDate(formData.departureDate)}</Text>
+							</Badge>
+
+							<Badge
+								p={'.25rem'}
+								colorScheme="green"
+								borderRadius={'md'}
+								m={'.25rem 0'}>
+								<Text fontSize={'.875rem'}>{formData.cabin}</Text>
+							</Badge>
+							<Badge
+								p={'.25rem'}
+								colorScheme="blue"
+								borderRadius={'md'}
+								m={'.25rem 0'}>
+								<Text fontSize={'.875rem'}>{formData.passenger} person(s)</Text>
+							</Badge>
+
+							{tripType === 'ROUND_TRIP' && formData.returnDate ? (
+								<Badge
+									p={'.25rem'}
+									colorScheme="blue"
+									borderRadius={'md'}
+									m={'.25rem 0'}>
+									<Text fontSize={'.875rem'}> {getFormattedDate(formData.returnDate)}</Text>
+								</Badge>
+							) : null}
+						</Flex>
+					</Flex>
+				</>
+			)}
 		</>
 	);
 };
