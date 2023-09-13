@@ -43,10 +43,6 @@ const BookingTab = (props: { trips: Trip[] }) => {
 		}
 	}, [props.trips]);
 
-	useEffect(() => {
-		console.log('trips:', futureTrips);
-	}, [futureTrips]);
-
 	return (
 		<Tabs
 			bg={'#ffffff'}
