@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
-import { createUser, findAllUsers, findUserByEmail, findUserById } from '../models/user/user.query';
+import { createUser, findAllUsers, findAndUpdateUser, findUserByEmail, findUserById } from '../models/user/user.query';
 import { getSession, createSession, destroySession } from './../middlewares/sessionManagement';
 import { Session } from '../interfaces/session.interface';
 import { Types } from '../database';
@@ -100,6 +100,29 @@ export const profile = async (req: Request, res: Response) => {
 		res.status(500).json({
 			error: true,
 			message: 'Error while getting profile!',
+		});
+	}
+};
+
+export const updateProfile = async (req: Request, res: Response) => {
+	try {
+		const { nationality, passportId, gender } = req.body;
+		const updateInfo = { nationality, passportId, gender };
+
+		const token = req.cookies.accessToken;
+		const session: Session | undefined = getSession(token);
+
+		if (session) {
+			const updateUser = await findAndUpdateUser(session.userEmail, updateInfo);
+			return res.status(200).send(updateUser);
+		}
+
+		res.status(401).send('Session is invalid!');
+	} catch (error) {
+		console.error('Error while updating profile at controller!');
+		res.status(500).json({
+			error: true,
+			message: 'Error while updating profile!',
 		});
 	}
 };

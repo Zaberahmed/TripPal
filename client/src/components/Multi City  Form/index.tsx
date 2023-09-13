@@ -9,7 +9,6 @@ import Error from '../Error';
 import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 import airports from './../../data/newAirports.json';
-import { AnyIfEmpty } from 'react-redux';
 
 export type MultiCityFormData = {
 	cities: {

@@ -11,7 +11,8 @@ const ProfileCard = () => {
 		password: '********',
 		phone: '016XXXXXXXX',
 		gender: '',
-		passport: '',
+		passportId: '',
+		nationality: '',
 	});
 
 	useEffect(() => {
@@ -56,6 +57,7 @@ const ProfileCard = () => {
 					<Text>Password</Text>
 					<Text>Phone</Text>
 					<Text>Gender</Text>
+					<Text>Nationality</Text>
 					<Text>Passport</Text>
 				</VStack>
 				<VStack
@@ -67,8 +69,9 @@ const ProfileCard = () => {
 					<Text>{user.email}</Text>
 					<Text>********</Text>
 					<Text>{user.phone}</Text>
-					<Text>{user.gender}</Text>
-					<Text>{user.passport}</Text>
+					<Text textTransform={'capitalize'}>{user.gender}</Text>
+					<Text textTransform={'capitalize'}>{user.nationality}</Text>
+					<Text textTransform={'capitalize'}>{user.passportId}</Text>
 				</VStack>
 			</Flex>
 			<Center mt={'2rem'}>

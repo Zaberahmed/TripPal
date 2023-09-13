@@ -8,6 +8,7 @@ export const userRouter = Router();
 userRouter.post('/signup', userController.signUp);
 userRouter.post('/signin', userController.signIn);
 userRouter.get('/profile', authenticator, userController.profile);
+userRouter.put('/travelInfo', authenticator, userController.updateProfile);
 userRouter.delete('/signout', authenticator, userController.signOut);
 
 userRouter.get('/getall', userController.getAllUsers);

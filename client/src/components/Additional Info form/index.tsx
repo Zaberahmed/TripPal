@@ -1,15 +1,33 @@
 import { useForm, SubmitHandler, Controller, FieldValues } from 'react-hook-form';
-import { Box, Input, Radio, RadioGroup, Stack, Button, Text, FormControl, FormLabel } from '@chakra-ui/react';
+import { Box, Radio, RadioGroup, Stack, Button, Text, FormControl, FormLabel, Input } from '@chakra-ui/react';
 import Select from 'react-select';
 import { nationalities } from '../../data/nationalities';
+import { useUpdateTravelInfoMutation } from '../../rtk-store/api/userApi';
+
+const calculateMinDate = () => {
+	const today = new Date();
+	const minDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+	return minDate.toISOString().slice(0, 10);
+};
 
 const AdditionalInfoForm = () => {
 	const { control, handleSubmit } = useForm();
+	const [updateUserTravelInfo] = useUpdateTravelInfoMutation();
 
 	const nationalityOptions = nationalities.map((nationality: string) => ({ label: nationality, value: nationality }));
 
-	const onSubmit: SubmitHandler<FieldValues> = (data) => {
-		console.log(data);
+	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+		console.log('data:', data);
+		const updateInfo = { nationality: data.nationality.value, gender: data.gender, passportId: data.passportId };
+		try {
+			const result = await updateUserTravelInfo(updateInfo);
+			console.log('result:', result);
+			if (result.data && result.data.email.length > 0) {
+				localStorage.setItem('user', JSON.stringify(result.data));
+			}
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	return (
@@ -67,6 +85,22 @@ const AdditionalInfoForm = () => {
 						control={control}
 						defaultValue=""
 						render={({ field }) => <Input {...field} />}
+					/>
+				</FormControl>
+
+				<FormControl>
+					<FormLabel mt={'.5rem'}>Date of Birth</FormLabel>
+					<Controller
+						name="dob"
+						control={control}
+						defaultValue=""
+						render={({ field }) => (
+							<Input
+								type="date"
+								min={calculateMinDate()}
+								{...field}
+							/>
+						)}
 					/>
 				</FormControl>
 

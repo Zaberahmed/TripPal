@@ -1,7 +1,5 @@
 import { Types } from '../../database';
-import { Trip } from '../../interfaces/trip.interface';
 import { User } from '../../interfaces/user.interface';
-import { TripModel } from '../trip/trip.model';
 import { UserModel } from './user.model';
 
 export const createUser = async (user: User) => {
@@ -35,3 +33,10 @@ export const findAllUsers = async () => {
 	}
 };
 
+export const findAndUpdateUser = async (email: string, updateInfo: { nationality: string; gender: string; passportId: string }) => {
+	try {
+		return await UserModel.findOneAndUpdate({ email: email }, { $set: updateInfo }, { new: true });
+	} catch (error) {
+		console.error('Error while updating all users in query!');
+	}
+};
