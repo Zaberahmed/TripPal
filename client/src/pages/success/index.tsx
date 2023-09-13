@@ -7,7 +7,7 @@ export const Success = () => {
 	const navigate = useNavigate();
 	useEffect(() => {
 		setTimeout(() => {
-			navigate('/home');
+			navigate('/flight');
 		}, 3000);
 	}, []);
 	return (

@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Hartsfield Jackson Atlanta Intl",
+		"name": "Hartsfield Jackson Atlanta Intl Airport",
 		"city": "Atlanta",
 		"country": "United States",
 		"iata_code": "ATL",
@@ -12,7 +12,7 @@
 		"objectID": "3682"
 	},
 	{
-		"name": "Chicago Ohare Intl",
+		"name": "Chicago Ohare Intl Airport",
 		"city": "Chicago",
 		"country": "United States",
 		"iata_code": "ORD",
@@ -24,7 +24,7 @@
 		"objectID": "3830"
 	},
 	{
-		"name": "Capital Intl",
+		"name": "Capital Intl Airport",
 		"city": "Beijing",
 		"country": "China",
 		"iata_code": "PEK",
@@ -60,7 +60,7 @@
 		"objectID": "1382"
 	},
 	{
-		"name": "Los Angeles Intl",
+		"name": "Los Angeles Intl Airport",
 		"city": "Los Angeles",
 		"country": "United States",
 		"iata_code": "LAX",
@@ -84,7 +84,7 @@
 		"objectID": "340"
 	},
 	{
-		"name": "Dallas Fort Worth Intl",
+		"name": "Dallas Fort Worth Intl Airport",
 		"city": "Dallas-Fort Worth",
 		"country": "United States",
 		"iata_code": "DFW",
@@ -96,7 +96,7 @@
 		"objectID": "3670"
 	},
 	{
-		"name": "John F Kennedy Intl",
+		"name": "John F Kennedy Intl Airport",
 		"city": "New York",
 		"country": "United States",
 		"iata_code": "JFK",
@@ -132,7 +132,7 @@
 		"objectID": "3406"
 	},
 	{
-		"name": "Changi Intl",
+		"name": "Changi Intl Airport",
 		"city": "Singapore",
 		"country": "Singapore",
 		"iata_code": "SIN",
@@ -156,7 +156,7 @@
 		"objectID": "1218"
 	},
 	{
-		"name": "Incheon Intl",
+		"name": "Incheon Intl Airport",
 		"city": "Seoul",
 		"country": "South Korea",
 		"iata_code": "ICN",
@@ -168,7 +168,7 @@
 		"objectID": "3930"
 	},
 	{
-		"name": "Denver Intl",
+		"name": "Denver Intl Airport",
 		"city": "Denver",
 		"country": "United States",
 		"iata_code": "DEN",
@@ -180,7 +180,7 @@
 		"objectID": "3751"
 	},
 	{
-		"name": "Miami Intl",
+		"name": "Miami Intl Airport",
 		"city": "Miami",
 		"country": "United States",
 		"iata_code": "MIA",
@@ -216,7 +216,7 @@
 		"objectID": "1701"
 	},
 	{
-		"name": "Hong Kong Intl",
+		"name": "Hong Kong Intl Airport",
 		"city": "Hong Kong",
 		"country": "Hong Kong",
 		"iata_code": "HKG",
@@ -228,7 +228,7 @@
 		"objectID": "3077"
 	},
 	{
-		"name": "Dubai Intl",
+		"name": "Dubai Intl Airport",
 		"city": "Dubai",
 		"country": "United Arab Emirates",
 		"iata_code": "DXB",
@@ -252,7 +252,7 @@
 		"objectID": "502"
 	},
 	{
-		"name": "Baiyun Intl",
+		"name": "Baiyun Intl Airport",
 		"city": "Guangzhou",
 		"country": "China",
 		"iata_code": "CAN",
@@ -288,7 +288,7 @@
 		"objectID": "1229"
 	},
 	{
-		"name": "Suvarnabhumi Intl",
+		"name": "Suvarnabhumi Intl Airport",
 		"city": "Bangkok",
 		"country": "Thailand",
 		"iata_code": "BKK",
@@ -324,7 +324,7 @@
 		"objectID": "3395"
 	},
 	{
-		"name": "Lester B Pearson Intl",
+		"name": "Lester B Pearson Intl Airport",
 		"city": "Toronto",
 		"country": "Canada",
 		"iata_code": "YYZ",
@@ -372,7 +372,7 @@
 		"objectID": "1613"
 	},
 	{
-		"name": "Charlotte Douglas Intl",
+		"name": "Charlotte Douglas Intl Airport",
 		"city": "Charlotte",
 		"country": "United States",
 		"iata_code": "CLT",
@@ -384,7 +384,7 @@
 		"objectID": "3876"
 	},
 	{
-		"name": "Philadelphia Intl",
+		"name": "Philadelphia Intl Airport",
 		"city": "Philadelphia",
 		"country": "United States",
 		"iata_code": "PHL",
@@ -396,7 +396,7 @@
 		"objectID": "3752"
 	},
 	{
-		"name": "Narita Intl",
+		"name": "Narita Intl Airport",
 		"city": "Tokyo",
 		"country": "Japan",
 		"iata_code": "NRT",
@@ -468,7 +468,7 @@
 		"objectID": "3393"
 	},
 	{
-		"name": "Indira Gandhi Intl",
+		"name": "Indira Gandhi Intl Airport",
 		"city": "Delhi",
 		"country": "India",
 		"iata_code": "DEL",
@@ -480,7 +480,7 @@
 		"objectID": "3093"
 	},
 	{
-		"name": "Taoyuan Intl",
+		"name": "Taoyuan Intl Airport",
 		"city": "Taipei",
 		"country": "Taiwan",
 		"iata_code": "TPE",
@@ -492,7 +492,7 @@
 		"objectID": "2276"
 	},
 	{
-		"name": "Kuala Lumpur Intl",
+		"name": "Kuala Lumpur Intl Airport",
 		"city": "Kuala Lumpur",
 		"country": "Malaysia",
 		"iata_code": "KUL",
@@ -504,7 +504,7 @@
 		"objectID": "3304"
 	},
 	{
-		"name": "Phoenix Sky Harbor Intl",
+		"name": "Phoenix Sky Harbor Intl Airport",
 		"city": "Phoenix",
 		"country": "United States",
 		"iata_code": "PHX",
@@ -528,7 +528,7 @@
 		"objectID": "3386"
 	},
 	{
-		"name": "Newark Liberty Intl",
+		"name": "Newark Liberty Intl Airport",
 		"city": "Newark",
 		"country": "United States",
 		"iata_code": "EWR",
@@ -540,7 +540,7 @@
 		"objectID": "3494"
 	},
 	{
-		"name": "San Francisco Intl",
+		"name": "San Francisco Intl Airport",
 		"city": "San Francisco",
 		"country": "United States",
 		"iata_code": "SFO",
@@ -552,7 +552,7 @@
 		"objectID": "3469"
 	},
 	{
-		"name": "Mc Carran Intl",
+		"name": "Mc Carran Intl Airport",
 		"city": "Las Vegas",
 		"country": "United States",
 		"iata_code": "LAS",
@@ -588,7 +588,7 @@
 		"objectID": "3550"
 	},
 	{
-		"name": "Licenciado Benito Juarez Intl",
+		"name": "Licenciado Benito Juarez Intl Airport",
 		"city": "Mexico City",
 		"country": "Mexico",
 		"iata_code": "MEX",
@@ -600,7 +600,7 @@
 		"objectID": "1824"
 	},
 	{
-		"name": "Abu Dhabi Intl",
+		"name": "Abu Dhabi Intl Airport",
 		"city": "Abu Dhabi",
 		"country": "United Arab Emirates",
 		"iata_code": "AUH",
@@ -612,7 +612,7 @@
 		"objectID": "2179"
 	},
 	{
-		"name": "Orlando Intl",
+		"name": "Orlando Intl Airport",
 		"city": "Orlando",
 		"country": "United States",
 		"iata_code": "MCO",
@@ -624,7 +624,7 @@
 		"objectID": "3878"
 	},
 	{
-		"name": "Baoan Intl",
+		"name": "Baoan Intl Airport",
 		"city": "Shenzhen",
 		"country": "China",
 		"iata_code": "SZX",
@@ -660,7 +660,7 @@
 		"objectID": "609"
 	},
 	{
-		"name": "Chhatrapati Shivaji Intl",
+		"name": "Chhatrapati Shivaji Intl Airport",
 		"city": "Mumbai",
 		"country": "India",
 		"iata_code": "BOM",
@@ -708,7 +708,7 @@
 		"objectID": "3645"
 	},
 	{
-		"name": "Minneapolis St Paul Intl",
+		"name": "Minneapolis St Paul Intl Airport",
 		"city": "Minneapolis",
 		"country": "United States",
 		"iata_code": "MSP",
@@ -720,7 +720,7 @@
 		"objectID": "3858"
 	},
 	{
-		"name": "General Edward Lawrence Logan Intl",
+		"name": "General Edward Lawrence Logan Intl Airport",
 		"city": "Boston",
 		"country": "United States",
 		"iata_code": "BOS",
@@ -756,7 +756,7 @@
 		"objectID": "599"
 	},
 	{
-		"name": "Hongqiao Intl",
+		"name": "Hongqiao Intl Airport",
 		"city": "Shanghai",
 		"country": "China",
 		"iata_code": "SHA",
@@ -768,7 +768,7 @@
 		"objectID": "3391"
 	},
 	{
-		"name": "Sydney Intl",
+		"name": "Sydney Intl Airport",
 		"city": "Sydney",
 		"country": "Australia",
 		"iata_code": "SYD",
@@ -804,7 +804,7 @@
 		"objectID": "1386"
 	},
 	{
-		"name": "Eleftherios Venizelos Intl",
+		"name": "Eleftherios Venizelos Intl Airport",
 		"city": "Athens",
 		"country": "Greece",
 		"iata_code": "ATH",
@@ -816,7 +816,7 @@
 		"objectID": "3941"
 	},
 	{
-		"name": "Seattle Tacoma Intl",
+		"name": "Seattle Tacoma Intl Airport",
 		"city": "Seattle",
 		"country": "United States",
 		"iata_code": "SEA",
@@ -864,7 +864,7 @@
 		"objectID": "2564"
 	},
 	{
-		"name": "Washington Dulles Intl",
+		"name": "Washington Dulles Intl Airport",
 		"city": "Washington",
 		"country": "United States",
 		"iata_code": "IAD",
@@ -876,7 +876,7 @@
 		"objectID": "3714"
 	},
 	{
-		"name": "Ninoy Aquino Intl",
+		"name": "Ninoy Aquino Intl Airport",
 		"city": "Manila",
 		"country": "Philippines",
 		"iata_code": "MNL",
@@ -912,7 +912,7 @@
 		"objectID": "3371"
 	},
 	{
-		"name": "Doha Intl",
+		"name": "Doha Intl Airport",
 		"city": "Doha",
 		"country": "Qatar",
 		"iata_code": "DOH",
@@ -924,7 +924,7 @@
 		"objectID": "2241"
 	},
 	{
-		"name": "King Abdulaziz Intl",
+		"name": "King Abdulaziz Intl Airport",
 		"city": "Jeddah",
 		"country": "Saudi Arabia",
 		"iata_code": "JED",
@@ -948,7 +948,7 @@
 		"objectID": "3390"
 	},
 	{
-		"name": "Fort Lauderdale Hollywood Intl",
+		"name": "Fort Lauderdale Hollywood Intl Airport",
 		"city": "Fort Lauderdale",
 		"country": "United States",
 		"iata_code": "FLL",
@@ -972,7 +972,7 @@
 		"objectID": "3376"
 	},
 	{
-		"name": "Pierre Elliott Trudeau Intl",
+		"name": "Pierre Elliott Trudeau Intl Airport",
 		"city": "Montreal",
 		"country": "Canada",
 		"iata_code": "YUL",
@@ -996,7 +996,7 @@
 		"objectID": "2948"
 	},
 	{
-		"name": "Soekarno Hatta Intl",
+		"name": "Soekarno Hatta Intl Airport",
 		"city": "Jakarta",
 		"country": "Indonesia",
 		"iata_code": "CGK",
@@ -1080,7 +1080,7 @@
 		"objectID": "1665"
 	},
 	{
-		"name": "Johannesburg Intl",
+		"name": "Johannesburg Intl Airport",
 		"city": "Johannesburg",
 		"country": "South Africa",
 		"iata_code": "JNB",
@@ -1140,7 +1140,7 @@
 		"objectID": "3697"
 	},
 	{
-		"name": "Tokyo Intl",
+		"name": "Tokyo Intl Airport",
 		"city": "Tokyo",
 		"country": "Japan",
 		"iata_code": "HND",
@@ -1152,7 +1152,7 @@
 		"objectID": "2359"
 	},
 	{
-		"name": "Vancouver Intl",
+		"name": "Vancouver Intl Airport",
 		"city": "Vancouver",
 		"country": "Canada",
 		"iata_code": "YVR",
@@ -1176,7 +1176,7 @@
 		"objectID": "1212"
 	},
 	{
-		"name": "Cancun Intl",
+		"name": "Cancun Intl Airport",
 		"city": "Cancun",
 		"country": "Mexico",
 		"iata_code": "CUN",
@@ -1200,7 +1200,7 @@
 		"objectID": "1054"
 	},
 	{
-		"name": "Eldorado Intl",
+		"name": "Eldorado Intl Airport",
 		"city": "Bogota",
 		"country": "Colombia",
 		"iata_code": "BOG",
@@ -1236,7 +1236,7 @@
 		"objectID": "3992"
 	},
 	{
-		"name": "Cairo Intl",
+		"name": "Cairo Intl Airport",
 		"city": "Cairo",
 		"country": "Egypt",
 		"iata_code": "CAI",
@@ -1248,7 +1248,7 @@
 		"objectID": "1128"
 	},
 	{
-		"name": "Brisbane Intl",
+		"name": "Brisbane Intl Airport",
 		"city": "Brisbane",
 		"country": "Australia",
 		"iata_code": "BNE",
@@ -1284,7 +1284,7 @@
 		"objectID": "4317"
 	},
 	{
-		"name": "Baltimore Washington Intl",
+		"name": "Baltimore Washington Intl Airport",
 		"city": "Baltimore",
 		"country": "United States",
 		"iata_code": "BWI",
@@ -1308,7 +1308,7 @@
 		"objectID": "3404"
 	},
 	{
-		"name": "Salt Lake City Intl",
+		"name": "Salt Lake City Intl Airport",
 		"city": "Salt Lake City",
 		"country": "United States",
 		"iata_code": "SLC",
@@ -1320,7 +1320,7 @@
 		"objectID": "3536"
 	},
 	{
-		"name": "Tampa Intl",
+		"name": "Tampa Intl Airport",
 		"city": "Tampa",
 		"country": "United States",
 		"iata_code": "TPA",
@@ -1332,7 +1332,7 @@
 		"objectID": "3646"
 	},
 	{
-		"name": "King Khaled Intl",
+		"name": "King Khaled Intl Airport",
 		"city": "Riyadh",
 		"country": "Saudi Arabia",
 		"iata_code": "RUH",
@@ -1392,7 +1392,7 @@
 		"objectID": "4144"
 	},
 	{
-		"name": "Chicago Midway Intl",
+		"name": "Chicago Midway Intl Airport",
 		"city": "Chicago",
 		"country": "United States",
 		"iata_code": "MDW",
@@ -1428,7 +1428,7 @@
 		"objectID": "4108"
 	},
 	{
-		"name": "Melbourne Intl",
+		"name": "Melbourne Intl Airport",
 		"city": "Melbourne",
 		"country": "Australia",
 		"iata_code": "MEL",
@@ -1536,7 +1536,7 @@
 		"objectID": "1688"
 	},
 	{
-		"name": "Mohammed V Intl",
+		"name": "Mohammed V Intl Airport",
 		"city": "Casablanca",
 		"country": "Morocco",
 		"iata_code": "CMN",
@@ -1548,7 +1548,7 @@
 		"objectID": "1074"
 	},
 	{
-		"name": "Louis Armstrong New Orleans Intl",
+		"name": "Louis Armstrong New Orleans Intl Airport",
 		"city": "New Orleans",
 		"country": "United States",
 		"iata_code": "MSY",
@@ -1584,7 +1584,7 @@
 		"objectID": "679"
 	},
 	{
-		"name": "Kuwait Intl",
+		"name": "Kuwait Intl Airport",
 		"city": "Kuwait",
 		"country": "Kuwait",
 		"iata_code": "KWI",
@@ -1596,7 +1596,7 @@
 		"objectID": "2176"
 	},
 	{
-		"name": "San Diego Intl",
+		"name": "San Diego Intl Airport",
 		"city": "San Diego",
 		"country": "United States",
 		"iata_code": "SAN",
@@ -1620,7 +1620,7 @@
 		"objectID": "535"
 	},
 	{
-		"name": "Honolulu Intl",
+		"name": "Honolulu Intl Airport",
 		"city": "Honolulu",
 		"country": "United States",
 		"iata_code": "HNL",
@@ -1656,7 +1656,7 @@
 		"objectID": "1055"
 	},
 	{
-		"name": "Portland Intl",
+		"name": "Portland Intl Airport",
 		"city": "Portland",
 		"country": "United States",
 		"iata_code": "PDX",
@@ -1668,7 +1668,7 @@
 		"objectID": "3720"
 	},
 	{
-		"name": "Jorge Chavez Intl",
+		"name": "Jorge Chavez Intl Airport",
 		"city": "Lima",
 		"country": "Peru",
 		"iata_code": "LIM",
@@ -1692,7 +1692,7 @@
 		"objectID": "3373"
 	},
 	{
-		"name": "Calgary Intl",
+		"name": "Calgary Intl Airport",
 		"city": "Calgary",
 		"country": "Canada",
 		"iata_code": "YYC",
@@ -1728,7 +1728,7 @@
 		"objectID": "1606"
 	},
 	{
-		"name": "Queen Alia Intl",
+		"name": "Queen Alia Intl Airport",
 		"city": "Amman",
 		"country": "Jordan",
 		"iata_code": "AMM",
@@ -1740,7 +1740,7 @@
 		"objectID": "2170"
 	},
 	{
-		"name": "Lambert St Louis Intl",
+		"name": "Lambert St Louis Intl Airport",
 		"city": "St. Louis",
 		"country": "United States",
 		"iata_code": "STL",
@@ -1788,7 +1788,7 @@
 		"objectID": "4030"
 	},
 	{
-		"name": "Tansonnhat Intl",
+		"name": "Tansonnhat Intl Airport",
 		"city": "Ho Chi Minh City",
 		"country": "Vietnam",
 		"iata_code": "SGN",
@@ -1836,7 +1836,7 @@
 		"objectID": "3372"
 	},
 	{
-		"name": "Bole Intl",
+		"name": "Bole Intl Airport",
 		"city": "Addis Ababa",
 		"country": "Ethiopia",
 		"iata_code": "ADD",
@@ -1848,7 +1848,7 @@
 		"objectID": "1107"
 	},
 	{
-		"name": "Auckland Intl",
+		"name": "Auckland Intl Airport",
 		"city": "Auckland",
 		"country": "New Zealand",
 		"iata_code": "AKL",
@@ -1860,7 +1860,7 @@
 		"objectID": "2006"
 	},
 	{
-		"name": "Tocumen Intl",
+		"name": "Tocumen Intl Airport",
 		"city": "Panama City",
 		"country": "Panama",
 		"iata_code": "PTY",
@@ -1872,7 +1872,7 @@
 		"objectID": "1871"
 	},
 	{
-		"name": "Chennai Intl",
+		"name": "Chennai Intl Airport",
 		"city": "Madras",
 		"country": "India",
 		"iata_code": "MAA",
@@ -1896,7 +1896,7 @@
 		"objectID": "1626"
 	},
 	{
-		"name": "Seeb Intl",
+		"name": "Seeb Intl Airport",
 		"city": "Muscat",
 		"country": "Oman",
 		"iata_code": "MCT",
@@ -1908,7 +1908,7 @@
 		"objectID": "2194"
 	},
 	{
-		"name": "Luis Munoz Marin Intl",
+		"name": "Luis Munoz Marin Intl Airport",
 		"city": "San Juan",
 		"country": "Puerto Rico",
 		"iata_code": "SJU",
@@ -1920,7 +1920,7 @@
 		"objectID": "2890"
 	},
 	{
-		"name": "Bandaranaike Intl Colombo",
+		"name": "Bandaranaike Intl Airport Colombo",
 		"city": "Colombo",
 		"country": "Sri Lanka",
 		"iata_code": "CMB",
@@ -1932,7 +1932,7 @@
 		"objectID": "3024"
 	},
 	{
-		"name": "Riga Intl",
+		"name": "Riga Intl Airport",
 		"city": "Riga",
 		"country": "Latvia",
 		"iata_code": "RIX",
@@ -1944,7 +1944,7 @@
 		"objectID": "3953"
 	},
 	{
-		"name": "Boryspil Intl",
+		"name": "Boryspil Intl Airport",
 		"city": "Kiev",
 		"country": "Ukraine",
 		"iata_code": "KBP",
@@ -2052,7 +2052,7 @@
 		"objectID": "3131"
 	},
 	{
-		"name": "Sharjah Intl",
+		"name": "Sharjah Intl Airport",
 		"city": "Sharjah",
 		"country": "United Arab Emirates",
 		"iata_code": "SHJ",
@@ -2076,7 +2076,7 @@
 		"objectID": "1489"
 	},
 	{
-		"name": "Netaji Subhash Chandra Bose Intl",
+		"name": "Netaji Subhash Chandra Bose Intl Airport",
 		"city": "Kolkata",
 		"country": "India",
 		"iata_code": "CCU",
@@ -2148,7 +2148,7 @@
 		"objectID": "4053"
 	},
 	{
-		"name": "Don Miguel Hidalgo Y Costilla Intl",
+		"name": "Don Miguel Hidalgo Y Costilla Intl Airport",
 		"city": "Guadalajara",
 		"country": "Mexico",
 		"iata_code": "GDL",
@@ -2172,7 +2172,7 @@
 		"objectID": "1418"
 	},
 	{
-		"name": "Perth Intl",
+		"name": "Perth Intl Airport",
 		"city": "Perth",
 		"country": "Australia",
 		"iata_code": "PER",
@@ -2184,7 +2184,7 @@
 		"objectID": "3351"
 	},
 	{
-		"name": "Simon Bolivar Intl",
+		"name": "Simon Bolivar Intl Airport",
 		"city": "Caracas",
 		"country": "Venezuela",
 		"iata_code": "CCS",
@@ -2256,7 +2256,7 @@
 		"objectID": "6345"
 	},
 	{
-		"name": "Noibai Intl",
+		"name": "Noibai Intl Airport",
 		"city": "Hanoi",
 		"country": "Vietnam",
 		"iata_code": "HAN",
@@ -2280,7 +2280,7 @@
 		"objectID": "1486"
 	},
 	{
-		"name": "Changbei Intl",
+		"name": "Changbei Intl Airport",
 		"city": "Nanchang",
 		"country": "China",
 		"iata_code": "KHN",
@@ -2328,7 +2328,7 @@
 		"objectID": "2305"
 	},
 	{
-		"name": "Bahrain Intl",
+		"name": "Bahrain Intl Airport",
 		"city": "Bahrain",
 		"country": "Bahrain",
 		"iata_code": "BAH",
@@ -2340,7 +2340,7 @@
 		"objectID": "2057"
 	},
 	{
-		"name": "Chubu Centrair Intl",
+		"name": "Chubu Centrair Intl Airport",
 		"city": "Nagoya",
 		"country": "Japan",
 		"iata_code": "NGO",
@@ -2400,7 +2400,7 @@
 		"objectID": "1472"
 	},
 	{
-		"name": "Austin Bergstrom Intl",
+		"name": "Austin Bergstrom Intl Airport",
 		"city": "Austin",
 		"country": "United States",
 		"iata_code": "AUS",
@@ -2412,7 +2412,7 @@
 		"objectID": "3673"
 	},
 	{
-		"name": "Raleigh Durham Intl",
+		"name": "Raleigh Durham Intl Airport",
 		"city": "Raleigh-durham",
 		"country": "United States",
 		"iata_code": "RDU",
@@ -2460,7 +2460,7 @@
 		"objectID": "6347"
 	},
 	{
-		"name": "Nashville Intl",
+		"name": "Nashville Intl Airport",
 		"city": "Nashville",
 		"country": "United States",
 		"iata_code": "BNA",
@@ -2472,7 +2472,7 @@
 		"objectID": "3690"
 	},
 	{
-		"name": "King Fahd Intl",
+		"name": "King Fahd Intl Airport",
 		"city": "Dammam",
 		"country": "Saudi Arabia",
 		"iata_code": "DMM",
@@ -2532,7 +2532,7 @@
 		"objectID": "1525"
 	},
 	{
-		"name": "Cleveland Hopkins Intl",
+		"name": "Cleveland Hopkins Intl Airport",
 		"city": "Cleveland",
 		"country": "United States",
 		"iata_code": "CLE",
@@ -2592,7 +2592,7 @@
 		"objectID": "2983"
 	},
 	{
-		"name": "Gimhae Intl",
+		"name": "Gimhae Intl Airport",
 		"city": "Busan",
 		"country": "South Korea",
 		"iata_code": "PUS",
@@ -2604,7 +2604,7 @@
 		"objectID": "2372"
 	},
 	{
-		"name": "Kansas City Intl",
+		"name": "Kansas City Intl Airport",
 		"city": "Kansas City",
 		"country": "United States",
 		"iata_code": "MCI",
@@ -2616,7 +2616,7 @@
 		"objectID": "3458"
 	},
 	{
-		"name": "Macau Intl",
+		"name": "Macau Intl Airport",
 		"city": "Macau",
 		"country": "Macau",
 		"iata_code": "MFM",
@@ -2628,7 +2628,7 @@
 		"objectID": "3121"
 	},
 	{
-		"name": "Arturo Merino Benitez Intl",
+		"name": "Arturo Merino Benitez Intl Airport",
 		"city": "Santiago",
 		"country": "Chile",
 		"iata_code": "SCL",
@@ -2688,7 +2688,7 @@
 		"objectID": "1562"
 	},
 	{
-		"name": "Cincinnati Northern Kentucky Intl",
+		"name": "Cincinnati Northern Kentucky Intl Airport",
 		"city": "Cincinnati",
 		"country": "United States",
 		"iata_code": "CVG",
@@ -2724,7 +2724,7 @@
 		"objectID": "3566"
 	},
 	{
-		"name": "Juan Santamaria Intl",
+		"name": "Juan Santamaria Intl Airport",
 		"city": "San Jose",
 		"country": "Costa Rica",
 		"iata_code": "SJO",
@@ -2736,7 +2736,7 @@
 		"objectID": "1885"
 	},
 	{
-		"name": "Pittsburgh Intl",
+		"name": "Pittsburgh Intl Airport",
 		"city": "Pittsburgh",
 		"country": "United States",
 		"iata_code": "PIT",
@@ -2748,7 +2748,7 @@
 		"objectID": "3570"
 	},
 	{
-		"name": "Zia Intl",
+		"name": "Hazrat Shahjala Intl Airport Airport",
 		"city": "Dhaka",
 		"country": "Bangladesh",
 		"iata_code": "DAC",
@@ -2772,7 +2772,7 @@
 		"objectID": "3141"
 	},
 	{
-		"name": "General Mariano Escobedo Intl",
+		"name": "General Mariano Escobedo Intl Airport Airport",
 		"city": "Monterrey",
 		"country": "Mexico",
 		"iata_code": "MTY",
@@ -2796,7 +2796,7 @@
 		"objectID": "1075"
 	},
 	{
-		"name": "Punta Cana Intl",
+		"name": "Punta Cana Intl Airport",
 		"city": "Punta Cana",
 		"country": "Dominican Republic",
 		"iata_code": "PUJ",
@@ -2820,7 +2820,7 @@
 		"objectID": "629"
 	},
 	{
-		"name": "Edmonton Intl",
+		"name": "Edmonton Intl Airport",
 		"city": "Edmonton",
 		"country": "Canada",
 		"iata_code": "YEG",
@@ -2832,7 +2832,7 @@
 		"objectID": "49"
 	},
 	{
-		"name": "Indianapolis Intl",
+		"name": "Indianapolis Intl Airport",
 		"city": "Indianapolis",
 		"country": "United States",
 		"iata_code": "IND",
@@ -2844,7 +2844,7 @@
 		"objectID": "3585"
 	},
 	{
-		"name": "Phuket Intl",
+		"name": "Phuket Intl Airport",
 		"city": "Phuket",
 		"country": "Thailand",
 		"iata_code": "HKT",
@@ -2868,7 +2868,7 @@
 		"objectID": "636"
 	},
 	{
-		"name": "San Antonio Intl",
+		"name": "San Antonio Intl Airport",
 		"city": "San Antonio",
 		"country": "United States",
 		"iata_code": "SAT",
@@ -2892,7 +2892,7 @@
 		"objectID": "585"
 	},
 	{
-		"name": "Lynden Pindling Intl",
+		"name": "Lynden Pindling Intl Airport",
 		"city": "Nassau",
 		"country": "Bahamas",
 		"iata_code": "NAS",
@@ -2904,7 +2904,7 @@
 		"objectID": "1953"
 	},
 	{
-		"name": "Don Muang Intl",
+		"name": "Don Muang Intl Airport",
 		"city": "Bangkok",
 		"country": "Thailand",
 		"iata_code": "DMK",
@@ -2940,7 +2940,7 @@
 		"objectID": "1264"
 	},
 	{
-		"name": "Leopold Sedar Senghor Intl",
+		"name": "Leopold Sedar Senghor Intl Airport",
 		"city": "Dakar",
 		"country": "Senegal",
 		"iata_code": "DKR",
@@ -2952,7 +2952,7 @@
 		"objectID": "1084"
 	},
 	{
-		"name": "Rafic Hariri Intl",
+		"name": "Rafic Hariri Intl Airport",
 		"city": "Beirut",
 		"country": "Lebanon",
 		"iata_code": "BEY",
@@ -3036,7 +3036,7 @@
 		"objectID": "4033"
 	},
 	{
-		"name": "Kaohsiung Intl",
+		"name": "Kaohsiung Intl Airport",
 		"city": "Kaohsiung",
 		"country": "Taiwan",
 		"iata_code": "KHH",
@@ -3072,7 +3072,7 @@
 		"objectID": "4331"
 	},
 	{
-		"name": "Southwest Florida Intl",
+		"name": "Southwest Florida Intl Airport",
 		"city": "Fort Myers",
 		"country": "United States",
 		"iata_code": "RSW",
@@ -3084,7 +3084,7 @@
 		"objectID": "3793"
 	},
 	{
-		"name": "Port Columbus Intl",
+		"name": "Port Columbus Intl Airport",
 		"city": "Columbus",
 		"country": "United States",
 		"iata_code": "CMH",
@@ -3156,7 +3156,7 @@
 		"objectID": "1512"
 	},
 	{
-		"name": "General Mitchell Intl",
+		"name": "General Mitchell Intl Airport",
 		"city": "Milwaukee",
 		"country": "United States",
 		"iata_code": "MKE",
@@ -3168,7 +3168,7 @@
 		"objectID": "3717"
 	},
 	{
-		"name": "Jinnah Intl",
+		"name": "Jinnah Intl Airport",
 		"city": "Karachi",
 		"country": "Pakistan",
 		"iata_code": "KHI",
@@ -3180,7 +3180,7 @@
 		"objectID": "2206"
 	},
 	{
-		"name": "Mehrabad Intl",
+		"name": "Mehrabad Intl Airport",
 		"city": "Teheran",
 		"country": "Iran",
 		"iata_code": "THR",
@@ -3228,7 +3228,7 @@
 		"objectID": "1200"
 	},
 	{
-		"name": "Norman Y Mineta San Jose Intl",
+		"name": "Norman Y Mineta San Jose Intl Airport",
 		"city": "San Jose",
 		"country": "United States",
 		"iata_code": "SJC",
@@ -3288,7 +3288,7 @@
 		"objectID": "273"
 	},
 	{
-		"name": "Ted Stevens Anchorage Intl",
+		"name": "Ted Stevens Anchorage Intl Airport",
 		"city": "Anchorage",
 		"country": "United States",
 		"iata_code": "ANC",
@@ -3312,7 +3312,7 @@
 		"objectID": "3136"
 	},
 	{
-		"name": "Jeju Intl",
+		"name": "Jeju Intl Airport",
 		"city": "Cheju",
 		"country": "South Korea",
 		"iata_code": "CJU",
@@ -3348,7 +3348,7 @@
 		"objectID": "491"
 	},
 	{
-		"name": "Vilnius Intl",
+		"name": "Vilnius Intl Airport",
 		"city": "Vilnius",
 		"country": "Lithuania",
 		"iata_code": "VNO",
@@ -3396,7 +3396,7 @@
 		"objectID": "669"
 	},
 	{
-		"name": "Princess Juliana Intl",
+		"name": "Princess Juliana Intl Airport",
 		"city": "Philipsburg",
 		"country": "Netherlands Antilles",
 		"iata_code": "SXM",
@@ -3420,7 +3420,7 @@
 		"objectID": "2578"
 	},
 	{
-		"name": "Memphis Intl",
+		"name": "Memphis Intl Airport",
 		"city": "Memphis",
 		"country": "United States",
 		"iata_code": "MEM",
@@ -3456,7 +3456,7 @@
 		"objectID": "3240"
 	},
 	{
-		"name": "Metropolitan Oakland Intl",
+		"name": "Metropolitan Oakland Intl Airport",
 		"city": "Oakland",
 		"country": "United States",
 		"iata_code": "OAK",
@@ -3468,7 +3468,7 @@
 		"objectID": "3453"
 	},
 	{
-		"name": "Allama Iqbal Intl",
+		"name": "Allama Iqbal Intl Airport",
 		"city": "Lahore",
 		"country": "Pakistan",
 		"iata_code": "LHE",
@@ -3480,7 +3480,7 @@
 		"objectID": "2207"
 	},
 	{
-		"name": "Cairns Intl",
+		"name": "Cairns Intl Airport",
 		"city": "Cairns",
 		"country": "Australia",
 		"iata_code": "CNS",
@@ -3492,7 +3492,7 @@
 		"objectID": "3322"
 	},
 	{
-		"name": "Tancredo Neves Intl",
+		"name": "Tancredo Neves Intl Airport",
 		"city": "Belo Horizonte",
 		"country": "Brazil",
 		"iata_code": "CNF",
@@ -3504,7 +3504,7 @@
 		"objectID": "2537"
 	},
 	{
-		"name": "Sacramento Intl",
+		"name": "Sacramento Intl Airport",
 		"city": "Sacramento",
 		"country": "United States",
 		"iata_code": "SMF",
@@ -3528,7 +3528,7 @@
 		"objectID": "2954"
 	},
 	{
-		"name": "Kotoka Intl",
+		"name": "Kotoka Intl Airport",
 		"city": "Accra",
 		"country": "Ghana",
 		"iata_code": "ACC",
@@ -3588,7 +3588,7 @@
 		"objectID": "1563"
 	},
 	{
-		"name": "El Salvador Intl",
+		"name": "El Salvador Intl Airport",
 		"city": "San Salvador",
 		"country": "El Salvador",
 		"iata_code": "SAL",
@@ -3624,7 +3624,7 @@
 		"objectID": "4091"
 	},
 	{
-		"name": "Kota Kinabalu Intl",
+		"name": "Kota Kinabalu Intl Airport",
 		"city": "Kota Kinabalu",
 		"country": "Malaysia",
 		"iata_code": "BKI",
@@ -3636,7 +3636,7 @@
 		"objectID": "3269"
 	},
 	{
-		"name": "Astana Intl",
+		"name": "Astana Intl Airport",
 		"city": "Tselinograd",
 		"country": "Kazakhstan",
 		"iata_code": "TSE",
@@ -3660,7 +3660,7 @@
 		"objectID": "1520"
 	},
 	{
-		"name": "Bradley Intl",
+		"name": "Bradley Intl Airport",
 		"city": "Windsor Locks",
 		"country": "United States",
 		"iata_code": "BDL",
@@ -3672,7 +3672,7 @@
 		"objectID": "3825"
 	},
 	{
-		"name": "Ioannis Kapodistrias Intl",
+		"name": "Ioannis Kapodistrias Intl Airport",
 		"city": "Kerkyra/corfu",
 		"country": "Greece",
 		"iata_code": "CFU",
@@ -3684,7 +3684,7 @@
 		"objectID": "1460"
 	},
 	{
-		"name": "Port Moresby Jacksons Intl",
+		"name": "Port Moresby Jacksons Intl Airport",
 		"city": "Port Moresby",
 		"country": "Papua New Guinea",
 		"iata_code": "POM",
@@ -3696,7 +3696,7 @@
 		"objectID": "5"
 	},
 	{
-		"name": "Adelaide Intl",
+		"name": "Adelaide Intl Airport",
 		"city": "Adelaide",
 		"country": "Australia",
 		"iata_code": "ADL",
@@ -3708,7 +3708,7 @@
 		"objectID": "3341"
 	},
 	{
-		"name": "Abidjan Felix Houphouet Boigny Intl",
+		"name": "Abidjan Felix Houphouet Boigny Intl Airport",
 		"city": "Abidjan",
 		"country": "Cote d'Ivoire",
 		"iata_code": "ABJ",
@@ -3732,7 +3732,7 @@
 		"objectID": "668"
 	},
 	{
-		"name": "Los Cabos Intl",
+		"name": "Los Cabos Intl Airport",
 		"city": "San Jose Del Cabo",
 		"country": "Mexico",
 		"iata_code": "SJD",
@@ -3792,7 +3792,7 @@
 		"objectID": "6366"
 	},
 	{
-		"name": "Yangon Intl",
+		"name": "Yangon Intl Airport",
 		"city": "Yangon",
 		"country": "Burma",
 		"iata_code": "RGN",
@@ -3840,7 +3840,7 @@
 		"objectID": "1222"
 	},
 	{
-		"name": "Mactan Cebu Intl",
+		"name": "Mactan Cebu Intl Airport",
 		"city": "Cebu",
 		"country": "Philippines",
 		"iata_code": "CEB",
@@ -3852,7 +3852,7 @@
 		"objectID": "4206"
 	},
 	{
-		"name": "Orlando Sanford Intl",
+		"name": "Orlando Sanford Intl Airport",
 		"city": "Sanford",
 		"country": "United States",
 		"iata_code": "SFB",
@@ -3876,7 +3876,7 @@
 		"objectID": "1206"
 	},
 	{
-		"name": "Halifax Intl",
+		"name": "Halifax Intl Airport",
 		"city": "Halifax",
 		"country": "Canada",
 		"iata_code": "YHZ",
@@ -3888,7 +3888,7 @@
 		"objectID": "73"
 	},
 	{
-		"name": "Chiang Mai Intl",
+		"name": "Chiang Mai Intl Airport",
 		"city": "Chiang Mai",
 		"country": "Thailand",
 		"iata_code": "CNX",
@@ -3912,7 +3912,7 @@
 		"objectID": "347"
 	},
 	{
-		"name": "Tripoli Intl",
+		"name": "Tripoli Intl Airport",
 		"city": "Tripoli",
 		"country": "Libya",
 		"iata_code": "TIP",
@@ -3972,7 +3972,7 @@
 		"objectID": "2618"
 	},
 	{
-		"name": "Las Americas Intl",
+		"name": "Las Americas Intl Airport",
 		"city": "Santo Domingo",
 		"country": "Dominican Republic",
 		"iata_code": "SDQ",
@@ -4020,7 +4020,7 @@
 		"objectID": "4374"
 	},
 	{
-		"name": "Licenciado Gustavo Diaz Ordaz Intl",
+		"name": "Licenciado Gustavo Diaz Ordaz Intl Airport",
 		"city": "Puerto Vallarta",
 		"country": "Mexico",
 		"iata_code": "PVR",
@@ -4032,7 +4032,7 @@
 		"objectID": "1836"
 	},
 	{
-		"name": "Jacksonville Intl",
+		"name": "Jacksonville Intl Airport",
 		"city": "Jacksonville",
 		"country": "United States",
 		"iata_code": "JAX",
@@ -4080,7 +4080,7 @@
 		"objectID": "7447"
 	},
 	{
-		"name": "Darwin Intl",
+		"name": "Darwin Intl Airport",
 		"city": "Darwin",
 		"country": "Australia",
 		"iata_code": "DRW",
@@ -4116,7 +4116,7 @@
 		"objectID": "2912"
 	},
 	{
-		"name": "Reina Beatrix Intl",
+		"name": "Reina Beatrix Intl Airport",
 		"city": "Oranjestad",
 		"country": "Aruba",
 		"iata_code": "AUA",
@@ -4152,7 +4152,7 @@
 		"objectID": "1458"
 	},
 	{
-		"name": "Sangster Intl",
+		"name": "Sangster Intl Airport",
 		"city": "Montego Bay",
 		"country": "Jamaica",
 		"iata_code": "MBJ",
@@ -4164,7 +4164,7 @@
 		"objectID": "1780"
 	},
 	{
-		"name": "Ottawa Macdonald Cartier Intl",
+		"name": "Ottawa Macdonald Cartier Intl Airport",
 		"city": "Ottawa",
 		"country": "Canada",
 		"iata_code": "YOW",
@@ -4188,7 +4188,7 @@
 		"objectID": "6386"
 	},
 	{
-		"name": "Palm Beach Intl",
+		"name": "Palm Beach Intl Airport",
 		"city": "West Palm Beach",
 		"country": "United States",
 		"iata_code": "PBI",
@@ -4200,7 +4200,7 @@
 		"objectID": "3722"
 	},
 	{
-		"name": "Tribhuvan Intl",
+		"name": "Tribhuvan Intl Airport",
 		"city": "Kathmandu",
 		"country": "Nepal",
 		"iata_code": "KTM",
@@ -4212,7 +4212,7 @@
 		"objectID": "3125"
 	},
 	{
-		"name": "Jose Marti Intl",
+		"name": "Jose Marti Intl Airport",
 		"city": "Havana",
 		"country": "Cuba",
 		"iata_code": "HAV",
@@ -4224,7 +4224,7 @@
 		"objectID": "1909"
 	},
 	{
-		"name": "Cape Town Intl",
+		"name": "Cape Town Intl Airport",
 		"city": "Cape Town",
 		"country": "South Africa",
 		"iata_code": "CPT",
@@ -4308,7 +4308,7 @@
 		"objectID": "1519"
 	},
 	{
-		"name": "Male Intl",
+		"name": "Male Intl Airport",
 		"city": "Male",
 		"country": "Maldives",
 		"iata_code": "MLE",
@@ -4332,7 +4332,7 @@
 		"objectID": "1208"
 	},
 	{
-		"name": "Pafos Intl",
+		"name": "Pafos Intl Airport",
 		"city": "Paphos",
 		"country": "Cyprus",
 		"iata_code": "PFO",
@@ -4356,7 +4356,7 @@
 		"objectID": "3456"
 	},
 	{
-		"name": "Penang Intl",
+		"name": "Penang Intl Airport",
 		"city": "Penang",
 		"country": "Malaysia",
 		"iata_code": "PEN",
@@ -4368,7 +4368,7 @@
 		"objectID": "3308"
 	},
 	{
-		"name": "Thiruvananthapuram Intl",
+		"name": "Thiruvananthapuram Intl Airport",
 		"city": "Trivandrum",
 		"country": "India",
 		"iata_code": "TRV",
@@ -4380,7 +4380,7 @@
 		"objectID": "3153"
 	},
 	{
-		"name": "Osaka Intl",
+		"name": "Osaka Intl Airport",
 		"city": "Osaka",
 		"country": "Japan",
 		"iata_code": "ITM",
@@ -4416,7 +4416,7 @@
 		"objectID": "4014"
 	},
 	{
-		"name": "Nadi Intl",
+		"name": "Nadi Intl Airport",
 		"city": "Nandi",
 		"country": "Fiji",
 		"iata_code": "NAN",
@@ -4428,7 +4428,7 @@
 		"objectID": "1960"
 	},
 	{
-		"name": "General Abelardo L Rodriguez Intl",
+		"name": "General Abelardo L Rodriguez Intl Airport",
 		"city": "Tijuana",
 		"country": "Mexico",
 		"iata_code": "TIJ",
@@ -4440,7 +4440,7 @@
 		"objectID": "1847"
 	},
 	{
-		"name": "Sir Seewoosagur Ramgoolam Intl",
+		"name": "Sir Seewoosagur Ramgoolam Intl Airport",
 		"city": "Plaisance",
 		"country": "Mauritius",
 		"iata_code": "MRU",
@@ -4488,7 +4488,7 @@
 		"objectID": "3863"
 	},
 	{
-		"name": "Borg El Arab Intl",
+		"name": "Borg El Arab Intl Airport",
 		"city": "Alexandria",
 		"country": "Egypt",
 		"iata_code": "HBE",
@@ -4512,7 +4512,7 @@
 		"objectID": "3035"
 	},
 	{
-		"name": "Winnipeg Intl",
+		"name": "Winnipeg Intl Airport",
 		"city": "Winnipeg",
 		"country": "Canada",
 		"iata_code": "YWG",
@@ -4584,7 +4584,7 @@
 		"objectID": "348"
 	},
 	{
-		"name": "Hurghada Intl",
+		"name": "Hurghada Intl Airport",
 		"city": "Hurghada",
 		"country": "Egypt",
 		"iata_code": "HRG",
@@ -4596,7 +4596,7 @@
 		"objectID": "1130"
 	},
 	{
-		"name": "Mariscal Sucre Intl",
+		"name": "Mariscal Sucre Intl Airport",
 		"city": "Quito",
 		"country": "Ecuador",
 		"iata_code": "UIO",
@@ -4620,7 +4620,7 @@
 		"objectID": "2378"
 	},
 	{
-		"name": "Shiraz Shahid Dastghaib Intl",
+		"name": "Shiraz Shahid Dastghaib Intl Airport",
 		"city": "Shiraz",
 		"country": "Iran",
 		"iata_code": "SYZ",
@@ -4644,7 +4644,7 @@
 		"objectID": "1324"
 	},
 	{
-		"name": "Kigali Intl",
+		"name": "Kigali Intl Airport",
 		"city": "Kigali",
 		"country": "Rwanda",
 		"iata_code": "KGL",
@@ -4668,7 +4668,7 @@
 		"objectID": "4075"
 	},
 	{
-		"name": "Sharm El Sheikh Intl",
+		"name": "Sharm El Sheikh Intl Airport",
 		"city": "Sharm El Sheikh",
 		"country": "Egypt",
 		"iata_code": "SSH",
@@ -4740,7 +4740,7 @@
 		"objectID": "415"
 	},
 	{
-		"name": "Richmond Intl",
+		"name": "Richmond Intl Airport",
 		"city": "Richmond",
 		"country": "United States",
 		"iata_code": "RIC",
@@ -4776,7 +4776,7 @@
 		"objectID": "1539"
 	},
 	{
-		"name": "Sanaa Intl",
+		"name": "Sanaa Intl Airport",
 		"city": "Sanaa",
 		"country": "Yemen",
 		"iata_code": "SAH",
@@ -4848,7 +4848,7 @@
 		"objectID": "4109"
 	},
 	{
-		"name": "Norfolk Intl",
+		"name": "Norfolk Intl Airport",
 		"city": "Norfolk",
 		"country": "United States",
 		"iata_code": "ORF",
@@ -4884,7 +4884,7 @@
 		"objectID": "3919"
 	},
 	{
-		"name": "Guararapes Gilberto Freyre Intl",
+		"name": "Guararapes Gilberto Freyre Intl Airport",
 		"city": "Recife",
 		"country": "Brazil",
 		"iata_code": "REC",
@@ -4896,7 +4896,7 @@
 		"objectID": "2610"
 	},
 	{
-		"name": "Christchurch Intl",
+		"name": "Christchurch Intl Airport",
 		"city": "Christchurch",
 		"country": "New Zealand",
 		"iata_code": "CHC",
@@ -4944,7 +4944,7 @@
 		"objectID": "4302"
 	},
 	{
-		"name": "Buffalo Niagara Intl",
+		"name": "Buffalo Niagara Intl Airport",
 		"city": "Buffalo",
 		"country": "United States",
 		"iata_code": "BUF",
@@ -4956,7 +4956,7 @@
 		"objectID": "3820"
 	},
 	{
-		"name": "Birmingham Intl",
+		"name": "Birmingham Intl Airport",
 		"city": "Birmingham",
 		"country": "United States",
 		"iata_code": "BHM",
@@ -4968,7 +4968,7 @@
 		"objectID": "3811"
 	},
 	{
-		"name": "Jose Joaquin De Olmedo Intl",
+		"name": "Jose Joaquin De Olmedo Intl Airport",
 		"city": "Guayaquil",
 		"country": "Ecuador",
 		"iata_code": "GYE",
@@ -4980,7 +4980,7 @@
 		"objectID": "2673"
 	},
 	{
-		"name": "Pinto Martins Intl",
+		"name": "Pinto Martins Intl Airport",
 		"city": "Fortaleza",
 		"country": "Brazil",
 		"iata_code": "FOR",
@@ -4992,7 +4992,7 @@
 		"objectID": "2559"
 	},
 	{
-		"name": "Belfast Intl",
+		"name": "Belfast Intl Airport",
 		"city": "Belfast",
 		"country": "United Kingdom",
 		"iata_code": "BFS",
@@ -5028,7 +5028,7 @@
 		"objectID": "2902"
 	},
 	{
-		"name": "Val De Cans Intl",
+		"name": "Val De Cans Intl Airport",
 		"city": "Belem",
 		"country": "Brazil",
 		"iata_code": "BEL",
@@ -5040,7 +5040,7 @@
 		"objectID": "2526"
 	},
 	{
-		"name": "Guam Intl",
+		"name": "Guam Intl Airport",
 		"city": "Agana",
 		"country": "Guam",
 		"iata_code": "GUM",
@@ -5088,7 +5088,7 @@
 		"objectID": "3973"
 	},
 	{
-		"name": "Charleston Afb Intl",
+		"name": "Charleston Afb Intl Airport",
 		"city": "Charleston",
 		"country": "United States",
 		"iata_code": "CHS",
@@ -5112,7 +5112,7 @@
 		"objectID": "3454"
 	},
 	{
-		"name": "V C Bird Intl",
+		"name": "V C Bird Intl Airport",
 		"city": "Antigua",
 		"country": "Antigua and Barbuda",
 		"iata_code": "ANU",
@@ -5160,7 +5160,7 @@
 		"objectID": "596"
 	},
 	{
-		"name": "Myrtle Beach Intl",
+		"name": "Myrtle Beach Intl Airport",
 		"city": "Myrtle Beach",
 		"country": "United States",
 		"iata_code": "MYR",
@@ -5196,7 +5196,7 @@
 		"objectID": "231"
 	},
 	{
-		"name": "Chisinau Intl",
+		"name": "Chisinau Intl Airport",
 		"city": "Chisinau",
 		"country": "Moldova",
 		"iata_code": "KIV",
@@ -5208,7 +5208,7 @@
 		"objectID": "1735"
 	},
 	{
-		"name": "Lusaka Intl",
+		"name": "Lusaka Intl Airport",
 		"city": "Lusaka",
 		"country": "Zambia",
 		"iata_code": "LUN",
@@ -5232,7 +5232,7 @@
 		"objectID": "373"
 	},
 	{
-		"name": "Entebbe Intl",
+		"name": "Entebbe Intl Airport",
 		"city": "Entebbe",
 		"country": "Uganda",
 		"iata_code": "EBB",
@@ -5244,7 +5244,7 @@
 		"objectID": "1187"
 	},
 	{
-		"name": "Mwalimu Julius K Nyerere Intl",
+		"name": "Mwalimu Julius K Nyerere Intl Airport",
 		"city": "Dar Es Salaam",
 		"country": "Tanzania",
 		"iata_code": "DAR",
@@ -5304,7 +5304,7 @@
 		"objectID": "495"
 	},
 	{
-		"name": "Danang Intl",
+		"name": "Danang Intl Airport",
 		"city": "Danang",
 		"country": "Vietnam",
 		"iata_code": "DAD",
@@ -5388,7 +5388,7 @@
 		"objectID": "6505"
 	},
 	{
-		"name": "James M Cox Dayton Intl",
+		"name": "James M Cox Dayton Intl Airport",
 		"city": "Dayton",
 		"country": "United States",
 		"iata_code": "DAY",
@@ -5400,7 +5400,7 @@
 		"objectID": "3627"
 	},
 	{
-		"name": "Eduardo Gomes Intl",
+		"name": "Eduardo Gomes Intl Airport",
 		"city": "Manaus",
 		"country": "Brazil",
 		"iata_code": "MAO",
@@ -5412,7 +5412,7 @@
 		"objectID": "2551"
 	},
 	{
-		"name": "Wellington Intl",
+		"name": "Wellington Intl Airport",
 		"city": "Wellington",
 		"country": "New Zealand",
 		"iata_code": "WLG",
@@ -5496,7 +5496,7 @@
 		"objectID": "3676"
 	},
 	{
-		"name": "Tucson Intl",
+		"name": "Tucson Intl Airport",
 		"city": "Tucson",
 		"country": "United States",
 		"iata_code": "TUS",
@@ -5508,7 +5508,7 @@
 		"objectID": "3636"
 	},
 	{
-		"name": "St Petersburg Clearwater Intl",
+		"name": "St Petersburg Clearwater Intl Airport",
 		"city": "St. Petersburg",
 		"country": "United States",
 		"iata_code": "PIE",
@@ -5568,7 +5568,7 @@
 		"objectID": "3137"
 	},
 	{
-		"name": "Phnom Penh Intl",
+		"name": "Phnom Penh Intl Airport",
 		"city": "Phnom-penh",
 		"country": "Cambodia",
 		"iata_code": "PNH",
@@ -5604,7 +5604,7 @@
 		"objectID": "4097"
 	},
 	{
-		"name": "Erbil Intl",
+		"name": "Erbil Intl Airport",
 		"city": "Erbil",
 		"country": "Iraq",
 		"iata_code": "EBL",
@@ -5616,7 +5616,7 @@
 		"objectID": "3989"
 	},
 	{
-		"name": "Albany Intl",
+		"name": "Albany Intl Airport",
 		"city": "Albany",
 		"country": "United States",
 		"iata_code": "ALB",
@@ -5628,7 +5628,7 @@
 		"objectID": "3864"
 	},
 	{
-		"name": "Greater Rochester Intl",
+		"name": "Greater Rochester Intl Airport",
 		"city": "Rochester",
 		"country": "United States",
 		"iata_code": "ROC",
@@ -5652,7 +5652,7 @@
 		"objectID": "2913"
 	},
 	{
-		"name": "Nnamdi Azikiwe Intl",
+		"name": "Nnamdi Azikiwe Intl Airport",
 		"city": "Abuja",
 		"country": "Nigeria",
 		"iata_code": "ABV",
@@ -5664,7 +5664,7 @@
 		"objectID": "260"
 	},
 	{
-		"name": "Peshawar Intl",
+		"name": "Peshawar Intl Airport",
 		"city": "Peshawar",
 		"country": "Pakistan",
 		"iata_code": "PEW",
@@ -5748,7 +5748,7 @@
 		"objectID": "3660"
 	},
 	{
-		"name": "Subang-Sultan Abdul Aziz Shah Intl",
+		"name": "Subang-Sultan Abdul Aziz Shah Intl Airport",
 		"city": "Kuala Lumpur",
 		"country": "Malaysia",
 		"iata_code": "SZB",
@@ -5808,7 +5808,7 @@
 		"objectID": "196"
 	},
 	{
-		"name": "Norman Manley Intl",
+		"name": "Norman Manley Intl Airport",
 		"city": "Kingston",
 		"country": "Jamaica",
 		"iata_code": "KIN",
@@ -5820,7 +5820,7 @@
 		"objectID": "1779"
 	},
 	{
-		"name": "Des Moines Intl",
+		"name": "Des Moines Intl Airport",
 		"city": "Des Moines",
 		"country": "United States",
 		"iata_code": "DSM",
@@ -5844,7 +5844,7 @@
 		"objectID": "3599"
 	},
 	{
-		"name": "Alfonso Bonilla Aragon Intl",
+		"name": "Alfonso Bonilla Aragon Intl Airport",
 		"city": "Cali",
 		"country": "Colombia",
 		"iata_code": "CLO",
@@ -5856,7 +5856,7 @@
 		"objectID": "2715"
 	},
 	{
-		"name": "Quebec Jean Lesage Intl",
+		"name": "Quebec Jean Lesage Intl Airport",
 		"city": "Quebec",
 		"country": "Canada",
 		"iata_code": "YQB",
@@ -5868,7 +5868,7 @@
 		"objectID": "111"
 	},
 	{
-		"name": "Harare Intl",
+		"name": "Harare Intl Airport",
 		"city": "Harare",
 		"country": "Zimbabwe",
 		"iata_code": "HRE",
@@ -5892,7 +5892,7 @@
 		"objectID": "671"
 	},
 	{
-		"name": "Reno Tahoe Intl",
+		"name": "Reno Tahoe Intl Airport",
 		"city": "Reno",
 		"country": "United States",
 		"iata_code": "RNO",
@@ -5904,7 +5904,7 @@
 		"objectID": "3807"
 	},
 	{
-		"name": "Gerald R Ford Intl",
+		"name": "Gerald R Ford Intl Airport",
 		"city": "Grand Rapids",
 		"country": "United States",
 		"iata_code": "GRR",
@@ -5964,7 +5964,7 @@
 		"objectID": "1997"
 	},
 	{
-		"name": "Philip S W Goldson Intl",
+		"name": "Philip S W Goldson Intl Airport",
 		"city": "Belize City",
 		"country": "Belize",
 		"iata_code": "BZE",
@@ -6000,7 +6000,7 @@
 		"objectID": "1064"
 	},
 	{
-		"name": "Tulsa Intl",
+		"name": "Tulsa Intl Airport",
 		"city": "Tulsa",
 		"country": "United States",
 		"iata_code": "TUL",
@@ -6036,7 +6036,7 @@
 		"objectID": "1044"
 	},
 	{
-		"name": "Ndjili Intl",
+		"name": "Ndjili Intl Airport",
 		"city": "Kinshasa",
 		"country": "Congo (Kinshasa)",
 		"iata_code": "FIH",
@@ -6096,7 +6096,7 @@
 		"objectID": "3903"
 	},
 	{
-		"name": "Fairbanks Intl",
+		"name": "Fairbanks Intl Airport",
 		"city": "Fairbanks",
 		"country": "United States",
 		"iata_code": "FAI",
@@ -6108,7 +6108,7 @@
 		"objectID": "3832"
 	},
 	{
-		"name": "Kabul Intl",
+		"name": "Kabul Intl Airport",
 		"city": "Kabul",
 		"country": "Afghanistan",
 		"iata_code": "KBL",
@@ -6156,7 +6156,7 @@
 		"objectID": "6387"
 	},
 	{
-		"name": "Syracuse Hancock Intl",
+		"name": "Syracuse Hancock Intl Airport",
 		"city": "Syracuse",
 		"country": "United States",
 		"iata_code": "SYR",
@@ -6168,7 +6168,7 @@
 		"objectID": "3745"
 	},
 	{
-		"name": "Kuching Intl",
+		"name": "Kuching Intl Airport",
 		"city": "Kuching",
 		"country": "Malaysia",
 		"iata_code": "KCH",
@@ -6252,7 +6252,7 @@
 		"objectID": "4008"
 	},
 	{
-		"name": "Palm Springs Intl",
+		"name": "Palm Springs Intl Airport",
 		"city": "Palm Springs",
 		"country": "United States",
 		"iata_code": "PSP",
@@ -6264,7 +6264,7 @@
 		"objectID": "3839"
 	},
 	{
-		"name": "El Alto Intl",
+		"name": "El Alto Intl Airport",
 		"city": "La Paz",
 		"country": "Bolivia",
 		"iata_code": "LPB",
@@ -6276,7 +6276,7 @@
 		"objectID": "2762"
 	},
 	{
-		"name": "Owen Roberts Intl",
+		"name": "Owen Roberts Intl Airport",
 		"city": "Georgetown",
 		"country": "Cayman Islands",
 		"iata_code": "GCM",
@@ -6300,7 +6300,7 @@
 		"objectID": "6434"
 	},
 	{
-		"name": "Ontario Intl",
+		"name": "Ontario Intl Airport",
 		"city": "Ontario",
 		"country": "United States",
 		"iata_code": "ONT",
@@ -6312,7 +6312,7 @@
 		"objectID": "3734"
 	},
 	{
-		"name": "Wattay Intl",
+		"name": "Wattay Intl Airport",
 		"city": "Vientiane",
 		"country": "Laos",
 		"iata_code": "VTE",
@@ -6444,7 +6444,7 @@
 		"objectID": "3266"
 	},
 	{
-		"name": "Viru Viru Intl",
+		"name": "Viru Viru Intl Airport",
 		"city": "Santa Cruz",
 		"country": "Bolivia",
 		"iata_code": "VVI",
@@ -6468,7 +6468,7 @@
 		"objectID": "2104"
 	},
 	{
-		"name": "Toussaint Louverture Intl",
+		"name": "Toussaint Louverture Intl Airport",
 		"city": "Port-au-prince",
 		"country": "Haiti",
 		"iata_code": "PAP",
@@ -6480,7 +6480,7 @@
 		"objectID": "1897"
 	},
 	{
-		"name": "General Ignacio P Garcia Intl",
+		"name": "General Ignacio P Garcia Intl Airport",
 		"city": "Hermosillo",
 		"country": "Mexico",
 		"iata_code": "HMO",
@@ -6528,7 +6528,7 @@
 		"objectID": "132"
 	},
 	{
-		"name": "El Paso Intl",
+		"name": "El Paso Intl Airport",
 		"city": "El Paso",
 		"country": "United States",
 		"iata_code": "ELP",
@@ -6564,7 +6564,7 @@
 		"objectID": "3986"
 	},
 	{
-		"name": "Savannah Hilton Head Intl",
+		"name": "Savannah Hilton Head Intl Airport",
 		"city": "Savannah",
 		"country": "United States",
 		"iata_code": "SAV",
@@ -6588,7 +6588,7 @@
 		"objectID": "3589"
 	},
 	{
-		"name": "Brunei Intl",
+		"name": "Brunei Intl Airport",
 		"city": "Bandar Seri Begawan",
 		"country": "Brunei",
 		"iata_code": "BWN",
@@ -6624,7 +6624,7 @@
 		"objectID": "2878"
 	},
 	{
-		"name": "Grantley Adams Intl",
+		"name": "Grantley Adams Intl Airport",
 		"city": "Bridgetown",
 		"country": "Barbados",
 		"iata_code": "BGI",
@@ -6636,7 +6636,7 @@
 		"objectID": "2875"
 	},
 	{
-		"name": "Carrasco Intl",
+		"name": "Carrasco Intl Airport",
 		"city": "Montevideo",
 		"country": "Uruguay",
 		"iata_code": "MVD",
@@ -6648,7 +6648,7 @@
 		"objectID": "2816"
 	},
 	{
-		"name": "La Mesa Intl",
+		"name": "La Mesa Intl Airport",
 		"city": "San Pedro Sula",
 		"country": "Honduras",
 		"iata_code": "SAP",
@@ -6684,7 +6684,7 @@
 		"objectID": "3693"
 	},
 	{
-		"name": "Daniel Oduber Quiros Intl",
+		"name": "Daniel Oduber Quiros Intl Airport",
 		"city": "Liberia",
 		"country": "Costa Rica",
 		"iata_code": "LIR",
@@ -6708,7 +6708,7 @@
 		"objectID": "4112"
 	},
 	{
-		"name": "Aden Intl",
+		"name": "Aden Intl Airport",
 		"city": "Aden",
 		"country": "Yemen",
 		"iata_code": "ADE",
@@ -6720,7 +6720,7 @@
 		"objectID": "3977"
 	},
 	{
-		"name": "Ketchikan Intl",
+		"name": "Ketchikan Intl Airport",
 		"city": "Ketchikan",
 		"country": "United States",
 		"iata_code": "KTN",
@@ -6756,7 +6756,7 @@
 		"objectID": "2962"
 	},
 	{
-		"name": "Zhuliany Intl",
+		"name": "Zhuliany Intl Airport",
 		"city": "Kiev",
 		"country": "Ukraine",
 		"iata_code": "IEV",
@@ -6828,7 +6828,7 @@
 		"objectID": "2562"
 	},
 	{
-		"name": "St Johns Intl",
+		"name": "St Johns Intl Airport",
 		"city": "St. John's",
 		"country": "Canada",
 		"iata_code": "YYT",
@@ -6852,7 +6852,7 @@
 		"objectID": "1226"
 	},
 	{
-		"name": "Durban Intl",
+		"name": "Durban Intl Airport",
 		"city": "Durban",
 		"country": "South Africa",
 		"iata_code": "DUR",
@@ -7032,7 +7032,7 @@
 		"objectID": "628"
 	},
 	{
-		"name": "Kona Intl At Keahole",
+		"name": "Kona Intl Airport At Keahole",
 		"city": "Kona",
 		"country": "United States",
 		"iata_code": "KOA",
@@ -7056,7 +7056,7 @@
 		"objectID": "3495"
 	},
 	{
-		"name": "Chinggis Khaan Intl",
+		"name": "Chinggis Khaan Intl Airport",
 		"city": "Ulan Bator",
 		"country": "Mongolia",
 		"iata_code": "ULN",
@@ -7068,7 +7068,7 @@
 		"objectID": "3380"
 	},
 	{
-		"name": "Gnassingbe Eyadema Intl",
+		"name": "Gnassingbe Eyadema Intl Airport",
 		"city": "Lome",
 		"country": "Togo",
 		"iata_code": "LFW",
@@ -7080,7 +7080,7 @@
 		"objectID": "298"
 	},
 	{
-		"name": "Kilimanjaro Intl",
+		"name": "Kilimanjaro Intl Airport",
 		"city": "Kilimanjaro",
 		"country": "Tanzania",
 		"iata_code": "JRO",
@@ -7128,7 +7128,7 @@
 		"objectID": "4166"
 	},
 	{
-		"name": "Esfahan Shahid Beheshti Intl",
+		"name": "Esfahan Shahid Beheshti Intl Airport",
 		"city": "Isfahan",
 		"country": "Iran",
 		"iata_code": "IFN",
@@ -7188,7 +7188,7 @@
 		"objectID": "4011"
 	},
 	{
-		"name": "Fresno Yosemite Intl",
+		"name": "Fresno Yosemite Intl Airport",
 		"city": "Fresno",
 		"country": "United States",
 		"iata_code": "FAT",
@@ -7200,7 +7200,7 @@
 		"objectID": "3687"
 	},
 	{
-		"name": "Juneau Intl",
+		"name": "Juneau Intl Airport",
 		"city": "Juneau",
 		"country": "United States",
 		"iata_code": "JNU",
@@ -7284,7 +7284,7 @@
 		"objectID": "1227"
 	},
 	{
-		"name": "Harrisburg Intl",
+		"name": "Harrisburg Intl Airport",
 		"city": "Harrisburg",
 		"country": "United States",
 		"iata_code": "MDT",
@@ -7296,7 +7296,7 @@
 		"objectID": "3542"
 	},
 	{
-		"name": "Del Caribe Intl Gen Santiago Marino",
+		"name": "Del Caribe Intl Airport Gen Santiago Marino",
 		"city": "Porlamar",
 		"country": "Venezuela",
 		"iata_code": "PMV",
@@ -7368,7 +7368,7 @@
 		"objectID": "4105"
 	},
 	{
-		"name": "Kaunas Intl",
+		"name": "Kaunas Intl Airport",
 		"city": "Kaunas",
 		"country": "Lithuania",
 		"iata_code": "KUN",
@@ -7392,7 +7392,7 @@
 		"objectID": "2613"
 	},
 	{
-		"name": "Bandar Abbass Intl",
+		"name": "Bandar Abbass Intl Airport",
 		"city": "Bandar Abbas",
 		"country": "Iran",
 		"iata_code": "BND",
@@ -7440,7 +7440,7 @@
 		"objectID": "1080"
 	},
 	{
-		"name": "Odesa Intl",
+		"name": "Odesa Intl Airport",
 		"city": "Odessa",
 		"country": "Ukraine",
 		"iata_code": "ODS",
@@ -7452,7 +7452,7 @@
 		"objectID": "2947"
 	},
 	{
-		"name": "Hewanorra Intl",
+		"name": "Hewanorra Intl Airport",
 		"city": "Hewandorra",
 		"country": "Saint Lucia",
 		"iata_code": "UVF",
@@ -7632,7 +7632,7 @@
 		"objectID": "3582"
 	},
 	{
-		"name": "Jackson Evers Intl",
+		"name": "Jackson Evers Intl Airport",
 		"city": "Jackson",
 		"country": "United States",
 		"iata_code": "JAN",
@@ -7716,7 +7716,7 @@
 		"objectID": "3066"
 	},
 	{
-		"name": "Silvio Pettirossi Intl",
+		"name": "Silvio Pettirossi Intl Airport",
 		"city": "Asuncion",
 		"country": "Paraguay",
 		"iata_code": "ASU",
@@ -7752,7 +7752,7 @@
 		"objectID": "2307"
 	},
 	{
-		"name": "Toncontin Intl",
+		"name": "Toncontin Intl Airport",
 		"city": "Tegucigalpa",
 		"country": "Honduras",
 		"iata_code": "TGU",
@@ -7848,7 +7848,7 @@
 		"objectID": "2877"
 	},
 	{
-		"name": "Amilcar Cabral Intl",
+		"name": "Amilcar Cabral Intl Airport",
 		"city": "Amilcar Cabral",
 		"country": "Cape Verde",
 		"iata_code": "SID",
@@ -7932,7 +7932,7 @@
 		"objectID": "3459"
 	},
 	{
-		"name": "Langkawi Intl",
+		"name": "Langkawi Intl Airport",
 		"city": "Pulau",
 		"country": "Malaysia",
 		"iata_code": "LGK",
@@ -7980,7 +7980,7 @@
 		"objectID": "2958"
 	},
 	{
-		"name": "Lviv Intl",
+		"name": "Lviv Intl Airport",
 		"city": "Lvov",
 		"country": "Ukraine",
 		"iata_code": "LWO",
@@ -8100,7 +8100,7 @@
 		"objectID": "1214"
 	},
 	{
-		"name": "Key West Intl",
+		"name": "Key West Intl Airport",
 		"city": "Key West",
 		"country": "United States",
 		"iata_code": "EYW",
@@ -8124,7 +8124,7 @@
 		"objectID": "3857"
 	},
 	{
-		"name": "Mandalay Intl",
+		"name": "Mandalay Intl Airport",
 		"city": "Mandalay",
 		"country": "Burma",
 		"iata_code": "MDL",
@@ -8160,7 +8160,7 @@
 		"objectID": "2109"
 	},
 	{
-		"name": "General R Fierro Villalobos Intl",
+		"name": "General R Fierro Villalobos Intl Airport",
 		"city": "Chihuahua",
 		"country": "Mexico",
 		"iata_code": "CUU",
@@ -8184,7 +8184,7 @@
 		"objectID": "1488"
 	},
 	{
-		"name": "Regina Intl",
+		"name": "Regina Intl Airport",
 		"city": "Regina",
 		"country": "Canada",
 		"iata_code": "YQR",
@@ -8340,7 +8340,7 @@
 		"objectID": "3174"
 	},
 	{
-		"name": "Shah Amanat Intl",
+		"name": "Shah Amanat Intl Airport",
 		"city": "Chittagong",
 		"country": "Bangladesh",
 		"iata_code": "CGP",
@@ -8400,7 +8400,7 @@
 		"objectID": "2597"
 	},
 	{
-		"name": "Mohamed Boudiaf Intl",
+		"name": "Mohamed Boudiaf Intl Airport",
 		"city": "Constantine",
 		"country": "Algeria",
 		"iata_code": "CZL",
@@ -8412,7 +8412,7 @@
 		"objectID": "221"
 	},
 	{
-		"name": "General Heriberto Jara Intl",
+		"name": "General Heriberto Jara Intl Airport",
 		"city": "Vera Cruz",
 		"country": "Mexico",
 		"iata_code": "VER",
@@ -8424,7 +8424,7 @@
 		"objectID": "1854"
 	},
 	{
-		"name": "Cozumel Intl",
+		"name": "Cozumel Intl Airport",
 		"city": "Cozumel",
 		"country": "Mexico",
 		"iata_code": "CZM",
@@ -8436,7 +8436,7 @@
 		"objectID": "1800"
 	},
 	{
-		"name": "Culiacan Intl",
+		"name": "Culiacan Intl Airport",
 		"city": "Culiacan",
 		"country": "Mexico",
 		"iata_code": "CUL",
@@ -8472,7 +8472,7 @@
 		"objectID": "1646"
 	},
 	{
-		"name": "Monrovia Roberts Intl",
+		"name": "Monrovia Roberts Intl Airport",
 		"city": "Monrovia",
 		"country": "Liberia",
 		"iata_code": "ROB",
@@ -8496,7 +8496,7 @@
 		"objectID": "3143"
 	},
 	{
-		"name": "Habib Bourguiba Intl",
+		"name": "Habib Bourguiba Intl Airport",
 		"city": "Monastir",
 		"country": "Tunisia",
 		"iata_code": "MIR",
@@ -8508,7 +8508,7 @@
 		"objectID": "286"
 	},
 	{
-		"name": "Marechal Cunha Machado Intl",
+		"name": "Marechal Cunha Machado Intl Airport",
 		"city": "Sao Luis",
 		"country": "Brazil",
 		"iata_code": "SLZ",
@@ -8604,7 +8604,7 @@
 		"objectID": "600"
 	},
 	{
-		"name": "Quad City Intl",
+		"name": "Quad City Intl Airport",
 		"city": "Moline",
 		"country": "United States",
 		"iata_code": "MLI",
@@ -8616,7 +8616,7 @@
 		"objectID": "4072"
 	},
 	{
-		"name": "Bermuda Intl",
+		"name": "Bermuda Intl Airport",
 		"city": "Bermuda",
 		"country": "Bermuda",
 		"iata_code": "BDA",
@@ -8664,7 +8664,7 @@
 		"objectID": "3698"
 	},
 	{
-		"name": "Spokane Intl",
+		"name": "Spokane Intl Airport",
 		"city": "Spokane",
 		"country": "United States",
 		"iata_code": "GEG",
@@ -8676,7 +8676,7 @@
 		"objectID": "3467"
 	},
 	{
-		"name": "Dr Ambedkar Intl",
+		"name": "Dr Ambedkar Intl Airport",
 		"city": "Nagpur",
 		"country": "India",
 		"iata_code": "NAG",
@@ -8712,7 +8712,7 @@
 		"objectID": "2952"
 	},
 	{
-		"name": "Donetsk Intl",
+		"name": "Donetsk Intl Airport",
 		"city": "Donetsk",
 		"country": "Ukraine",
 		"iata_code": "DOK",
@@ -8736,7 +8736,7 @@
 		"objectID": "2633"
 	},
 	{
-		"name": "Tabriz Intl",
+		"name": "Tabriz Intl Airport",
 		"city": "Tabriz",
 		"country": "Iran",
 		"iata_code": "TBZ",
@@ -8748,7 +8748,7 @@
 		"objectID": "2162"
 	},
 	{
-		"name": "Grand Bahama Intl",
+		"name": "Grand Bahama Intl Airport",
 		"city": "Freeport",
 		"country": "Bahamas",
 		"iata_code": "FPO",
@@ -8772,7 +8772,7 @@
 		"objectID": "188"
 	},
 	{
-		"name": "General Rafael Buelna Intl",
+		"name": "General Rafael Buelna Intl Airport",
 		"city": "Mazatlan",
 		"country": "Mexico",
 		"iata_code": "MZT",
@@ -8796,7 +8796,7 @@
 		"objectID": "1819"
 	},
 	{
-		"name": "Saskatoon J G Diefenbaker Intl",
+		"name": "Saskatoon J G Diefenbaker Intl Airport",
 		"city": "Saskatoon",
 		"country": "Canada",
 		"iata_code": "YXE",
@@ -8856,7 +8856,7 @@
 		"objectID": "3112"
 	},
 	{
-		"name": "Point Salines Intl",
+		"name": "Point Salines Intl Airport",
 		"city": "Point Salines",
 		"country": "Grenada",
 		"iata_code": "GND",
@@ -8880,7 +8880,7 @@
 		"objectID": "2059"
 	},
 	{
-		"name": "Managua Intl",
+		"name": "Managua Intl Airport",
 		"city": "Managua",
 		"country": "Nicaragua",
 		"iata_code": "MGA",
@@ -8892,7 +8892,7 @@
 		"objectID": "1863"
 	},
 	{
-		"name": "Guanajuato Intl",
+		"name": "Guanajuato Intl Airport",
 		"city": "Del Bajio",
 		"country": "Mexico",
 		"iata_code": "BJX",
@@ -8904,7 +8904,7 @@
 		"objectID": "1815"
 	},
 	{
-		"name": "Gregorio Luperon Intl",
+		"name": "Gregorio Luperon Intl Airport",
 		"city": "Puerto Plata",
 		"country": "Dominican Republic",
 		"iata_code": "POP",
@@ -9108,7 +9108,7 @@
 		"objectID": "2972"
 	},
 	{
-		"name": "Dnipropetrovsk Intl",
+		"name": "Dnipropetrovsk Intl Airport",
 		"city": "Dnepropetrovsk",
 		"country": "Ukraine",
 		"iata_code": "DNK",
@@ -9120,7 +9120,7 @@
 		"objectID": "2941"
 	},
 	{
-		"name": "La Chinita Intl",
+		"name": "La Chinita Intl Airport",
 		"city": "Maracaibo",
 		"country": "Venezuela",
 		"iata_code": "MAR",
@@ -9168,7 +9168,7 @@
 		"objectID": "1930"
 	},
 	{
-		"name": "Juan Manuel Galvez Intl",
+		"name": "Juan Manuel Galvez Intl Airport",
 		"city": "Roatan",
 		"country": "Honduras",
 		"iata_code": "RTB",
@@ -9252,7 +9252,7 @@
 		"objectID": "3819"
 	},
 	{
-		"name": "Burlington Intl",
+		"name": "Burlington Intl Airport",
 		"city": "Burlington",
 		"country": "United States",
 		"iata_code": "BTV",
@@ -9276,7 +9276,7 @@
 		"objectID": "3289"
 	},
 	{
-		"name": "Rarotonga Intl",
+		"name": "Rarotonga Intl Airport",
 		"city": "Avarua",
 		"country": "Cook Islands",
 		"iata_code": "RAR",
@@ -9288,7 +9288,7 @@
 		"objectID": "1959"
 	},
 	{
-		"name": "Licenciado Adolfo Lopez Mateos Intl",
+		"name": "Licenciado Adolfo Lopez Mateos Intl Airport",
 		"city": "Toluca",
 		"country": "Mexico",
 		"iata_code": "TLC",
@@ -9312,7 +9312,7 @@
 		"objectID": "121"
 	},
 	{
-		"name": "Bujumbura Intl",
+		"name": "Bujumbura Intl Airport",
 		"city": "Bujumbura",
 		"country": "Burundi",
 		"iata_code": "BJM",
@@ -9324,7 +9324,7 @@
 		"objectID": "1120"
 	},
 	{
-		"name": "Seychelles Intl",
+		"name": "Seychelles Intl Airport",
 		"city": "Mahe",
 		"country": "Seychelles",
 		"iata_code": "SEZ",
@@ -9408,7 +9408,7 @@
 		"objectID": "630"
 	},
 	{
-		"name": "Lehigh Valley Intl",
+		"name": "Lehigh Valley Intl Airport",
 		"city": "Allentown",
 		"country": "United States",
 		"iata_code": "ABE",
@@ -9444,7 +9444,7 @@
 		"objectID": "4089"
 	},
 	{
-		"name": "Sarasota Bradenton Intl",
+		"name": "Sarasota Bradenton Intl Airport",
 		"city": "Sarasota",
 		"country": "United States",
 		"iata_code": "SRQ",
@@ -9480,7 +9480,7 @@
 		"objectID": "4009"
 	},
 	{
-		"name": "Wilmington Intl",
+		"name": "Wilmington Intl Airport",
 		"city": "Wilmington",
 		"country": "United States",
 		"iata_code": "ILM",
@@ -9540,7 +9540,7 @@
 		"objectID": "3324"
 	},
 	{
-		"name": "Luang Phabang Intl",
+		"name": "Luang Phabang Intl Airport",
 		"city": "Luang Prabang",
 		"country": "Laos",
 		"iata_code": "LPQ",
@@ -9624,7 +9624,7 @@
 		"objectID": "2005"
 	},
 	{
-		"name": "C P A Carlos Rovirosa Intl",
+		"name": "C P A Carlos Rovirosa Intl Airport",
 		"city": "Villahermosa",
 		"country": "Mexico",
 		"iata_code": "VSA",
@@ -9636,7 +9636,7 @@
 		"objectID": "1853"
 	},
 	{
-		"name": "Victoria Intl",
+		"name": "Victoria Intl Airport",
 		"city": "Victoria",
 		"country": "Canada",
 		"iata_code": "YYJ",
@@ -9684,7 +9684,7 @@
 		"objectID": "1415"
 	},
 	{
-		"name": "Mombasa Moi Intl",
+		"name": "Mombasa Moi Intl Airport",
 		"city": "Mombasa",
 		"country": "Kenya",
 		"iata_code": "MBA",
@@ -9696,7 +9696,7 @@
 		"objectID": "1145"
 	},
 	{
-		"name": "Banjul Intl",
+		"name": "Banjul Intl Airport",
 		"city": "Banjul",
 		"country": "Gambia",
 		"iata_code": "BJL",
@@ -9780,7 +9780,7 @@
 		"objectID": "2067"
 	},
 	{
-		"name": "Kamuzu Intl",
+		"name": "Kamuzu Intl Airport",
 		"city": "Lilongwe",
 		"country": "Malawi",
 		"iata_code": "LLW",
@@ -9984,7 +9984,7 @@
 		"objectID": "3100"
 	},
 	{
-		"name": "Terrance B Lettsome Intl",
+		"name": "Terrance B Lettsome Intl Airport",
 		"city": "Tortola",
 		"country": "British Virgin Islands",
 		"iata_code": "EIS",
@@ -10008,7 +10008,7 @@
 		"objectID": "2714"
 	},
 	{
-		"name": "Cataratas Intl",
+		"name": "Cataratas Intl Airport",
 		"city": "Foz Do Iguacu",
 		"country": "Brazil",
 		"iata_code": "IGU",
@@ -10032,7 +10032,7 @@
 		"objectID": "2333"
 	},
 	{
-		"name": "Multan Intl",
+		"name": "Multan Intl Airport",
 		"city": "Multan",
 		"country": "Pakistan",
 		"iata_code": "MUX",
@@ -10044,7 +10044,7 @@
 		"objectID": "2214"
 	},
 	{
-		"name": "Juan Gualberto Gomez Intl",
+		"name": "Juan Gualberto Gomez Intl Airport",
 		"city": "Varadero",
 		"country": "Cuba",
 		"iata_code": "VRA",
@@ -10056,7 +10056,7 @@
 		"objectID": "1923"
 	},
 	{
-		"name": "Abraham Gonzalez Intl",
+		"name": "Abraham Gonzalez Intl Airport",
 		"city": "Ciudad Juarez",
 		"country": "Mexico",
 		"iata_code": "CJS",
@@ -10164,7 +10164,7 @@
 		"objectID": "2581"
 	},
 	{
-		"name": "Nausori Intl",
+		"name": "Nausori Intl Airport",
 		"city": "Nausori",
 		"country": "Fiji",
 		"iata_code": "SUV",
@@ -10368,7 +10368,7 @@
 		"objectID": "3974"
 	},
 	{
-		"name": "Chiang Rai Intl",
+		"name": "Chiang Rai Intl Airport",
 		"city": "Chiang Rai",
 		"country": "Thailand",
 		"iata_code": "CEI",
@@ -10488,7 +10488,7 @@
 		"objectID": "2856"
 	},
 	{
-		"name": "General Jose Antonio Anzoategui Intl",
+		"name": "General Jose Antonio Anzoategui Intl Airport",
 		"city": "Barcelona",
 		"country": "Venezuela",
 		"iata_code": "BLA",
@@ -10500,7 +10500,7 @@
 		"objectID": "2821"
 	},
 	{
-		"name": "Teniente Alejandro Velasco Astete Intl",
+		"name": "Teniente Alejandro Velasco Astete Intl Airport",
 		"city": "Cuzco",
 		"country": "Peru",
 		"iata_code": "CUZ",
@@ -10536,7 +10536,7 @@
 		"objectID": "2729"
 	},
 	{
-		"name": "Cerro Moreno Intl",
+		"name": "Cerro Moreno Intl Airport",
 		"city": "Antofagasta",
 		"country": "Chile",
 		"iata_code": "ANF",
@@ -10596,7 +10596,7 @@
 		"objectID": "2308"
 	},
 	{
-		"name": "Zahedan Intl",
+		"name": "Zahedan Intl Airport",
 		"city": "Zahedan",
 		"country": "Iran",
 		"iata_code": "ZAH",
@@ -10608,7 +10608,7 @@
 		"objectID": "2167"
 	},
 	{
-		"name": "Cibao Intl",
+		"name": "Cibao Intl Airport",
 		"city": "Santiago",
 		"country": "Dominican Republic",
 		"iata_code": "STI",
@@ -11052,7 +11052,7 @@
 		"objectID": "3948"
 	},
 	{
-		"name": "Portland Intl Jetport",
+		"name": "Portland Intl Airport Jetport",
 		"city": "Portland",
 		"country": "United States",
 		"iata_code": "PWM",
@@ -11064,7 +11064,7 @@
 		"objectID": "3862"
 	},
 	{
-		"name": "Bellingham Intl",
+		"name": "Bellingham Intl Airport",
 		"city": "Bellingham",
 		"country": "United States",
 		"iata_code": "BLI",
@@ -11076,7 +11076,7 @@
 		"objectID": "3777"
 	},
 	{
-		"name": "Atlantic City Intl",
+		"name": "Atlantic City Intl Airport",
 		"city": "Atlantic City",
 		"country": "United States",
 		"iata_code": "ACY",
@@ -11124,7 +11124,7 @@
 		"objectID": "295"
 	},
 	{
-		"name": "Arturo Michelena Intl",
+		"name": "Arturo Michelena Intl Airport",
 		"city": "Valencia",
 		"country": "Venezuela",
 		"iata_code": "VLN",
@@ -11148,7 +11148,7 @@
 		"objectID": "2802"
 	},
 	{
-		"name": "Johan A Pengel Intl",
+		"name": "Johan A Pengel Intl Airport",
 		"city": "Zandery",
 		"country": "Suriname",
 		"iata_code": "PBM",
@@ -11172,7 +11172,7 @@
 		"objectID": "2710"
 	},
 	{
-		"name": "El Tepual Intl",
+		"name": "El Tepual Intl Airport",
 		"city": "Puerto Montt",
 		"country": "Chile",
 		"iata_code": "PMC",
@@ -11220,7 +11220,7 @@
 		"objectID": "2288"
 	},
 	{
-		"name": "Francisco C Ada Saipan Intl",
+		"name": "Francisco C Ada Saipan Intl Airport",
 		"city": "Saipan",
 		"country": "Northern Mariana Islands",
 		"iata_code": "SPN",
@@ -11244,7 +11244,7 @@
 		"objectID": "2123"
 	},
 	{
-		"name": "Frank Pais Intl",
+		"name": "Frank Pais Intl Airport",
 		"city": "Holguin",
 		"country": "Cuba",
 		"iata_code": "HOG",
@@ -11256,7 +11256,7 @@
 		"objectID": "1910"
 	},
 	{
-		"name": "Torreon Intl",
+		"name": "Torreon Intl Airport",
 		"city": "Torreon",
 		"country": "Mexico",
 		"iata_code": "TRC",
@@ -11268,7 +11268,7 @@
 		"objectID": "1845"
 	},
 	{
-		"name": "General Francisco J Mujica Intl",
+		"name": "General Francisco J Mujica Intl Airport",
 		"city": "Morelia",
 		"country": "Mexico",
 		"iata_code": "MLM",
@@ -11280,7 +11280,7 @@
 		"objectID": "1821"
 	},
 	{
-		"name": "General Manuel Marquez De Leon Intl",
+		"name": "General Manuel Marquez De Leon Intl Airport",
 		"city": "La Paz",
 		"country": "Mexico",
 		"iata_code": "LAP",
@@ -11292,7 +11292,7 @@
 		"objectID": "1816"
 	},
 	{
-		"name": "Casa De Campo Intl",
+		"name": "Casa De Campo Intl Airport",
 		"city": "La Romana",
 		"country": "Dominican Republic",
 		"iata_code": "LRM",
@@ -11364,7 +11364,7 @@
 		"objectID": "1352"
 	},
 	{
-		"name": "Greater Moncton Intl",
+		"name": "Greater Moncton Intl Airport",
 		"city": "Moncton",
 		"country": "Canada",
 		"iata_code": "YQM",
@@ -11376,7 +11376,7 @@
 		"objectID": "117"
 	},
 	{
-		"name": "Luxor Intl",
+		"name": "Luxor Intl Airport",
 		"city": "Luxor",
 		"country": "Egypt",
 		"iata_code": "LXR",
@@ -11400,7 +11400,7 @@
 		"objectID": "1070"
 	},
 	{
-		"name": "Lubumbashi Intl",
+		"name": "Lubumbashi Intl Airport",
 		"city": "Lubumashi",
 		"country": "Congo (Kinshasa)",
 		"iata_code": "FBM",
@@ -11448,7 +11448,7 @@
 		"objectID": "582"
 	},
 	{
-		"name": "Wilkes Barre Scranton Intl",
+		"name": "Wilkes Barre Scranton Intl Airport",
 		"city": "Scranton",
 		"country": "United States",
 		"iata_code": "AVP",
@@ -11460,7 +11460,7 @@
 		"objectID": "4286"
 	},
 	{
-		"name": "Rick Husband Amarillo Intl",
+		"name": "Rick Husband Amarillo Intl Airport",
 		"city": "Amarillo",
 		"country": "United States",
 		"iata_code": "AMA",
@@ -11472,7 +11472,7 @@
 		"objectID": "3840"
 	},
 	{
-		"name": "Lubbock Preston Smith Intl",
+		"name": "Lubbock Preston Smith Intl Airport",
 		"city": "Lubbock",
 		"country": "United States",
 		"iata_code": "LBB",
@@ -11496,7 +11496,7 @@
 		"objectID": "2759"
 	},
 	{
-		"name": "Diego Aracena Intl",
+		"name": "Diego Aracena Intl Airport",
 		"city": "Iquique",
 		"country": "Chile",
 		"iata_code": "IQQ",
@@ -11556,7 +11556,7 @@
 		"objectID": "984"
 	},
 	{
-		"name": "Sir Seretse Khama Intl",
+		"name": "Sir Seretse Khama Intl Airport",
 		"city": "Gaberone",
 		"country": "Botswana",
 		"iata_code": "GBE",
@@ -11568,7 +11568,7 @@
 		"objectID": "881"
 	},
 	{
-		"name": "Port Elizabeth Intl",
+		"name": "Port Elizabeth Intl Airport",
 		"city": "Port Elizabeth",
 		"country": "South Africa",
 		"iata_code": "PLZ",
@@ -11724,7 +11724,7 @@
 		"objectID": "4148"
 	},
 	{
-		"name": "Rogue Valley Intl Medford",
+		"name": "Rogue Valley Intl Airport Medford",
 		"city": "Medford",
 		"country": "United States",
 		"iata_code": "MFR",
@@ -11796,7 +11796,7 @@
 		"objectID": "3743"
 	},
 	{
-		"name": "Newport News Williamsburg Intl",
+		"name": "Newport News Williamsburg Intl Airport",
 		"city": "Newport News",
 		"country": "United States",
 		"iata_code": "PHF",
@@ -12024,7 +12024,7 @@
 		"objectID": "2089"
 	},
 	{
-		"name": "Exuma Intl",
+		"name": "Exuma Intl Airport",
 		"city": "Great Exuma",
 		"country": "Bahamas",
 		"iata_code": "GGT",
@@ -12048,7 +12048,7 @@
 		"objectID": "1918"
 	},
 	{
-		"name": "Marcos A Gelabert Intl",
+		"name": "Marcos A Gelabert Intl Airport",
 		"city": "Panama",
 		"country": "Panama",
 		"iata_code": "PAC",
@@ -12060,7 +12060,7 @@
 		"objectID": "1869"
 	},
 	{
-		"name": "Ixtapa Zihuatanejo Intl",
+		"name": "Ixtapa Zihuatanejo Intl Airport",
 		"city": "Zihuatanejo",
 		"country": "Mexico",
 		"iata_code": "ZIH",
@@ -12072,7 +12072,7 @@
 		"objectID": "1856"
 	},
 	{
-		"name": "Jesus Teran Intl",
+		"name": "Jesus Teran Intl Airport",
 		"city": "Aguascalientes",
 		"country": "Mexico",
 		"iata_code": "AGU",
@@ -12192,7 +12192,7 @@
 		"objectID": "6079"
 	},
 	{
-		"name": "Midland Intl",
+		"name": "Midland Intl Airport",
 		"city": "Midland",
 		"country": "United States",
 		"iata_code": "MAF",
@@ -12276,7 +12276,7 @@
 		"objectID": "2001"
 	},
 	{
-		"name": "General Juan N Alvarez Intl",
+		"name": "General Juan N Alvarez Intl Airport",
 		"city": "Acapulco",
 		"country": "Mexico",
 		"iata_code": "ACA",
@@ -12600,7 +12600,7 @@
 		"objectID": "4320"
 	},
 	{
-		"name": "Cheddi Jagan Intl",
+		"name": "Cheddi Jagan Intl Airport",
 		"city": "Georgetown",
 		"country": "Guyana",
 		"iata_code": "GEO",
@@ -12720,7 +12720,7 @@
 		"objectID": "3846"
 	},
 	{
-		"name": "Austin Straubel Intl",
+		"name": "Austin Straubel Intl Airport",
 		"city": "Green Bay",
 		"country": "United States",
 		"iata_code": "GRB",
@@ -12756,7 +12756,7 @@
 		"objectID": "3544"
 	},
 	{
-		"name": "Bangor Intl",
+		"name": "Bangor Intl Airport",
 		"city": "Bangor",
 		"country": "United States",
 		"iata_code": "BGR",
@@ -12768,7 +12768,7 @@
 		"objectID": "3463"
 	},
 	{
-		"name": "Port Hedland Intl",
+		"name": "Port Hedland Intl Airport",
 		"city": "Port Hedland",
 		"country": "Australia",
 		"iata_code": "PHE",
@@ -12924,7 +12924,7 @@
 		"objectID": "2756"
 	},
 	{
-		"name": "Port Harcourt Intl",
+		"name": "Port Harcourt Intl Airport",
 		"city": "Port Hartcourt",
 		"country": "Nigeria",
 		"iata_code": "PHC",
@@ -12984,7 +12984,7 @@
 		"objectID": "2330"
 	},
 	{
-		"name": "Basrah Intl",
+		"name": "Basrah Intl Airport",
 		"city": "Basrah",
 		"country": "Iraq",
 		"iata_code": "BSR",
@@ -13056,7 +13056,7 @@
 		"objectID": "1846"
 	},
 	{
-		"name": "Ponciano Arriaga Intl",
+		"name": "Ponciano Arriaga Intl Airport",
 		"city": "San Luis Potosi",
 		"country": "Mexico",
 		"iata_code": "SLP",
@@ -13068,7 +13068,7 @@
 		"objectID": "1842"
 	},
 	{
-		"name": "General Lucio Blanco Intl",
+		"name": "General Lucio Blanco Intl Airport",
 		"city": "Reynosa",
 		"country": "Mexico",
 		"iata_code": "REX",
@@ -13164,7 +13164,7 @@
 		"objectID": "45"
 	},
 	{
-		"name": "Asmara Intl",
+		"name": "Asmara Intl Airport",
 		"city": "Asmara",
 		"country": "Eritrea",
 		"iata_code": "ASM",
@@ -13176,7 +13176,7 @@
 		"objectID": "3967"
 	},
 	{
-		"name": "Valley Intl",
+		"name": "Valley Intl Airport",
 		"city": "Harlingen",
 		"country": "United States",
 		"iata_code": "HRL",
@@ -13224,7 +13224,7 @@
 		"objectID": "2981"
 	},
 	{
-		"name": "Goloson Intl",
+		"name": "Goloson Intl Airport",
 		"city": "La Ceiba",
 		"country": "Honduras",
 		"iata_code": "LCE",
@@ -13260,7 +13260,7 @@
 		"objectID": "1122"
 	},
 	{
-		"name": "Egal Intl",
+		"name": "Egal Intl Airport",
 		"city": "Hargeisa",
 		"country": "Somalia",
 		"iata_code": "HGA",
@@ -13692,7 +13692,7 @@
 		"objectID": "4247"
 	},
 	{
-		"name": "Missoula Intl",
+		"name": "Missoula Intl Airport",
 		"city": "Missoula",
 		"country": "United States",
 		"iata_code": "MSO",
@@ -13752,7 +13752,7 @@
 		"objectID": "4054"
 	},
 	{
-		"name": "Taiz Intl",
+		"name": "Taiz Intl Airport",
 		"city": "Taiz",
 		"country": "Yemen",
 		"iata_code": "TAI",
@@ -13800,7 +13800,7 @@
 		"objectID": "3905"
 	},
 	{
-		"name": "Great Falls Intl",
+		"name": "Great Falls Intl Airport",
 		"city": "Great Falls",
 		"country": "United States",
 		"iata_code": "GTF",
@@ -13824,7 +13824,7 @@
 		"objectID": "3794"
 	},
 	{
-		"name": "Plattsburgh Intl",
+		"name": "Plattsburgh Intl Airport",
 		"city": "Plattsburgh",
 		"country": "United States",
 		"iata_code": "PBG",
@@ -13992,7 +13992,7 @@
 		"objectID": "2949"
 	},
 	{
-		"name": "Simferopol Intl",
+		"name": "Simferopol Intl Airport",
 		"city": "Simferopol",
 		"country": "Ukraine",
 		"iata_code": "SIP",
@@ -14016,7 +14016,7 @@
 		"objectID": "2920"
 	},
 	{
-		"name": "Coronel Francisco Secada Vignetta Intl",
+		"name": "Coronel Francisco Secada Vignetta Intl Airport",
 		"city": "Iquitos",
 		"country": "Peru",
 		"iata_code": "IQT",
@@ -14040,7 +14040,7 @@
 		"objectID": "2774"
 	},
 	{
-		"name": "Mallam Aminu Intl",
+		"name": "Mallam Aminu Intl Airport",
 		"city": "Kano",
 		"country": "Nigeria",
 		"iata_code": "KAN",
@@ -14064,7 +14064,7 @@
 		"objectID": "2662"
 	},
 	{
-		"name": "Ministro Victor Konder Intl",
+		"name": "Ministro Victor Konder Intl Airport",
 		"city": "Navegantes",
 		"country": "Brazil",
 		"iata_code": "NVT",
@@ -14172,7 +14172,7 @@
 		"objectID": "2164"
 	},
 	{
-		"name": "Playa De Oro Intl",
+		"name": "Playa De Oro Intl Airport",
 		"city": "Manzanillo",
 		"country": "Mexico",
 		"iata_code": "ZLO",
@@ -14184,7 +14184,7 @@
 		"objectID": "1858"
 	},
 	{
-		"name": "General Leobardo C Ruiz Intl",
+		"name": "General Leobardo C Ruiz Intl Airport",
 		"city": "Zacatecas",
 		"country": "Mexico",
 		"iata_code": "ZCL",
@@ -14196,7 +14196,7 @@
 		"objectID": "1855"
 	},
 	{
-		"name": "General Francisco Javier Mina Intl",
+		"name": "General Francisco Javier Mina Intl Airport",
 		"city": "Tampico",
 		"country": "Mexico",
 		"iata_code": "TAM",
@@ -14220,7 +14220,7 @@
 		"objectID": "1838"
 	},
 	{
-		"name": "Hermanos Serdan Intl",
+		"name": "Hermanos Serdan Intl Airport",
 		"city": "Puebla",
 		"country": "Mexico",
 		"iata_code": "PBC",
@@ -14292,7 +14292,7 @@
 		"objectID": "119"
 	},
 	{
-		"name": "Victoria Falls Intl",
+		"name": "Victoria Falls Intl Airport",
 		"city": "Victoria Falls",
 		"country": "Zimbabwe",
 		"iata_code": "VFA",
@@ -14316,7 +14316,7 @@
 		"objectID": "921"
 	},
 	{
-		"name": "Mattala Rajapaksa Intl.",
+		"name": "Mattala Rajapaksa Intl Airport.",
 		"city": "Mattala",
 		"country": "Sri Lanka",
 		"iata_code": "HRI",
@@ -14376,7 +14376,7 @@
 		"objectID": "586"
 	},
 	{
-		"name": "Bagan Intl",
+		"name": "Bagan Intl Airport",
 		"city": "Nyuang U",
 		"country": "Burma",
 		"iata_code": "NYU",
@@ -14436,7 +14436,7 @@
 		"objectID": "2792"
 	},
 	{
-		"name": "Carlos Ibanez Del Campo Intl",
+		"name": "Carlos Ibanez Del Campo Intl Airport",
 		"city": "Punta Arenas",
 		"country": "Chile",
 		"iata_code": "PUQ",
@@ -14844,7 +14844,7 @@
 		"objectID": "601"
 	},
 	{
-		"name": "Wewak Intl",
+		"name": "Wewak Intl Airport",
 		"city": "Wewak",
 		"country": "Papua New Guinea",
 		"iata_code": "WWK",
@@ -15000,7 +15000,7 @@
 		"objectID": "481"
 	},
 	{
-		"name": "Marsa Alam Intl",
+		"name": "Marsa Alam Intl Airport",
 		"city": "Marsa Alam",
 		"country": "Egypt",
 		"iata_code": "RMF",
@@ -15144,7 +15144,7 @@
 		"objectID": "3859"
 	},
 	{
-		"name": "Alexandria Intl",
+		"name": "Alexandria Intl Airport",
 		"city": "Alexandria",
 		"country": "United States",
 		"iata_code": "AEX",
@@ -15156,7 +15156,7 @@
 		"objectID": "3852"
 	},
 	{
-		"name": "Mc Allen Miller Intl",
+		"name": "Mc Allen Miller Intl Airport",
 		"city": "Mcallen",
 		"country": "United States",
 		"iata_code": "MFE",
@@ -15216,7 +15216,7 @@
 		"objectID": "3732"
 	},
 	{
-		"name": "Stewart Intl",
+		"name": "Stewart Intl Airport",
 		"city": "Newburgh",
 		"country": "United States",
 		"iata_code": "SWF",
@@ -15348,7 +15348,7 @@
 		"objectID": "3183"
 	},
 	{
-		"name": "Hat Yai Intl",
+		"name": "Hat Yai Intl Airport",
 		"city": "Hat Yai",
 		"country": "Thailand",
 		"iata_code": "HDY",
@@ -15480,7 +15480,7 @@
 		"objectID": "2806"
 	},
 	{
-		"name": "Cap Fap David Abenzur Rengifo Intl",
+		"name": "Cap Fap David Abenzur Rengifo Intl Airport",
 		"city": "Pucallpa",
 		"country": "Peru",
 		"iata_code": "PCL",
@@ -15588,7 +15588,7 @@
 		"objectID": "2423"
 	},
 	{
-		"name": "Zamboanga Intl",
+		"name": "Zamboanga Intl Airport",
 		"city": "Zamboanga",
 		"country": "Philippines",
 		"iata_code": "ZAM",
@@ -15744,7 +15744,7 @@
 		"objectID": "1830"
 	},
 	{
-		"name": "Xoxocotlan Intl",
+		"name": "Xoxocotlan Intl Airport",
 		"city": "Oaxaca",
 		"country": "Mexico",
 		"iata_code": "OAX",
@@ -15852,7 +15852,7 @@
 		"objectID": "1464"
 	},
 	{
-		"name": "Megas Alexandros Intl",
+		"name": "Megas Alexandros Intl Airport",
 		"city": "Kavala",
 		"country": "Greece",
 		"iata_code": "KVA",
@@ -16044,7 +16044,7 @@
 		"objectID": "3620"
 	},
 	{
-		"name": "Carriel Sur Intl",
+		"name": "Carriel Sur Intl Airport",
 		"city": "Concepcion",
 		"country": "Chile",
 		"iata_code": "CCP",
@@ -16128,7 +16128,7 @@
 		"objectID": "1990"
 	},
 	{
-		"name": "Faleolo Intl",
+		"name": "Faleolo Intl Airport",
 		"city": "Faleolo",
 		"country": "Samoa",
 		"iata_code": "APW",
@@ -16140,7 +16140,7 @@
 		"objectID": "1969"
 	},
 	{
-		"name": "Antonio Maceo Intl",
+		"name": "Antonio Maceo Intl Airport",
 		"city": "Santiago De Cuba",
 		"country": "Cuba",
 		"iata_code": "SCU",
@@ -16621,7 +16621,7 @@
 	},
 	{
 		"name": "Sayun International Airport",
-		"city": "Sayun Intl",
+		"city": "Sayun Intl Airport",
 		"country": "Yemen",
 		"iata_code": "GXF",
 		"_geoloc": {
@@ -16944,7 +16944,7 @@
 		"objectID": "4153"
 	},
 	{
-		"name": "Mbs Intl",
+		"name": "Mbs Intl Airport",
 		"city": "Saginaw",
 		"country": "United States",
 		"iata_code": "MBS",
@@ -16956,7 +16956,7 @@
 		"objectID": "4128"
 	},
 	{
-		"name": "Glacier Park Intl",
+		"name": "Glacier Park Intl Airport",
 		"city": "Kalispell",
 		"country": "United States",
 		"iata_code": "FCA",
@@ -17028,7 +17028,7 @@
 		"objectID": "3995"
 	},
 	{
-		"name": "Daytona Beach Intl",
+		"name": "Daytona Beach Intl Airport",
 		"city": "Daytona Beach",
 		"country": "United States",
 		"iata_code": "DAB",
@@ -17052,7 +17052,7 @@
 		"objectID": "3854"
 	},
 	{
-		"name": "Corpus Christi Intl",
+		"name": "Corpus Christi Intl Airport",
 		"city": "Corpus Christi",
 		"country": "United States",
 		"iata_code": "CRP",
@@ -17100,7 +17100,7 @@
 		"objectID": "37"
 	},
 	{
-		"name": "Melbourne Intl",
+		"name": "Melbourne Intl Airport",
 		"city": "Melbourne",
 		"country": "United States",
 		"iata_code": "MLB",
@@ -17112,7 +17112,7 @@
 		"objectID": "3671"
 	},
 	{
-		"name": "Niagara Falls Intl",
+		"name": "Niagara Falls Intl Airport",
 		"city": "Niagara Falls",
 		"country": "United States",
 		"iata_code": "IAG",
@@ -17124,7 +17124,7 @@
 		"objectID": "3630"
 	},
 	{
-		"name": "Minot Intl",
+		"name": "Minot Intl Airport",
 		"city": "Minot",
 		"country": "United States",
 		"iata_code": "MOT",
@@ -17136,7 +17136,7 @@
 		"objectID": "3498"
 	},
 	{
-		"name": "Grand Forks Intl",
+		"name": "Grand Forks Intl Airport",
 		"city": "Grand Forks",
 		"country": "United States",
 		"iata_code": "GFK",
@@ -17172,7 +17172,7 @@
 		"objectID": "3396"
 	},
 	{
-		"name": "Pyongyang Intl",
+		"name": "Pyongyang Intl Airport",
 		"city": "Pyongyang",
 		"country": "Korea",
 		"iata_code": "FNJ",
@@ -17304,7 +17304,7 @@
 		"objectID": "3092"
 	},
 	{
-		"name": "Osmany Intl",
+		"name": "Osmany Intl Airport",
 		"city": "Sylhet Osmani",
 		"country": "Bangladesh",
 		"iata_code": "ZYL",
@@ -17352,7 +17352,7 @@
 		"objectID": "2926"
 	},
 	{
-		"name": "Barquisimeto Intl",
+		"name": "Barquisimeto Intl Airport",
 		"city": "Barquisimeto",
 		"country": "Venezuela",
 		"iata_code": "BRM",
@@ -17592,7 +17592,7 @@
 		"objectID": "2011"
 	},
 	{
-		"name": "Fua Amotu Intl",
+		"name": "Fua Amotu Intl Airport",
 		"city": "Tongatapu",
 		"country": "Tonga",
 		"iata_code": "TBU",
@@ -17616,7 +17616,7 @@
 		"objectID": "1944"
 	},
 	{
-		"name": "Valle Del Fuerte Intl",
+		"name": "Valle Del Fuerte Intl Airport",
 		"city": "Los Mochis",
 		"country": "Mexico",
 		"iata_code": "LMM",
@@ -17628,7 +17628,7 @@
 		"objectID": "1814"
 	},
 	{
-		"name": "Durango Intl",
+		"name": "Durango Intl Airport",
 		"city": "Durango",
 		"country": "Mexico",
 		"iata_code": "DGO",
@@ -17652,7 +17652,7 @@
 		"objectID": "18"
 	},
 	{
-		"name": "Ciudad Obregon Intl",
+		"name": "Ciudad Obregon Intl Airport",
 		"city": "Ciudad Obregon",
 		"country": "Mexico",
 		"iata_code": "CEN",
@@ -17664,7 +17664,7 @@
 		"objectID": "1794"
 	},
 	{
-		"name": "Whitehorse Intl",
+		"name": "Whitehorse Intl Airport",
 		"city": "Whitehorse",
 		"country": "Canada",
 		"iata_code": "YXY",
@@ -17916,7 +17916,7 @@
 		"objectID": "1058"
 	},
 	{
-		"name": "Chileka Intl",
+		"name": "Chileka Intl Airport",
 		"city": "Blantyre",
 		"country": "Malawi",
 		"iata_code": "BLZ",
@@ -18132,7 +18132,7 @@
 		"objectID": "5412"
 	},
 	{
-		"name": "Hodeidah Intl",
+		"name": "Hodeidah Intl Airport",
 		"city": "Hodeidah",
 		"country": "Yemen",
 		"iata_code": "HOD",
@@ -18348,7 +18348,7 @@
 		"objectID": "820"
 	},
 	{
-		"name": "Bloemfontein Intl",
+		"name": "Bloemfontein Intl Airport",
 		"city": "Bloemfontein",
 		"country": "South Africa",
 		"iata_code": "BFN",
@@ -19428,7 +19428,7 @@
 		"objectID": "4305"
 	},
 	{
-		"name": "Erie Intl Tom Ridge Fld",
+		"name": "Erie Intl Airport Tom Ridge Fld",
 		"city": "Erie",
 		"country": "United States",
 		"iata_code": "ERI",
@@ -19728,7 +19728,7 @@
 		"objectID": "3881"
 	},
 	{
-		"name": "Watertown Intl",
+		"name": "Watertown Intl Airport",
 		"city": "Watertown",
 		"country": "United States",
 		"iata_code": "ART",
@@ -19752,7 +19752,7 @@
 		"objectID": "3719"
 	},
 	{
-		"name": "Laredo Intl",
+		"name": "Laredo Intl Airport",
 		"city": "Laredo",
 		"country": "United States",
 		"iata_code": "LRD",
@@ -19788,7 +19788,7 @@
 		"objectID": "364"
 	},
 	{
-		"name": "Duluth Intl",
+		"name": "Duluth Intl Airport",
 		"city": "Duluth",
 		"country": "United States",
 		"iata_code": "DLH",
@@ -19800,7 +19800,7 @@
 		"objectID": "3598"
 	},
 	{
-		"name": "Hilo Intl",
+		"name": "Hilo Intl Airport",
 		"city": "Hilo",
 		"country": "United States",
 		"iata_code": "ITO",
@@ -19848,7 +19848,7 @@
 		"objectID": "3323"
 	},
 	{
-		"name": "Presidente Nicolau Lobato Intl",
+		"name": "Presidente Nicolau Lobato Intl Airport",
 		"city": "Dili",
 		"country": "East Timor",
 		"iata_code": "DIL",
@@ -20232,7 +20232,7 @@
 		"objectID": "2278"
 	},
 	{
-		"name": "Cassidy Intl",
+		"name": "Cassidy Intl Airport",
 		"city": "Kiritimati",
 		"country": "Kiribati",
 		"iata_code": "CXI",
@@ -20244,7 +20244,7 @@
 		"objectID": "2252"
 	},
 	{
-		"name": "Marshall Islands Intl",
+		"name": "Marshall Islands Intl Airport",
 		"city": "Majuro",
 		"country": "Marshall Islands",
 		"iata_code": "MAJ",
@@ -20388,7 +20388,7 @@
 		"objectID": "183"
 	},
 	{
-		"name": "General Rodolfo Sanchez Taboada Intl",
+		"name": "General Rodolfo Sanchez Taboada Intl Airport",
 		"city": "Mexicali",
 		"country": "Mexico",
 		"iata_code": "MXL",
@@ -20460,7 +20460,7 @@
 		"objectID": "1694"
 	},
 	{
-		"name": "Canadian Rockies Intl",
+		"name": "Canadian Rockies Intl Airport",
 		"city": "Cranbrook",
 		"country": "Canada",
 		"iata_code": "YXC",
@@ -20664,7 +20664,7 @@
 		"objectID": "1144"
 	},
 	{
-		"name": "Aswan Intl",
+		"name": "Aswan Intl Airport",
 		"city": "Aswan",
 		"country": "Egypt",
 		"iata_code": "ASW",
@@ -20688,7 +20688,7 @@
 		"objectID": "1097"
 	},
 	{
-		"name": "J M Nkomo Intl",
+		"name": "J M Nkomo Intl Airport",
 		"city": "Bulawayo",
 		"country": "Zimbabwe",
 		"iata_code": "BUQ",
@@ -20700,7 +20700,7 @@
 		"objectID": "1001"
 	},
 	{
-		"name": "Sao Tome Intl",
+		"name": "Sao Tome Intl Airport",
 		"city": "Sao Tome",
 		"country": "Sao Tome and Principe",
 		"iata_code": "TMS",
@@ -21084,7 +21084,7 @@
 		"objectID": "1247"
 	},
 	{
-		"name": "Eldoret Intl",
+		"name": "Eldoret Intl Airport",
 		"city": "Eldoret",
 		"country": "Kenya",
 		"iata_code": "EDL",
@@ -23232,7 +23232,7 @@
 		"objectID": "4095"
 	},
 	{
-		"name": "Nauru Intl",
+		"name": "Nauru Intl Airport",
 		"city": "Nauru",
 		"country": "Nauru",
 		"iata_code": "INU",
@@ -23292,7 +23292,7 @@
 		"objectID": "3994"
 	},
 	{
-		"name": "Palanga Intl",
+		"name": "Palanga Intl Airport",
 		"city": "Palanga",
 		"country": "Lithuania",
 		"iata_code": "PLQ",
@@ -23364,7 +23364,7 @@
 		"objectID": "3894"
 	},
 	{
-		"name": "Natrona Co Intl",
+		"name": "Natrona Co Intl Airport",
 		"city": "Casper",
 		"country": "United States",
 		"iata_code": "CPR",
@@ -23424,7 +23424,7 @@
 		"objectID": "3739"
 	},
 	{
-		"name": "Brownsville South Padre Island Intl",
+		"name": "Brownsville South Padre Island Intl Airport",
 		"city": "Brownsville",
 		"country": "United States",
 		"iata_code": "BRO",
@@ -23484,7 +23484,7 @@
 		"objectID": "3610"
 	},
 	{
-		"name": "Yuma Mcas Yuma Intl",
+		"name": "Yuma Mcas Yuma Intl Airport",
 		"city": "Yuma",
 		"country": "United States",
 		"iata_code": "YUM",
@@ -24192,7 +24192,7 @@
 		"objectID": "2286"
 	},
 	{
-		"name": "Pohnpei Intl",
+		"name": "Pohnpei Intl Airport",
 		"city": "Pohnpei",
 		"country": "Micronesia",
 		"iata_code": "PNI",
@@ -24384,7 +24384,7 @@
 		"objectID": "1968"
 	},
 	{
-		"name": "Bonriki Intl",
+		"name": "Bonriki Intl Airport",
 		"city": "Tarawa",
 		"country": "Kiribati",
 		"iata_code": "TRW",
@@ -24396,7 +24396,7 @@
 		"objectID": "1965"
 	},
 	{
-		"name": "Ignacio Agramonte Intl",
+		"name": "Ignacio Agramonte Intl Airport",
 		"city": "Camaguey",
 		"country": "Cuba",
 		"iata_code": "CMW",
@@ -24408,7 +24408,7 @@
 		"objectID": "1904"
 	},
 	{
-		"name": "Cap Haitien Intl",
+		"name": "Cap Haitien Intl Airport",
 		"city": "Cap Haitien",
 		"country": "Haiti",
 		"iata_code": "CAP",
@@ -24432,7 +24432,7 @@
 		"objectID": "1887"
 	},
 	{
-		"name": "Puerto Escondido Intl",
+		"name": "Puerto Escondido Intl Airport",
 		"city": "Puerto Escondido",
 		"country": "Mexico",
 		"iata_code": "PXM",
@@ -24480,7 +24480,7 @@
 		"objectID": "180"
 	},
 	{
-		"name": "Ciudad Del Carmen Intl",
+		"name": "Ciudad Del Carmen Intl Airport",
 		"city": "Ciudad Del Carmen",
 		"country": "Mexico",
 		"iata_code": "CME",
@@ -24492,7 +24492,7 @@
 		"objectID": "1789"
 	},
 	{
-		"name": "Bahias De Huatulco Intl",
+		"name": "Bahias De Huatulco Intl Airport",
 		"city": "Huatulco",
 		"country": "Mexico",
 		"iata_code": "HUX",
@@ -24720,7 +24720,7 @@
 		"objectID": "1285"
 	},
 	{
-		"name": "Gander Intl",
+		"name": "Gander Intl Airport",
 		"city": "Gander",
 		"country": "Canada",
 		"iata_code": "YQX",
@@ -24816,7 +24816,7 @@
 		"objectID": "1117"
 	},
 	{
-		"name": "Dire Dawa Intl",
+		"name": "Dire Dawa Intl Airport",
 		"city": "Dire Dawa",
 		"country": "Ethiopia",
 		"iata_code": "DIR",
@@ -25248,7 +25248,7 @@
 		"objectID": "3696"
 	},
 	{
-		"name": "Norfolk Island Intl",
+		"name": "Norfolk Island Intl Airport",
 		"city": "Norfolk Island",
 		"country": "Norfolk Island",
 		"iata_code": "NLK",
@@ -25356,7 +25356,7 @@
 		"objectID": "1958"
 	},
 	{
-		"name": "Gerrard Smith Intl",
+		"name": "Gerrard Smith Intl Airport",
 		"city": "Cayman Barac",
 		"country": "Cayman Islands",
 		"iata_code": "CYB",
@@ -25368,7 +25368,7 @@
 		"objectID": "1925"
 	},
 	{
-		"name": "Vilo Acuna Intl",
+		"name": "Vilo Acuna Intl Airport",
 		"city": "Cayo Largo del Sur",
 		"country": "Cuba",
 		"iata_code": "CYO",
@@ -25380,7 +25380,7 @@
 		"objectID": "1903"
 	},
 	{
-		"name": "Bocas Del Toro Intl",
+		"name": "Bocas Del Toro Intl Airport",
 		"city": "Bocas Del Toro",
 		"country": "Panama",
 		"iata_code": "BOC",
@@ -28968,7 +28968,7 @@
 		"objectID": "4215"
 	},
 	{
-		"name": "Laoag Intl",
+		"name": "Laoag Intl Airport",
 		"city": "Laoag",
 		"country": "Philippines",
 		"iata_code": "LAO",
@@ -29256,7 +29256,7 @@
 		"objectID": "3987"
 	},
 	{
-		"name": "Socotra Intl",
+		"name": "Socotra Intl Airport",
 		"city": "Socotra",
 		"country": "Yemen",
 		"iata_code": "SCT",
@@ -29388,7 +29388,7 @@
 		"objectID": "3753"
 	},
 	{
-		"name": "Roswell Intl Air Center",
+		"name": "Roswell Intl Airport Air Center",
 		"city": "Roswell",
 		"country": "United States",
 		"iata_code": "ROW",
@@ -29400,7 +29400,7 @@
 		"objectID": "3736"
 	},
 	{
-		"name": "Boeing Fld King Co Intl",
+		"name": "Boeing Fld King Co Intl Airport",
 		"city": "Seattle",
 		"country": "United States",
 		"iata_code": "BFI",
@@ -29496,7 +29496,7 @@
 		"objectID": "3680"
 	},
 	{
-		"name": "Rickenbacker Intl",
+		"name": "Rickenbacker Intl Airport",
 		"city": "Columbus",
 		"country": "United States",
 		"iata_code": "LCK",
@@ -29520,7 +29520,7 @@
 		"objectID": "3664"
 	},
 	{
-		"name": "Sloulin Fld Intl",
+		"name": "Sloulin Fld Intl Airport",
 		"city": "Williston",
 		"country": "United States",
 		"iata_code": "ISN",
@@ -29568,7 +29568,7 @@
 		"objectID": "3584"
 	},
 	{
-		"name": "Falls Intl",
+		"name": "Falls Intl Airport",
 		"city": "International Falls",
 		"country": "United States",
 		"iata_code": "INL",
@@ -29784,7 +29784,7 @@
 		"objectID": "3182"
 	},
 	{
-		"name": "U Taphao Intl",
+		"name": "U Taphao Intl Airport",
 		"city": "Pattaya",
 		"country": "Thailand",
 		"iata_code": "UTP",
@@ -29928,7 +29928,7 @@
 		"objectID": "2870"
 	},
 	{
-		"name": "General Bartolome Salom Intl",
+		"name": "General Bartolome Salom Intl Airport",
 		"city": "Puerto Cabello",
 		"country": "Venezuela",
 		"iata_code": "PBL",
@@ -29976,7 +29976,7 @@
 		"objectID": "2809"
 	},
 	{
-		"name": "Coronel Carlos Ciriani Santa Rosa Intl",
+		"name": "Coronel Carlos Ciriani Santa Rosa Intl Airport",
 		"city": "Tacna",
 		"country": "Peru",
 		"iata_code": "TCQ",
@@ -30168,7 +30168,7 @@
 		"objectID": "2667"
 	},
 	{
-		"name": "Mataveri Intl",
+		"name": "Mataveri Intl Airport",
 		"city": "Easter Island",
 		"country": "Chile",
 		"iata_code": "IPC",
@@ -30504,7 +30504,7 @@
 		"objectID": "2280"
 	},
 	{
-		"name": "Yap Intl",
+		"name": "Yap Intl Airport",
 		"city": "Yap",
 		"country": "Micronesia",
 		"iata_code": "YAP",
@@ -30528,7 +30528,7 @@
 		"objectID": "2257"
 	},
 	{
-		"name": "Chuuk Intl",
+		"name": "Chuuk Intl Airport",
 		"city": "Chuuk",
 		"country": "Micronesia",
 		"iata_code": "TKK",
@@ -30540,7 +30540,7 @@
 		"objectID": "2254"
 	},
 	{
-		"name": "Rota Intl",
+		"name": "Rota Intl Airport",
 		"city": "Rota",
 		"country": "Northern Mariana Islands",
 		"iata_code": "ROP",
@@ -30588,7 +30588,7 @@
 		"objectID": "2212"
 	},
 	{
-		"name": "Faisalabad Intl",
+		"name": "Faisalabad Intl Airport",
 		"city": "Faisalabad",
 		"country": "Pakistan",
 		"iata_code": "LYP",
@@ -30600,7 +30600,7 @@
 		"objectID": "2202"
 	},
 	{
-		"name": "Aqaba King Hussein Intl",
+		"name": "Aqaba King Hussein Intl Airport",
 		"city": "Aqaba",
 		"country": "Jordan",
 		"iata_code": "AQJ",
@@ -30924,7 +30924,7 @@
 		"objectID": "1932"
 	},
 	{
-		"name": "Enrique Malek Intl",
+		"name": "Enrique Malek Intl Airport",
 		"city": "David",
 		"country": "Panama",
 		"iata_code": "DAV",
@@ -30936,7 +30936,7 @@
 		"objectID": "1867"
 	},
 	{
-		"name": "Tapachula Intl",
+		"name": "Tapachula Intl Airport",
 		"city": "Tapachula",
 		"country": "Mexico",
 		"iata_code": "TAP",
@@ -30960,7 +30960,7 @@
 		"objectID": "1835"
 	},
 	{
-		"name": "Piedras Negras Intl",
+		"name": "Piedras Negras Intl Airport",
 		"city": "Piedras Negras",
 		"country": "Mexico",
 		"iata_code": "PDS",
@@ -30984,7 +30984,7 @@
 		"objectID": "1822"
 	},
 	{
-		"name": "General Servando Canales Intl",
+		"name": "General Servando Canales Intl Airport",
 		"city": "Matamoros",
 		"country": "Mexico",
 		"iata_code": "MAM",
@@ -31008,7 +31008,7 @@
 		"objectID": "1813"
 	},
 	{
-		"name": "Plan De Guadalupe Intl",
+		"name": "Plan De Guadalupe Intl Airport",
 		"city": "Saltillo",
 		"country": "Mexico",
 		"iata_code": "SLW",
@@ -31020,7 +31020,7 @@
 		"objectID": "1810"
 	},
 	{
-		"name": "General Pedro Jose Mendez Intl",
+		"name": "General Pedro Jose Mendez Intl Airport",
 		"city": "Ciudad Victoria",
 		"country": "Mexico",
 		"iata_code": "CVM",
@@ -31032,7 +31032,7 @@
 		"objectID": "1798"
 	},
 	{
-		"name": "Ingeniero Alberto Acuna Ongay Intl",
+		"name": "Ingeniero Alberto Acuna Ongay Intl Airport",
 		"city": "Campeche",
 		"country": "Mexico",
 		"iata_code": "CPE",
@@ -31872,8 +31872,8 @@
 		"objectID": "4217"
 	},
 	{
-		"name": "Al Ghaidah Intl",
-		"city": "Al Ghaidah Intl",
+		"name": "Al Ghaidah Intl Airport",
+		"city": "Al Ghaidah Intl Airport",
 		"country": "Yemen",
 		"iata_code": "AAY",
 		"_geoloc": {
@@ -36864,7 +36864,7 @@
 		"objectID": "374"
 	},
 	{
-		"name": "Ogdensburg Intl",
+		"name": "Ogdensburg Intl Airport",
 		"city": "Ogdensburg",
 		"country": "United States",
 		"iata_code": "OGS",
@@ -37008,7 +37008,7 @@
 		"objectID": "356"
 	},
 	{
-		"name": "Massena Intl Richards Fld",
+		"name": "Massena Intl Airport Richards Fld",
 		"city": "Massena",
 		"country": "United States",
 		"iata_code": "MSS",
@@ -37692,7 +37692,7 @@
 		"objectID": "2787"
 	},
 	{
-		"name": "Capt Jose A Quinones Gonzales Intl",
+		"name": "Capt Jose A Quinones Gonzales Intl Airport",
 		"city": "Chiclayo",
 		"country": "Peru",
 		"iata_code": "CIX",
@@ -37716,7 +37716,7 @@
 		"objectID": "277"
 	},
 	{
-		"name": "Sadiq Abubakar Iii Intl",
+		"name": "Sadiq Abubakar Iii Intl Airport",
 		"city": "Sokoto",
 		"country": "Nigeria",
 		"iata_code": "SKO",
@@ -37836,7 +37836,7 @@
 		"objectID": "269"
 	},
 	{
-		"name": "Eloy Alfaro Intl",
+		"name": "Eloy Alfaro Intl Airport",
 		"city": "Manta",
 		"country": "Ecuador",
 		"iata_code": "MEC",
@@ -38004,7 +38004,7 @@
 		"objectID": "2549"
 	},
 	{
-		"name": "Corumba Intl",
+		"name": "Corumba Intl Airport",
 		"city": "Corumba",
 		"country": "Brazil",
 		"iata_code": "CMG",
@@ -38364,7 +38364,7 @@
 		"objectID": "2192"
 	},
 	{
-		"name": "Fujairah Intl",
+		"name": "Fujairah Intl Airport",
 		"city": "Fujeirah",
 		"country": "United Arab Emirates",
 		"iata_code": "FJR",
@@ -38640,7 +38640,7 @@
 		"objectID": "1979"
 	},
 	{
-		"name": "Pago Pago Intl",
+		"name": "Pago Pago Intl Airport",
 		"city": "Pago Pago",
 		"country": "American Samoa",
 		"iata_code": "PPG",
@@ -38676,7 +38676,7 @@
 		"objectID": "1884"
 	},
 	{
-		"name": "Cap Manuel Nino Intl",
+		"name": "Cap Manuel Nino Intl Airport",
 		"city": "Changuinola",
 		"country": "Panama",
 		"iata_code": "CHX",
@@ -38688,7 +38688,7 @@
 		"objectID": "1866"
 	},
 	{
-		"name": "Quetzalcoatl Intl",
+		"name": "Quetzalcoatl Intl Airport",
 		"city": "Nuevo Laredo",
 		"country": "Mexico",
 		"iata_code": "NLD",
@@ -38700,7 +38700,7 @@
 		"objectID": "1828"
 	},
 	{
-		"name": "Loreto Intl",
+		"name": "Loreto Intl Airport",
 		"city": "Loreto",
 		"country": "Mexico",
 		"iata_code": "LTO",
@@ -38724,7 +38724,7 @@
 		"objectID": "181"
 	},
 	{
-		"name": "Chetumal Intl",
+		"name": "Chetumal Intl Airport",
 		"city": "Chetumal",
 		"country": "Mexico",
 		"iata_code": "CTM",
@@ -39168,7 +39168,7 @@
 		"objectID": "1028"
 	},
 	{
-		"name": "Moshoeshoe I Intl",
+		"name": "Moshoeshoe I Intl Airport",
 		"city": "Maseru",
 		"country": "Lesotho",
 		"iata_code": "MSU",
@@ -39324,7 +39324,7 @@
 		"objectID": "4125"
 	},
 	{
-		"name": "Massawa Intl",
+		"name": "Massawa Intl Airport",
 		"city": "Massawa",
 		"country": "Eritrea",
 		"iata_code": "MSW",

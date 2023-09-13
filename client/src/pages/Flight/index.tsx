@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import FlightFullInfoCard from '../../components/Flight Full Info';
+import FlightsFullInfoCard from '../../components/Flight Full Info';
 import TripInfoBox from '../../components/Trip Info Box';
 import FlightFilterButton from '../../components/Flight Filter Button';
-import { Center, Flex } from '@chakra-ui/react';
+import { Box, Center, Flex } from '@chakra-ui/react';
 
 const FlightPage = () => {
 	const [flightSearchList, setFlightSearchList] = useState<any[]>([]);
@@ -24,15 +24,15 @@ const FlightPage = () => {
 			const flights = JSON.parse(flightString);
 
 			if (flights) {
-				flights.forEach((flight: any) => {
-					const segments = flight.segments;
-					const purchaseLinks = flight.purchaseLinks;
+				flights.forEach((trip: any) => {
+					const tripFlights: any[] = [];
+					const purchaseLinks = trip.purchaseLinks;
 
 					const purchaseLink = purchaseLinks[0];
 
-					// const legs = segments[0].legs;
-					segments.forEach((segment: any) => {
+					trip.segments.forEach((segment: any) => {
 						const legs = segment.legs;
+						const flightLegs: any[] = [];
 
 						legs.forEach((legInfo: any) => {
 							const originStationCode = legInfo.originStationCode;
@@ -49,7 +49,7 @@ const FlightPage = () => {
 							const logoUrl = operatingCarrier.logoUrl;
 							const displayName = operatingCarrier.displayName;
 
-							const newFlightDetails = {
+							const newLegDetails = {
 								originStationCode,
 								destinationStationCode,
 								departureDateTime,
@@ -64,27 +64,23 @@ const FlightPage = () => {
 								totalPrice: purchaseLink.totalPrice,
 							};
 
-							setFlightSearchList((prev: any[]) => [...prev, newFlightDetails]);
+							flightLegs.push(newLegDetails);
 						});
+
+						tripFlights.push(flightLegs);
 					});
+
+					setFlightSearchList((prev: any[]) => [...prev, tripFlights]);
 				});
 			}
 		}
 	}, []);
-
-	// useEffect(() => {
-	// 	console.log(flightSearchList);
-	// 	console.log(filteredFlights);
-	// }, [flightSearchList]);
 
 	useEffect(() => {
 		const flightCleanData = {
 			flightSearchList,
 		};
 		localStorage.setItem('flightCleanData', JSON.stringify(flightCleanData));
-	}, [flightSearchList]);
-
-	useEffect(() => {
 		setFilteredFlights(flightSearchList);
 	}, [flightSearchList]);
 
@@ -134,22 +130,16 @@ const FlightPage = () => {
 				</Flex>
 			</Center>
 			{filteredFlights &&
-				filteredFlights.map((flight: any, index: number) => (
-					<FlightFullInfoCard
-						key={index}
-						originStationCode={flight.originStationCode}
-						destinationStationCode={flight.destinationStationCode}
-						departureDateTime={flight.departureDateTime}
-						arrivalDateTime={flight.arrivalDateTime}
-						classOfService={flight.classOfService}
-						flightNumber={flight.flightNumber}
-						numStops={flight.numStops}
-						distanceInKM={flight.distanceInKM}
-						logoUrl={flight.logoUrl}
-						displayName={flight.displayName}
-						currency={flight.currency}
-						totalPrice={flight.totalPrice}
-					/>
+				filteredFlights.map((trips: any, index: number) => (
+					<Box key={index}>
+						{trips.map((flights: any, index: number) => (
+							<FlightsFullInfoCard
+								key={index}
+								flights={flights}
+								totalPrice={trips.totalPrice}
+							/>
+						))}
+					</Box>
 				))}
 		</>
 	);

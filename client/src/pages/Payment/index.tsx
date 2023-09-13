@@ -8,29 +8,49 @@ import { RoundTripFormData } from '../../components/Round Trip Form';
 import { MultiCityFormData } from '../../components/Multi City  Form';
 import PaymentDetails from '../../components/Payment Details';
 import AdditionalInfoForm from '../../components/Additional Info form';
+import { FlightsDetails } from '../../components/Flight Full Info';
 
 const PaymentInfo = () => {
 	const [postTrip] = usePostTripMutation();
-	const [flight, setFlight] = useState({
-		originStationCode: '',
-		destinationStationCode: '',
-		departureDateTime: '',
-		arrivalDateTime: '',
-		numStops: 0,
-		displayName: '',
-		logoUrl: '',
-		currency: '',
-		totalPrice: 0,
-	});
+	const [flights, setFlights] = useState<FlightsDetails[]>([
+		{
+			originStationCode: '',
+			destinationStationCode: '',
+			departureDateTime: '',
+			arrivalDateTime: '',
+			numStops: 0,
+			displayName: '',
+			logoUrl: '',
+			currency: '',
+			totalPrice: 0,
+			classOfService: '',
+			flightNumber: 0,
+			distanceInKM: 0,
+		},
+	]);
 	const [quantity, setQuantity] = useState(1);
 	const [tripType, setTripType] = useState('');
 	const [formData, setFormData] = useState<OneWayFormData | RoundTripFormData | MultiCityFormData | null>(null);
+	const [totalPrice, setTotalPrice] = useState(0);
+	const [currency, setCurrency] = useState('');
 
 	useEffect(() => {
-		const flight = localStorage.getItem('choosenFlight');
-		if (flight) {
-			const parsedFlight = JSON.parse(flight);
-			if (parsedFlight) setFlight(parsedFlight);
+		const flights = localStorage.getItem('choosenFlights');
+		const totalPrice = localStorage.getItem('totalPrice');
+		const currency = localStorage.getItem('currency');
+
+		if (totalPrice) {
+			const parsedTotalPrice = JSON.parse(totalPrice);
+			setTotalPrice(parsedTotalPrice);
+		}
+		if (currency) {
+			const parsedCurrency = JSON.parse(currency);
+			setCurrency(parsedCurrency);
+		}
+
+		if (flights) {
+			const parsedFlights = JSON.parse(flights);
+			if (parsedFlights) setFlights(parsedFlights);
 		}
 		const tripType = localStorage.getItem('tripType');
 		if (tripType) {
@@ -73,7 +93,7 @@ const PaymentInfo = () => {
 					oneWayTrip: formData,
 					roundTrip: null,
 					multiCity: null,
-					flightDetails: flight,
+					flightDetails: flights,
 				};
 			} else if (tripType === 'ROUND_TRIP') {
 				data = {
@@ -81,7 +101,7 @@ const PaymentInfo = () => {
 					oneWayTrip: null,
 					roundTrip: formData,
 					multiCity: null,
-					flightDetails: flight,
+					flightDetails: flights,
 				};
 			} else {
 				data = {
@@ -89,15 +109,15 @@ const PaymentInfo = () => {
 					oneWayTrip: null,
 					roundTrip: null,
 					multiCity: formData,
-					flightDetails: flight,
+					flightDetails: flights,
 				};
 			}
 			const result = await postTrip(data);
-			console.log(result);
+			console.log('result:', result);
 			if (result) {
 				axios
 					.post(`${import.meta.env.VITE_BACKEND_URL}:${import.meta.env.VITE_BACKEND_PORT}/user/payment/create-checkout-session`, {
-						test: { price: flight.totalPrice * quantity, quantity: quantity },
+						test: { price: totalPrice * quantity, quantity: quantity },
 					})
 					.then((response) => {
 						if (response.data.url) {
@@ -123,22 +143,25 @@ const PaymentInfo = () => {
 						Flight details
 					</Text>
 				</Center>
-				<FlightDetails
-					originStationCode={flight.originStationCode}
-					destinationStationCode={flight.destinationStationCode}
-					departureDateTime={flight.departureDateTime}
-					arrivalDateTime={flight.arrivalDateTime}
-					numStops={flight.numStops}
-					displayName={flight.displayName}
-					logoUrl={flight.logoUrl}
-				/>
+				{flights.map((flight: any, index: number) => (
+					<FlightDetails
+						key={index}
+						originStationCode={flight.originStationCode}
+						destinationStationCode={flight.destinationStationCode}
+						departureDateTime={flight.departureDateTime}
+						arrivalDateTime={flight.arrivalDateTime}
+						numStops={flight.numStops}
+						displayName={flight.displayName}
+						logoUrl={flight.logoUrl}
+					/>
+				))}
 
 				<AdditionalInfoForm />
 
 				<PaymentDetails
 					quantity={quantity}
-					totalPrice={flight.totalPrice}
-					currency={flight.currency}
+					totalPrice={totalPrice}
+					currency={currency}
 					handleCheckout={handleCheckout}
 				/>
 			</Box>

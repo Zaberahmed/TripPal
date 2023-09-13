@@ -15,7 +15,10 @@ const BookingTab = (props: { trips: Trip[] }) => {
 			const future: Trip[] = [];
 
 			props.trips.forEach((trip) => {
-				const departureDate = new Date(trip.flightDetails?.departureDateTime || '');
+				let departureDate;
+				if (trip.flightDetails && trip.flightDetails[trip.flightDetails.length - 1].departureDateTime) departureDate = new Date(trip.flightDetails[trip.flightDetails.length - 1].departureDateTime);
+				else departureDate = 0;
+
 				if (departureDate && departureDate < currentDate) {
 					past.push(trip);
 				} else {
@@ -23,10 +26,27 @@ const BookingTab = (props: { trips: Trip[] }) => {
 				}
 			});
 
-			setPastTrips(past);
-			setFutureTrips(future);
+			const sortedPastTrips = past.slice().sort((a, b) => {
+				const departureDateA = new Date(a.flightDetails![a.flightDetails!.length - 1].departureDateTime).getTime();
+				const departureDateB = new Date(b.flightDetails![b.flightDetails!.length - 1].departureDateTime).getTime();
+				return departureDateB - departureDateA;
+			});
+
+			const sortedFutureTrips = future.slice().sort((a, b) => {
+				const departureDateA = new Date(a.flightDetails![a.flightDetails!.length - 1].departureDateTime).getTime();
+				const departureDateB = new Date(b.flightDetails![b.flightDetails!.length - 1].departureDateTime).getTime();
+				return departureDateA - departureDateB;
+			});
+
+			setPastTrips(sortedPastTrips);
+			setFutureTrips(sortedFutureTrips);
 		}
 	}, [props.trips]);
+
+	useEffect(() => {
+		console.log('trips:', futureTrips);
+	}, [futureTrips]);
+
 	return (
 		<Tabs
 			bg={'#ffffff'}
@@ -79,7 +99,7 @@ const BookingTab = (props: { trips: Trip[] }) => {
 						: null}
 				</TabPanel>
 				<TabPanel>
-					{futureTrips && futureTrips.length > 0
+					{futureTrips && futureTrips
 						? futureTrips.map((trip: any, index: number) => {
 								return (
 									<Box
@@ -89,16 +109,20 @@ const BookingTab = (props: { trips: Trip[] }) => {
 										bg={'beige'}
 										borderRadius={'lg'}
 										boxShadow={'lg'}>
-										<FlightDetails
-											key={index}
-											originStationCode={trip.flightDetails.originStationCode}
-											destinationStationCode={trip.flightDetails.destinationStationCode}
-											departureDateTime={trip.flightDetails.departureDateTime}
-											arrivalDateTime={trip.flightDetails.arrivalDateTime}
-											numStops={trip.flightDetails.numStops}
-											displayName={trip.flightDetails.displayName}
-											logoUrl={trip.flightDetails.logoUrl}
-										/>
+										{trip.flightDetails && trip.flightDetails.length > 0
+											? trip.flightDetails.map((flight: any, index: number) => (
+													<FlightDetails
+														key={index}
+														originStationCode={flight.originStationCode}
+														destinationStationCode={flight.destinationStationCode}
+														departureDateTime={flight.departureDateTime}
+														arrivalDateTime={flight.arrivalDateTime}
+														numStops={flight.numStops}
+														displayName={flight.displayName}
+														logoUrl={flight.logoUrl}
+													/>
+											  ))
+											: null}
 									</Box>
 								);
 						  })

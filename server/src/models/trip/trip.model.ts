@@ -56,7 +56,7 @@ const tripSchema = new Schema({
 	oneWayTrip: { type: oneWayTripSchema, required: false },
 	roundTrip: { type: roundTripSchema, required: false },
 	multiCityTrip: { type: multiCityTripSchema, required: false },
-	flightDetails: { type: flightDetailsSchema, required: true },
+	flightDetails: [{ type: flightDetailsSchema, required: true }],
 });
 
 export const TripModel = model<Trip>('Trip', tripSchema);

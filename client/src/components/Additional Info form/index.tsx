@@ -17,7 +17,7 @@ const AdditionalInfoForm = () => {
 	const nationalityOptions = nationalities.map((nationality: string) => ({ label: nationality, value: nationality }));
 
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-		console.log('data:', data);
+		// console.log('data:', data);
 		const updateInfo = { nationality: data.nationality.value, gender: data.gender, passportId: data.passportId };
 		try {
 			const result = await updateUserTravelInfo(updateInfo);
@@ -43,7 +43,7 @@ const AdditionalInfoForm = () => {
 					mt={'1.5rem'}>
 					Additional Information
 				</Text>
-				<FormControl>
+				<FormControl isRequired>
 					<FormLabel mt={'1rem'}>Nationality</FormLabel>
 					<Controller
 						name="nationality"
@@ -60,7 +60,7 @@ const AdditionalInfoForm = () => {
 					/>
 				</FormControl>
 
-				<FormControl>
+				<FormControl isRequired>
 					<FormLabel mt={'.5rem'}>Gender</FormLabel>
 					<Controller
 						name="gender"
@@ -78,7 +78,7 @@ const AdditionalInfoForm = () => {
 					/>
 				</FormControl>
 
-				<FormControl>
+				<FormControl isRequired>
 					<FormLabel mt={'.5rem'}>Passport ID</FormLabel>
 					<Controller
 						name="passportId"
@@ -88,7 +88,7 @@ const AdditionalInfoForm = () => {
 					/>
 				</FormControl>
 
-				<FormControl>
+				<FormControl isRequired>
 					<FormLabel mt={'.5rem'}>Date of Birth</FormLabel>
 					<Controller
 						name="dob"

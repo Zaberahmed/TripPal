@@ -6,7 +6,7 @@ export interface Trip {
 	oneWayTrip?: OneWayFormData | null;
 	roundTrip?: RoundTripFormData | null;
 	multiCityTrip?: MultiCityFormData | null;
-	flightDetails: FlightDetails;
+	flightDetails: FlightsDetails[];
 }
 export type OneWayFormData = {
 	source: string;
@@ -41,7 +41,7 @@ export type MultiCityFormData = {
 	cabin: string;
 };
 
-export interface FlightDetails {
+export interface FlightsDetails {
 	originStationCode: string;
 	destinationStationCode: string;
 	departureDateTime: string;

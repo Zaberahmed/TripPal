@@ -2,9 +2,6 @@ import { Request, Response } from 'express';
 import { Session } from '../interfaces/session.interface';
 import { getSession } from '../middlewares/sessionManagement';
 import { bookATrip, findAllTrips } from '../models/trip/trip.query';
-import { findUserByEmail } from '../models/user/user.query';
-import { UserModel } from '../models/user/user.model';
-import path from 'path';
 
 export const createTrip = async (req: Request, res: Response) => {
 	try {

@@ -87,10 +87,11 @@ const TripInfoBox = () => {
 					boxShadow={'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}
 					bg={'beige'}
 					borderRadius={'md'}>
-					{formData.cities.map((city) => {
+					{formData.cities.map((city, index) => {
 						return (
 							<>
 								<Badge
+									key={index}
 									p={'.25rem'}
 									colorScheme="orange"
 									borderRadius={'md'}
@@ -100,6 +101,7 @@ const TripInfoBox = () => {
 									</Text>
 								</Badge>
 								<Badge
+									key={city.destination}
 									p={'.25rem'}
 									colorScheme="blue"
 									borderRadius={'md'}

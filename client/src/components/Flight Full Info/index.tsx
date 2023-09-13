@@ -3,8 +3,9 @@ import ShowMoreInfo from '../Show More';
 import FlightDetails from '../Flight Details';
 import { useNavigate } from 'react-router-dom';
 import BookNowCard from '../Book Now Card';
+import { useEffect, useState } from 'react';
 
-export interface FlightDetails {
+export interface FlightsDetails {
 	originStationCode: string;
 	destinationStationCode: string;
 	departureDateTime: string;
@@ -19,14 +20,27 @@ export interface FlightDetails {
 	totalPrice: number;
 }
 
-const FlightFullInfoCard: React.FC<FlightDetails> = ({ originStationCode, destinationStationCode, departureDateTime, arrivalDateTime, classOfService, flightNumber, numStops, distanceInKM, logoUrl, displayName, currency, totalPrice }) => {
+const FlightsFullInfoCard: React.FC<{ flights: FlightsDetails[]; totalPrice: number }> = (props) => {
 	const navigate = useNavigate();
-	const flight = { originStationCode, destinationStationCode, departureDateTime, arrivalDateTime, classOfService, flightNumber, numStops, distanceInKM, logoUrl, displayName, currency, totalPrice };
+	const [totalPrice, setTotalPrice] = useState(0);
+	const [currency, setCurrency] = useState('');
 
 	const handleClick = () => {
-		localStorage.setItem('choosenFlight', JSON.stringify(flight));
+		localStorage.setItem('choosenFlights', JSON.stringify(props.flights));
+		localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
+		localStorage.setItem('currecny', JSON.stringify(currency));
 		navigate('/payment');
 	};
+
+	useEffect(() => {
+		let totalPrice = 0;
+
+		props.flights.forEach((flight) => {
+			totalPrice += flight.totalPrice || 0;
+		});
+		setTotalPrice(totalPrice);
+		setCurrency(props.flights[0].currency);
+	}, [props.flights]);
 
 	return (
 		<Box
@@ -37,15 +51,19 @@ const FlightFullInfoCard: React.FC<FlightDetails> = ({ originStationCode, destin
 			<Flex
 				mb={'1rem'}
 				direction={'column'}>
-				<FlightDetails
-					originStationCode={originStationCode}
-					destinationStationCode={destinationStationCode}
-					departureDateTime={departureDateTime}
-					arrivalDateTime={arrivalDateTime}
-					numStops={numStops}
-					logoUrl={logoUrl}
-					displayName={displayName}
-				/>
+				{props.flights.map((flight: any, index: number) => (
+					<FlightDetails
+						key={index}
+						originStationCode={flight.originStationCode}
+						destinationStationCode={flight.destinationStationCode}
+						departureDateTime={flight.departureDateTime}
+						arrivalDateTime={flight.arrivalDateTime}
+						numStops={flight.numStops}
+						logoUrl={flight.logoUrl}
+						displayName={flight.displayName}
+					/>
+				))}
+
 				<BookNowCard
 					totalPrice={totalPrice}
 					currency={currency}
@@ -57,4 +75,4 @@ const FlightFullInfoCard: React.FC<FlightDetails> = ({ originStationCode, destin
 	);
 };
 
-export default FlightFullInfoCard;
+export default FlightsFullInfoCard;
